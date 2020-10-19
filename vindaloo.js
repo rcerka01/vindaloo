@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use("/assets", express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-    res.render("index");
+    res.render("index", { puppet: conf.login.user, puddle: conf.login.password });
 });
 
 var mainApiController = require('./controllers/mainApiController');
