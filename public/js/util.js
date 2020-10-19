@@ -112,7 +112,7 @@ function getPreviousTrades(wSocket) {
 function closeTrades(trades, symbol, wSocket) {
     for (i in trades) {
         if (trades[i].symbol == symbol) {
-            closeTrade(trades[i].position, trades[i].volume, trades[1].close_price, symbol, wSocket);
+            closeTrade(trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
         }
     }
 }
