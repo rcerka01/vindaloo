@@ -21,8 +21,8 @@ function connect() {
     var msg = {};
     msg.command = "login";
     var arguments = {};
-    arguments.userId = puppet; //"11490059"; // conf.user;
-    arguments.password = puddle; //"xoh26571"; //conf.password;
+    arguments.userId = puppet;
+    arguments.password = puddle;
     msg.arguments = arguments;
     //console.log('Trying to log in as: ' + msg.arguments.userId);
     try {
