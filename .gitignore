@@ -1,2 +1,3 @@
-mmconfig/secret.js
+config/secret.js
 node_modules/*
+.gitignore
