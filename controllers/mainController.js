@@ -22,7 +22,7 @@ function closeTrades(trades, symbol, wSocket) {
 
 module.exports = { run: function (app) {
 
-    app.get("/:action/:symbol/:volume", function(req, res) {
+    app.post("/:action/:symbol/:volume", function(req, res) {
 
         var action = req.params.action;
         var symbol = req.params.symbol;
