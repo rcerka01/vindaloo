@@ -33,7 +33,7 @@ function sendGetPrice(symbol, ws) {
     }
 }
 
-function sendStartTrade(action, symbol, price, volume, wSocket, sl) {
+function sendStartTrade(action, symbol, price, volume, wSocket, sl, offset) {
     if (action == "sell") { 
         var cmd = 1; 
         if (sl != 0) { sl = price + sl; }
@@ -51,6 +51,7 @@ function sendStartTrade(action, symbol, price, volume, wSocket, sl) {
     tradeTransInfo.type = 0;
     tradeTransInfo.volume = volume;
     tradeTransInfo.sl = sl;
+    tradeTransInfo.offset = offset;
     arguments.tradeTransInfo = tradeTransInfo;
     msg.arguments = arguments;
     try {
@@ -102,7 +103,7 @@ function sendGetPreviousTrades(wSocket) {
 module.exports = {
     login: function login(ws, account) { sendLogin(ws, account); },
     getPrice: function getPrice(symbol, ws) { sendGetPrice(symbol, ws); },
-    startTrade: function startTrade(action, symbol, price, volume, wSocket, sl) { sendStartTrade(action, symbol, price, volume, wSocket, sl); },
+    startTrade: function startTrade(action, symbol, price, volume, wSocket, sl, offset) { sendStartTrade(action, symbol, price, volume, wSocket, sl, offset); },
     closeTrade: function closeTrade(position, volume, price, symbol, wSocket) { sendCloseTrade(position, volume, price, symbol, wSocket); },
     getPreviousTrades: function getPreviousTrades(wSocket) { sendGetPreviousTrades(wSocket); }
 }
