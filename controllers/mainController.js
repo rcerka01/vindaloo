@@ -22,10 +22,11 @@ function closeTrades(trades, symbol, wSocket) {
 
 module.exports = { run: function (app) {
 
-    app.post("/:account/:sl/:action/:symbol/:volume", function(req, res) {
+    app.post("/:account/:sl/:offset/:action/:symbol/:volume", function(req, res) {
 
         var account = req.params.account;
         var sl = Number(req.params.sl);
+        var offset = Number(req.params.offset);
         var action = req.params.action;
         var symbol = req.params.symbol;
         var volume = Number(req.params.volume);
@@ -48,7 +49,7 @@ module.exports = { run: function (app) {
                     } else if (response.returnData.ask != undefined) {
                         if (action == "sell") { var price = response.returnData.bid; } else { var price = response.returnData.ask; }
                         console.log("Price to " + action + " is " + price)
-                        send.startTrade(action, symbol, price, volume, wSocket, sl)
+                        send.startTrade(action, symbol, price, volume, wSocket, sl, offset)
                     } else if (response.returnData.order != undefined) {
                         var order = response.returnData.order;
                         console.log("Order compleated: " + order)
