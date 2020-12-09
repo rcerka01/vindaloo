@@ -1,11 +1,11 @@
 const conf = require("../config/config");
 
-function sendLogin(ws) {
+function sendLogin(ws, account) {
     var msg = {};
     msg.command = "login";
     var arguments = {};
-    arguments.userId = conf.login.user;
-    arguments.password = conf.login.password;
+    arguments.userId = conf.login[Number(account) - 1].user;
+    arguments.password = conf.login[Number(account) - 1].password;
     msg.arguments = arguments;
     //console.log('Trying to log in as: ' + msg.arguments.userId);
     try {
@@ -33,8 +33,14 @@ function sendGetPrice(symbol, ws) {
     }
 }
 
-function sendStartTrade(action, symbol, price, volume, wSocket) {
-    if (action == "sell") { var cmd = 1; } else { var cmd = 0; }
+function sendStartTrade(action, symbol, price, volume, wSocket, sl) {
+    if (action == "sell") { 
+        var cmd = 1; 
+        if (sl != 0) { sl = price + sl; }
+    } else { 
+        var cmd = 0;
+        if (sl != 0) { sl = price - sl; }
+    }
     var msg = {};
     msg.command = "tradeTransaction";
     var arguments = {};
@@ -44,6 +50,7 @@ function sendStartTrade(action, symbol, price, volume, wSocket) {
     tradeTransInfo.symbol = symbol;
     tradeTransInfo.type = 0;
     tradeTransInfo.volume = volume;
+    tradeTransInfo.sl = sl;
     arguments.tradeTransInfo = tradeTransInfo;
     msg.arguments = arguments;
     try {
@@ -93,9 +100,9 @@ function sendGetPreviousTrades(wSocket) {
 }
 
 module.exports = {
-    login: function login(ws) { sendLogin(ws); },
+    login: function login(ws, account) { sendLogin(ws, account); },
     getPrice: function getPrice(symbol, ws) { sendGetPrice(symbol, ws); },
-    startTrade: function startTrade(action, symbol, price, volume, wSocket) { sendStartTrade(action, symbol, price, volume, wSocket); },
+    startTrade: function startTrade(action, symbol, price, volume, wSocket, sl) { sendStartTrade(action, symbol, price, volume, wSocket, sl); },
     closeTrade: function closeTrade(position, volume, price, symbol, wSocket) { sendCloseTrade(position, volume, price, symbol, wSocket); },
     getPreviousTrades: function getPreviousTrades(wSocket) { sendGetPreviousTrades(wSocket); }
 }
