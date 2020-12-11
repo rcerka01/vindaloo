@@ -34,12 +34,16 @@ function sendGetPrice(symbol, ws) {
 }
 
 function sendStartTrade(action, symbol, price, volume, wSocket, sl, offset) {
+    const slFormated = (sl) => { return Number(sl.toFixed(5)); }
+    offset = offset * 10;
     if (action == "sell") { 
         var cmd = 1; 
-        if (sl != 0) { sl = price + sl; }
+        if (sl != 0) { sl = (price + sl / 10000); }
+        sl = slFormated(sl);
     } else { 
         var cmd = 0;
-        if (sl != 0) { sl = price - sl; }
+        if (sl != 0) { sl = (price - sl / 10000); }
+        sl = slFormated(sl);
     }
     var msg = {};
     msg.command = "tradeTransaction";
