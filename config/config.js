@@ -31,5 +31,21 @@ module.exports = {
     {
         user: secret.user6,
         password: secret.password6,
+    },
+    {
+        user: secret.user7,
+        password: secret.password7,
+    },
+    {
+        user: secret.user8,
+        password: secret.password8,
+    },
+    {
+        user: secret.user9,
+        password: secret.password9,
+    },
+    {
+        user: secret.user10,
+        password: secret.password10,
     }]
 }
