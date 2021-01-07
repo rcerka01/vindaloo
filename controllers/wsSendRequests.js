@@ -23,7 +23,6 @@ function sendGetPrice(symbol, ws) {
     var arguments = {};
     arguments.symbol = symbol;
     msg.arguments = arguments;
-    console.log('Looking price for: ' + msg.arguments.symbol);
     try {
         var msg = JSON.stringify(msg);
         ws.send(msg);

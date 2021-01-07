@@ -12,19 +12,29 @@ function disconnect(ws) {
     return ws.close();
 }
 
-function closeTrades(trades, symbol, wSocket) {
+function actionStringToInt(action) {
+    if (action == "buy") { return 0; } else { return 1; }
+}
+
+function closeTrades(trades, symbol, wSocket, action) {
+    var cmd = actionStringToInt(action);
     for (i in trades) {
-        if (trades[i].symbol == symbol) {
+        // close only trades of oposite direction
+        if (trades[i].symbol == symbol && trades[i].cmd != cmd) {
             send.closeTrade(trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
         }
     }
+}
+
+function isExistingTrade(trades, symbol, cmd) {
+    return trades.some(item =>  item.cmd === cmd && item.symbol === symbol )
 }
 
 module.exports = { run: function (app) {
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume", function(req, res) {
 
-        var account = req.params.account;
+        var account = Number(req.params.account);
         var sl = Number(req.params.sl);
         var tp = Number(req.params.tp);
         var offset = Number(req.params.offset);
@@ -36,7 +46,7 @@ module.exports = { run: function (app) {
 
         wSocket.onopen = function() {
             console.log('Connected');
-            ws = send.login(wSocket, Number(account));
+            ws = send.login(wSocket, account);
         };
 
         wSocket.onmessage = function(evt) {
@@ -45,18 +55,38 @@ module.exports = { run: function (app) {
                 if(response.status == true) {
                     if(response.streamSessionId != undefined) {
                         console.log("Login successful");
+
                         send.getPreviousTrades(wSocket);
-                        send.getPrice(symbol, wSocket)
+
                     } else if (response.returnData.ask != undefined) {
+                        /* return getPrice */
+
                         if (action == "sell") { var price = response.returnData.bid; } else { var price = response.returnData.ask; }
-                        console.log("Price to " + action + " is " + price)
                         send.startTrade(action, symbol, price, volume, wSocket, sl, tp, offset)
+                   
                     } else if (response.returnData.order != undefined) {
+                        /* return startTrade. Jusr order ID */
+
                         var order = response.returnData.order;
-                        console.log("Order compleated: " + order)
+                        console.log("Order compleated: " + order); // finish
+
+                        // change condition to for also 0 trades open
                     } else if (response.returnData.length > 0) {
-                        console.log("Runing trades: " + response.returnData.length)
-                        closeTrades(response.returnData, symbol, wSocket);
+                        /* return getPreviousTrades */
+
+                        var cmd = actionStringToInt(action);
+
+                        // only if trade is NOT in same direction (buy / sell)
+                        if (!isExistingTrade(response.returnData, symbol, cmd)) {
+                            send.getPrice(symbol, wSocket) // ignites new order
+                            closeTrades(response.returnData, symbol, wSocket, action);
+                        }
+
+                    } else if (response.returnData.length == 0) {
+                        /* return getPreviousTrades, none exist. Start first one */
+
+                        send.getPrice(symbol, wSocket)
+
                     } else {
                         console.log("Disconecting, no action taken.");
                         //disconnect(wSocket);
