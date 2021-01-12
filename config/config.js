@@ -67,5 +67,9 @@ module.exports = {
     {
         user: secret.user15,
         password: secret.password15
+    },
+    {
+        user: secret.user16,
+        password: secret.password16
     }]
 }
