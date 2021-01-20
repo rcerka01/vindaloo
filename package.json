@@ -19,6 +19,7 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "node-schedule": "^1.3.2",
     "unirest": "^0.6.0",
     "ws": "^7.3.1",
     "xapi-node": "^2.3.5"
