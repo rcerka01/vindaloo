@@ -8,6 +8,18 @@ module.exports = {
     ws: {
         url: "wss://ws.xapi.pro/demo"
     },
+    timedependant: {
+        openTime: {
+            hour: '7',
+            minute: '00'
+        },
+        closeTime: {
+            hour: '18',
+            minute: '30'
+        },
+        closeSymbols: ['GBPUSD'],
+        closeAccounts: [15,14,13,12,11]
+    },
     login: [{
         user: secret.user1,
         password: secret.password1
@@ -71,5 +83,9 @@ module.exports = {
     {
         user: secret.user16,
         password: secret.password16
+    },
+    {
+        user: secret.user17,
+        password: secret.password17
     }]
 }
