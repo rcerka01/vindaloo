@@ -8,6 +8,9 @@ module.exports = {
     ws: {
         url: "wss://ws.xapi.pro/demo"
     },
+    wsLive: {
+        url: "wss://ws.xtb.com/real"
+    },
     timedependant: {
         openTime: {
             hour: '7',
@@ -87,5 +90,17 @@ module.exports = {
     {
         user: secret.user17,
         password: secret.password17
+    },
+    {
+        user: secret.user18,
+        password: secret.password18
+    },
+    {
+        user: secret.user19,
+        password: secret.password19
+    },
+    {
+        user: secret.user20,
+        password: secret.password20
     }]
 }

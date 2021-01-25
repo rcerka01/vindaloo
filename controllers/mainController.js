@@ -6,15 +6,12 @@ const schedule = require('node-schedule');
 
 var TIME_DEPENDANT_RUN_FLAG = false;
  
-function connect() {
-    var url = conf.ws.url;
+function connect(account) {
+    if (account >= 20) { var url = conf.wsLive.url; } else { var url = conf.ws.url; }
     console.log('Connecting to: ' + url);
     return new WebSocket(url);
 }
 
-function disconnect(ws) {
-    return ws.close();
-}
 
 function actionStringToInt(action) {
     if (action == "buy") { return 0; } else { return 1; }
@@ -85,7 +82,7 @@ module.exports = { run: function (app) {
 
         // lock time dependant
         if (run) {
-            const wSocket = connect();
+            const wSocket = connect(account);
 
             wSocket.onopen = function() {
                 console.log('Connected');
@@ -132,7 +129,6 @@ module.exports = { run: function (app) {
 
                         } else {
                             console.log("Disconecting, no action taken.");
-                            //disconnect(wSocket);
                         }
                     } else {
                         console.log('Error: ' + response.errorDescr);
