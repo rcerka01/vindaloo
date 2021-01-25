@@ -1,6 +1,7 @@
 const conf = require("../config/config");
 const send = require("./wsSendRequests");    
 const closeTradesController = require("./closeTradesController");    
+const intervalSchedulesController = require("./intervalSchedulesController");    
 const WebSocket = require('ws');
 const schedule = require('node-schedule');
 
@@ -64,6 +65,8 @@ function closeDay() {
 module.exports = { run: function (app) {
     openDay();
     closeDay();
+
+    intervalSchedulesController.run(15, 'GBPUSD');
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume/:timedependant?", function(req, res) {
 
