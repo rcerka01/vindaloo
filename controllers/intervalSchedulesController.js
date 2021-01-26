@@ -53,8 +53,9 @@ module.exports = { run: function (symbol, account) {
 
                     } else {
                         console.log("Disconecting, no action taken.");
+                        //disconnect(wSocket);
                     }
-                    https://www.lsm.lv/raksts/zinas/latvija/no-sodienas-iecelosanai-latvija-der-tikai-viena-veida-negativs-covid-19-tests.a390127/       } else {
+                } else {
                     console.log('Error: ' + response.errorDescr);
                 }
             } catch (Exception) {

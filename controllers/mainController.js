@@ -64,6 +64,7 @@ module.exports = { run: function (app) {
     closeDay();
 
     intervalSchedulesController.run(15, 'GBPUSD');
+    
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume/:timedependant?", function(req, res) {
 
