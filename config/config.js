@@ -21,8 +21,22 @@ module.exports = {
             minute: '30'
         },
         closeSymbols: ['GBPUSD'],
-        closeAccounts: [15,14,13,12,11]
+        closeAccounts: [11]
     },
+    oneMinuteIntevalSchedules: [
+        { account: 13,
+                 items: [{
+                    symbol: 'GBPUSD',
+                    threshold: 10
+                 }]
+        },
+        { account: 12,
+            items: [{
+               symbol: 'GBPUSD',
+               threshold: 15
+            }]
+        }
+    ],
     login: [{
         user: secret.user1,
         password: secret.password1

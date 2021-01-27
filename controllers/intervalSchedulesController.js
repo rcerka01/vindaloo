@@ -1,25 +1,20 @@
 const conf = require("../config/config");
 const send = require("./wsSendRequests");    
+const closeTrades = require("./closeTradesController");    
 const WebSocket = require('ws');
- 
+const schedule = require('node-schedule');
+
 function connect(account) {
     if (account >= 20) { var url = conf.wsLive.url; } else { var url = conf.ws.url; }
     console.log('Connecting to: ' + url);
     return new WebSocket(url);
 }
 
-function closeTrades(trades, symbol, wSocket) {
-    for (i in trades) {
-        if (trades[i].symbol == symbol) {
-            send.closeTrade(trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
-        }
-    }
-}
+module.exports = { run: function (account, symbol, threshold) {
 
-module.exports = { close: function (symbol, account) {
+    schedule.scheduleJob('0 * 0-7,19-23 * * 1-5', function(){
+//_________________________________________________________________________
         const wSocket = connect(account);
-
-        console.log("RUN CLOSE TRADES " + symbol + " " + account)
 
         wSocket.onopen = function() {
             console.log('Connected');
@@ -37,8 +32,15 @@ module.exports = { close: function (symbol, account) {
                         // change condition to for also 0 trades open
                     } else if (response.returnData.length > 0) {
                         /* return getPreviousTrades */
-                        closeTrades(response.returnData, symbol, wSocket);
 
+                        const data = response.returnData;
+                        for (i in data) {
+                            if (data[i].symbol == symbol) {
+                                if (data[i].profit >= threshold) {
+                                    closeTrades.close(symbol, account);
+                                }
+                            }
+                        }
                     } else if (response.returnData.length == 0) {
                         /* return getPreviousTrades, none exist. Start first one */
                         send.getPrice(symbol, wSocket)
@@ -56,5 +58,8 @@ module.exports = { close: function (symbol, account) {
         wSocket.onclose = function() {
             console.log('Connection closed');
         };
-    }
-}
+
+    //_________________________________________________________________________
+    });
+
+}}

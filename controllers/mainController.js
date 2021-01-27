@@ -1,6 +1,7 @@
 const conf = require("../config/config");
 const send = require("./wsSendRequests");    
 const closeTradesController = require("./closeTradesController");    
+const intervalSchedulesController = require("./intervalSchedulesController");    
 const WebSocket = require('ws');
 const schedule = require('node-schedule');
 
@@ -58,9 +59,22 @@ function closeDay() {
     });
 }
 
+function runScheduler(par) {
+    for (i in par) {
+        var account = par[i].account;
+        var items = par[i].items;
+        for (ii in items) {
+            var symbol = items[ii].symbol;
+            var threshold = items[ii].threshold;
+            intervalSchedulesController.run(account, symbol, threshold);
+        }
+    }
+}
+    
 module.exports = { run: function (app) {
     openDay();
     closeDay();
+    runScheduler(conf.oneMinuteIntevalSchedules);
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume/:timedependant?", function(req, res) {
 
