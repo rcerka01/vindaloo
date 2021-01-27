@@ -1,28 +1,20 @@
 const conf = require("../config/config");
 const send = require("./wsSendRequests");    
+const closeTrades = require("./closeTradesController");    
 const WebSocket = require('ws');
 const schedule = require('node-schedule');
 
-function connect() {
-    var url = conf.ws.url;
+function connect(account) {
+    if (account >= 20) { var url = conf.wsLive.url; } else { var url = conf.ws.url; }
     console.log('Connecting to: ' + url);
     return new WebSocket(url);
 }
 
-function disconnect(ws) {
-    return ws.close();
-}
+module.exports = { run: function (account, symbol, threshold) {
 
-module.exports = { run: function (symbol, account) {
-
-    console.log('got this')
-
-    schedule.scheduleJob('0 * * * * 1-5', function(){
-        console.log('The answer to life, the universe, and everything!');
-      
-
+    schedule.scheduleJob('0 * 0-7,19-23 * * 1-5', function(){
 //_________________________________________________________________________
-        const wSocket = connect();
+        const wSocket = connect(account);
 
         wSocket.onopen = function() {
             console.log('Connected');
@@ -41,19 +33,20 @@ module.exports = { run: function (symbol, account) {
                     } else if (response.returnData.length > 0) {
                         /* return getPreviousTrades */
 
-                        const data = response.data
+                        const data = response.returnData;
                         for (i in data) {
-                            console.log(data.profit)
+                            if (data[i].symbol == symbol) {
+                                if (data[i].profit >= threshold) {
+                                    closeTrades.close(symbol, account);
+                                }
+                            }
                         }
-                        //closeTrades(response.returnData, symbol, wSocket);
-
                     } else if (response.returnData.length == 0) {
                         /* return getPreviousTrades, none exist. Start first one */
                         send.getPrice(symbol, wSocket)
 
                     } else {
                         console.log("Disconecting, no action taken.");
-                        //disconnect(wSocket);
                     }
                 } else {
                     console.log('Error: ' + response.errorDescr);
@@ -66,9 +59,7 @@ module.exports = { run: function (symbol, account) {
             console.log('Connection closed');
         };
 
-
     //_________________________________________________________________________
-});
+    });
 
-     }
-}
+}}

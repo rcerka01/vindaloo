@@ -2,14 +2,10 @@ const conf = require("../config/config");
 const send = require("./wsSendRequests");    
 const WebSocket = require('ws');
  
-function connect() {
-    var url = conf.ws.url;
+function connect(account) {
+    if (account >= 20) { var url = conf.wsLive.url; } else { var url = conf.ws.url; }
     console.log('Connecting to: ' + url);
     return new WebSocket(url);
-}
-
-function disconnect(ws) {
-    return ws.close();
 }
 
 function closeTrades(trades, symbol, wSocket) {
@@ -21,7 +17,9 @@ function closeTrades(trades, symbol, wSocket) {
 }
 
 module.exports = { close: function (symbol, account) {
-        const wSocket = connect();
+        const wSocket = connect(account);
+
+        console.log("RUN CLOSE TRADES " + symbol + " " + account)
 
         wSocket.onopen = function() {
             console.log('Connected');
