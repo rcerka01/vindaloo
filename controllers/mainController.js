@@ -1,11 +1,11 @@
 const conf = require("../config/config");
 const send = require("./wsSendRequests");    
-const closeTradesController = require("./closeTradesController");    
-const intervalSchedulesController = require("./intervalSchedulesController");    
+// const closeTradesController = require("./closeTradesController");    
+// const intervalSchedulesController = require("./intervalSchedulesController");    
 const WebSocket = require('ws');
-const schedule = require('node-schedule');
+// const schedule = require('node-schedule');
 
-var TIME_DEPENDANT_RUN_FLAG = false;
+// var TIME_DEPENDANT_RUN_FLAG = false;
  
 function connect(account) {
     if (account >= 20) { var url = conf.wsLive.url; } else { var url = conf.ws.url; }
@@ -32,49 +32,49 @@ function isExistingTrade(trades, symbol, cmd) {
     return trades.some(item =>  item.cmd === cmd && item.symbol === symbol )
 }
 
-function formatScheduleTime(time) {
-    const formatedTime = '0 ' + time.minute + ' ' + time.hour + ' * * 1-5';
-    return formatedTime;
-}
+// function formatScheduleTime(time) {
+//     const formatedTime = '0 ' + time.minute + ' ' + time.hour + ' * * 1-5';
+//     return formatedTime;
+// }
 
 
-function openDay() {
-    schedule.scheduleJob(formatScheduleTime(conf.timedependant.openTime), function(){
-        console.log('OPEN DAY');
-        TIME_DEPENDANT_RUN_FLAG = true;
-    });
+// function openDay() {
+//     schedule.scheduleJob(formatScheduleTime(conf.timedependant.openTime), function(){
+//         console.log('OPEN DAY');
+//         TIME_DEPENDANT_RUN_FLAG = true;
+//     });
 
-}
+// }
 
-function closeDay() {
-    schedule.scheduleJob(formatScheduleTime(conf.timedependant.closeTime), function(){
-        console.log('CLOSE DAY');
-        TIME_DEPENDANT_RUN_FLAG = false;
+// function closeDay() {
+//     schedule.scheduleJob(formatScheduleTime(conf.timedependant.closeTime), function(){
+//         console.log('CLOSE DAY');
+//         TIME_DEPENDANT_RUN_FLAG = false;
 
-        for (i in conf.timedependant.closeAccounts) {
-            for (ii in conf.timedependant.closeSymbols) {
-                closeTradesController.close(conf.timedependant.closeSymbols[ii], conf.timedependant.closeAccounts[i]);
-            }
-        }        
-    });
-}
+//         for (i in conf.timedependant.closeAccounts) {
+//             for (ii in conf.timedependant.closeSymbols) {
+//                 closeTradesController.close(conf.timedependant.closeSymbols[ii], conf.timedependant.closeAccounts[i]);
+//             }
+//         }        
+//     });
+// }
 
-function runScheduler(par) {
-    for (i in par) {
-        var account = par[i].account;
-        var items = par[i].items;
-        for (ii in items) {
-            var symbol = items[ii].symbol;
-            var threshold = items[ii].threshold;
-            intervalSchedulesController.run(account, symbol, threshold);
-        }
-    }
-}
+// function runScheduler(par) {
+//     for (i in par) {
+//         var account = par[i].account;
+//         var items = par[i].items;
+//         for (ii in items) {
+//             var symbol = items[ii].symbol;
+//             var threshold = items[ii].threshold;
+//             intervalSchedulesController.run(account, symbol, threshold);
+//         }
+//     }
+// }
     
 module.exports = { run: function (app) {
-    openDay();
-    closeDay();
-    runScheduler(conf.oneMinuteIntevalSchedules);
+    // openDay();
+    // closeDay();
+    // runScheduler(conf.oneMinuteIntevalSchedules);
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume/:timedependant?", function(req, res) {
 
@@ -88,14 +88,14 @@ module.exports = { run: function (app) {
         var timeDependant = req.params.timedependant;
 
         // set lock for time dependant
-        if (timeDependant == 'true' && !TIME_DEPENDANT_RUN_FLAG) {
-            var run = false;
-        } else {
-            var run = true;
-        }
+        // if (timeDependant == 'true' && !TIME_DEPENDANT_RUN_FLAG) {
+        //     var run = false;
+        // } else {
+        //     var run = true;
+        // }
 
         // lock time dependant
-        if (run) {
+        //if (run) {
             const wSocket = connect(account);
 
             wSocket.onopen = function() {
@@ -156,7 +156,7 @@ module.exports = { run: function (app) {
                 console.log('Connection closed');
             };
 
-        } // close time deendant lock
+        //} // close time deendant lock
 
         res.render("index");
         });
