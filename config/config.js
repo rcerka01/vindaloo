@@ -11,32 +11,32 @@ module.exports = {
     wsLive: {
         url: "wss://ws.xtb.com/real"
     },
-    timedependant: {
-        openTime: {
-            hour: '7',
-            minute: '00'
-        },
-        closeTime: {
-            hour: '18',
-            minute: '30'
-        },
-        closeSymbols: ['GBPUSD'],
-        closeAccounts: [11]
-    },
-    oneMinuteIntevalSchedules: [
-        { account: 13,
-                 items: [{
-                    symbol: 'GBPUSD',
-                    threshold: 10
-                 }]
-        },
-        { account: 12,
-            items: [{
-               symbol: 'GBPUSD',
-               threshold: 15
-            }]
-        }
-    ],
+    // timedependant: {
+    //     openTime: {
+    //         hour: '7',
+    //         minute: '00'
+    //     },
+    //     closeTime: {
+    //         hour: '18',
+    //         minute: '30'
+    //     },
+    //     closeSymbols: ['GBPUSD'],
+    //     closeAccounts: [11]
+    // },
+    // oneMinuteIntevalSchedules: [
+    //     { account: 13,
+    //              items: [{
+    //                 symbol: 'GBPUSD',
+    //                 threshold: 10
+    //              }]
+    //     },
+    //     { account: 12,
+    //         items: [{
+    //            symbol: 'GBPUSD',
+    //            threshold: 15
+    //         }]
+    //     }
+    // ],
     login: [{
         user: secret.user1,
         password: secret.password1
