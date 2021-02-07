@@ -94,8 +94,14 @@ module.exports = { run: function (app) {
         //     var run = true;
         // }
 
-        // lock time dependant
-        //if (run) {
+        if (account == 18) {
+            var run = false;
+        } else {
+            var run = true;
+        }
+
+        // lock  dependant
+        if (run) {
             const wSocket = connect(account);
 
             wSocket.onopen = function() {
@@ -156,7 +162,7 @@ module.exports = { run: function (app) {
                 console.log('Connection closed');
             };
 
-        //} // close time deendant lock
+        } // close time deendant lock
 
         res.render("index");
         });
