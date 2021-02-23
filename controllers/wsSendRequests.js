@@ -4,8 +4,10 @@ function sendLogin(ws, account) {
     var msg = {};
     msg.command = "login";
     var arguments = {};
-    arguments.userId = conf.login[Number(account) - 1].user;
-    arguments.password = conf.login[Number(account) - 1].password;
+    
+    let login = conf.login.find(l => Number(l.id) === account);
+    arguments.userId = login.user;
+    arguments.password = login.password;
     msg.arguments = arguments;
     //console.log('Trying to log in as: ' + msg.arguments.userId);
     try {
