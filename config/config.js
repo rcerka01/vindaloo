@@ -96,6 +96,35 @@ module.exports = {
                     volume: 0.1
                 }
             ]
+        },
+        {
+            id: 1005,
+            accounts: [
+                //     {
+                //     id: 102,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'GBPUSD',
+                //     volume: 0.1
+                // },
+                {
+                    id: 3,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.3
+                },
+                {
+                    id: 13,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.3
+                }
+            ]
         }
     ],
     login: [{
