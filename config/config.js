@@ -194,6 +194,12 @@ module.exports = {
         user: secret.user15,
         password: secret.password15
     },
+    {
+        id: 16,
+        type: 'demo',
+        user: secret.user16,
+        password: secret.password16
+    },
 
 
     // Nipun
