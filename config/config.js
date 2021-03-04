@@ -11,7 +11,7 @@ module.exports = {
     wsLive: {
         url: "wss://ws.xtb.com/real"
     },
-    lockedAccounts: [18,101,102,103,104],
+    lockedAccounts: [18,101,102,103],
     multiples: [
         {   // 35
             id: 1001,
