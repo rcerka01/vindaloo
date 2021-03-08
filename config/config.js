@@ -11,21 +11,13 @@ module.exports = {
     wsLive: {
         url: "wss://ws.xtb.com/real"
     },
-    lockedAccounts: [18,101,102,103,104],
+    lockedAccounts: [101,102,103,104],
     multiples: [
         {   // 35
             id: 1001,
             accounts: [
                     {
                     id: 101,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                },
-                {
-                    id: 12,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -44,14 +36,6 @@ module.exports = {
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
-                },
-                {
-                    id: 13,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
                 }
             ]
         },        
@@ -60,14 +44,6 @@ module.exports = {
             accounts: [
                     {
                     id: 103,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                },
-                {
-                    id: 14,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -86,9 +62,22 @@ module.exports = {
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
-                },
+                }
+            ]
+        },
+        {   // 40 GUESTS
+            id: 2001,
+            accounts: [
                 {
-                    id: 15,
+                    id: 1,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                },
+                    {
+                    id: 50,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -96,7 +85,52 @@ module.exports = {
                     volume: 0.1
                 },
                 {
-                    id: 16,
+                    id: 60,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 70,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   // 45 GUESTS
+            id: 2002,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 61,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 71,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -200,22 +234,112 @@ module.exports = {
         user: secret.user16,
         password: secret.password16
     },
-
-
-    // Nipun
     {
         id: 17,
         type: 'demo',
         user: secret.user17,
         password: secret.password17
     },
-    // Marsel
     {
         id: 18,
         type: 'demo',
         user: secret.user18,
         password: secret.password18
     },
+    {
+        id: 19,
+        type: 'demo',
+        user: secret.user19,
+        password: secret.password19
+    },    
+    {
+        id: 20,
+        type: 'demo',
+        user: secret.user20,
+        password: secret.password20
+    },
+
+
+    // Nipun
+    {
+        id: 50,
+        type: 'demo',
+        user: secret.user50,
+        password: secret.password50
+    },
+    {
+        id: 51,
+        type: 'demo',
+        user: secret.user51,
+        password: secret.password51
+    },
+    {
+        id: 52,
+        type: 'demo',
+        user: secret.user52,
+        password: secret.password52
+    },
+    {
+        id: 53,
+        type: 'demo',
+        user: secret.user53,
+        password: secret.password53
+    },
+
+    // Marsel
+    {
+        id: 60,
+        type: 'demo',
+        user: secret.user60,
+        password: secret.password60
+    },
+    {
+        id: 61,
+        type: 'demo',
+        user: secret.user61,
+        password: secret.password61
+    },
+    {
+        id: 62,
+        type: 'demo',
+        user: secret.user62,
+        password: secret.password62
+    },
+    {
+        id: 63,
+        type: 'demo',
+        user: secret.user63,
+        password: secret.password63
+    },
+
+    // Ilva
+    {
+        id: 70,
+        type: 'demo',
+        user: secret.user70,
+        password: secret.password70
+    },
+    {
+        id: 71,
+        type: 'demo',
+        user: secret.user71,
+        password: secret.password71
+    },
+    {
+        id: 72,
+        type: 'demo',
+        user: secret.user72,
+        password: secret.password72
+    },
+    {
+        id: 73,
+        type: 'demo',
+        user: secret.user73,
+        password: secret.password73
+    },
+
+
+
 
 
     {
