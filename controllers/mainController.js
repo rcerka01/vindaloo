@@ -1,12 +1,49 @@
 const conf = require("../config/config");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
+const multipleFactorController = require("./multipleFactorController");     
+const closeTradeController = require("./closeTradeController");     
 
 module.exports = { run: function (app) {
 
     function isLockedAccount(account) {
         return conf.lockedAccounts.includes(account);
     }
+
+    app.post("/close/:account/:symbol", function(req, res) {
+
+        var account = Number(req.params.account);
+        var name = req.params.symbol;
+
+        closeTradeController.close(account, name);
+
+        res.render("index");
+    });
+
+    app.post("/multiple-factor/:key/:value", function(req, res) {
+
+        var key = req.params.key;
+        var value = Number(req.params.value);
+
+        multipleFactorController.createOrUpdate(key, value);
+
+        res.render("index");
+    });
+
+    app.get("/display-factors", function(req, res) {
+
+        var factors = multipleFactorController.getFactors();
+
+        let output = "<ul>";
+
+        for (let [key, value] of factors) {
+            output = output + "<li>" + key + ' => ' + value + "</li>";
+        }
+
+        output = output + "</ul>";
+
+        res.render("factors", { output });
+    });
 
     app.post("/:account/:action", function(req, res) {
 
