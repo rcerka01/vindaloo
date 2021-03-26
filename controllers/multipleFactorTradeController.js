@@ -43,7 +43,7 @@ function isOpenSellTrade(factors) {
 function runMultipleFactorTrade(factors) {
 
     const account = 777;
-    const symbol = "DE30";
+    const symbol = "OIL";
     const buy = "buy";
     const sell = "sell";
 
@@ -63,10 +63,6 @@ function runMultipleFactorTrade(factors) {
             multipleTradeController.close(account, symbol);
         }
 
-    }
-
-    for (let [key, value] of factors) {
-        console.log("multiple trade run " + key + ' => ' + value);
     }
 }
 
