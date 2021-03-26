@@ -13,6 +13,27 @@ module.exports = {
     },
     lockedAccounts: [],
     multiples: [
+        {   // oil
+            id: 777,
+            accounts: [
+                    {
+                    id: 16,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL',
+                    volume: 0.1
+                }
+            ]
+        },
         {   // 35
             id: 1001,
             accounts: [
