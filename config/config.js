@@ -18,7 +18,7 @@ module.exports = {
             accounts: [
                     {
                     id: 16,
-                    sl: 0,
+                    sl: 3000,
                     tp: 0,
                     offset: 0,
                     symbol: 'OIL',
@@ -26,7 +26,7 @@ module.exports = {
                 },
                 {
                     id: 50,
-                    sl: 0,
+                    sl: 3000,
                     tp: 0,
                     offset: 0,
                     symbol: 'OIL',
