@@ -21,7 +21,7 @@ module.exports = {
                     sl: 3000,
                     tp: 0,
                     offset: 0,
-                    symbol: 'OIL',
+                    symbol: 'OIL.WTI',
                     volume: 0.1
                 },
                 {
@@ -29,7 +29,7 @@ module.exports = {
                     sl: 3000,
                     tp: 0,
                     offset: 0,
-                    symbol: 'OIL',
+                    symbol: 'OIL.WTI',
                     volume: 0.1
                 }
             ]
