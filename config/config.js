@@ -16,6 +16,14 @@ module.exports = {
         {   // oil
             id: 777,
             accounts: [
+                {
+                    id: 19,
+                    sl: 3000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL.WTI',
+                    volume: 0.1
+                },
                     {
                     id: 16,
                     sl: 3000,
