@@ -16,11 +16,11 @@ module.exports = {
             }
         });
     },
-    close: function (account) {
+    close: function (account, direction) {
         let multiple = conf.multiples.find(m => Number(m.id) === account);
 
         multiple.accounts.map(a => {
-            closeTradeController.close(a.id, a.symbol);
+            closeTradeController.close(a.id, a.symbol, direction);
         });
     }
 }

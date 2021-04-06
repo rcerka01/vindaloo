@@ -15,7 +15,20 @@ function closeTrades(trades, symbol, wSocket) {
     }
 }
 
-module.exports = { close: function (account, symbol) {
+function tradeDirectionToDigit(direction) {
+    if (direction === "buy") {
+        return 0;
+    } else if (direction === "sell") {
+        return 1;    
+    } else {
+        return -1;
+    }
+}
+
+module.exports = { close: function (account, symbol, tradeDirection) {
+
+    const cmd = tradeDirectionToDigit(tradeDirection);
+
     const wSocket = connect(account);
 
     wSocket.onopen = function() {
@@ -33,7 +46,13 @@ module.exports = { close: function (account, symbol) {
 
                 } else if (response.returnData.length > 0) {
                     
-                    closeTrades(response.returnData, symbol, wSocket);
+                    if (cmd < 0) {
+                        closeTrades(response.returnData, symbol, wSocket);
+                    } else {
+                        const tradesToClose =  response.returnData.filter(data => 
+                            data.symbol === symbol && data.cmd === cmd);
+                        closeTrades(tradesToClose, symbol, wSocket);
+                    }                    
 
                 } else {
                     console.log("Disconecting, no action taken.");
@@ -50,5 +69,4 @@ module.exports = { close: function (account, symbol) {
         console.log('Connection closed');
     };
 
-}
-}
+}}
