@@ -1,7 +1,7 @@
 const conf = require("../config/config");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
-const multipleFactorController = require("./multipleFactorController");     
+const mfController = require("./mfController");     
 const closeTradeController = require("./closeTradeController");     
 
 module.exports = { run: function (app) {
@@ -25,14 +25,14 @@ module.exports = { run: function (app) {
         var key = req.params.key;
         var value = Number(req.params.value);
 
-        multipleFactorController.createOrUpdate(key, value);
+        mfController.createOrUpdate(key, value);
 
         res.render("index");
     });
 
     app.get("/display-factors", function(req, res) {
 
-        var factors = multipleFactorController.getFactors();
+        var factors = mfController.getFactors();
 
         let output = "<ul>";
 
@@ -41,6 +41,12 @@ module.exports = { run: function (app) {
         }
 
         output = output + "</ul>";
+
+        for (let [key, value] of factors) {
+            output = output + "curl -X POST " + "http://" + req.headers.host + "/multiple-factor/"
+            + key + "/" + value
+            + "<br>";
+        }
 
         res.render("factors", { output });
     });
@@ -77,5 +83,4 @@ module.exports = { run: function (app) {
         res.render("index");
     });
     
-}
-}
+}}
