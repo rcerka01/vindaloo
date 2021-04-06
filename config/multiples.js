@@ -1,6 +1,6 @@
 module.exports = {
     accounts: [
-        {   // oil
+        {   // 5min
             id: 777,
             accounts: [
                 {
@@ -20,101 +20,578 @@ module.exports = {
                     volume: 0.1
                 }
             ]
-        },
-        {   // 35
-            id: 1001,
-            accounts: [
-                    {
-                    id: 101,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   // 40
-            id: 1002,
-            accounts: [
-                    {
-                    id: 102,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },        
-        {   // 45
-            id: 1003,
-            accounts: [
-                    {
-                    id: 103,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },        
-        {   // 50 0.0009
-            id: 1004,
-            accounts: [
-                    {
-                    id: 104,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   // 40 GUESTS
-            id: 2001,
+        },{   
+            id: 778,
             accounts: [
                 {
-                    id: 1,
+                    id: 19,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'UK100',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'UK100',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 779,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 150000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'DE30',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 150000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'DE30',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 780,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 80000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'US500',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 80000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'US500',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 781,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'FRA40',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'FRA40',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 782,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EU50',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EU50',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 791,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 792,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 793,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 794,
+            accounts: [
+                {
+                    id: 19,
                     sl: 25,
                     tp: 0,
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
                 },
-                    {
+                {
                     id: 50,
                     sl: 25,
                     tp: 0,
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
-                },
+                }
+            ]
+        },{   
+            id: 795,
+            accounts: [
                 {
-                    id: 60,
+                    id: 19,
                     sl: 25,
                     tp: 0,
                     offset: 0,
-                    symbol: 'GBPUSD',
+                    symbol: 'USDCAD',
                     volume: 0.1
                 },
                 {
-                    id: 70,
+                    id: 50,
                     sl: 25,
                     tp: 0,
                     offset: 0,
-                    symbol: 'GBPUSD',
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 796,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 797,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 798,
+            accounts: [
+                {
+                    id: 19,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 50,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
                     volume: 0.1
                 }
             ]
         },
-        {   // 45 GUESTS
-            id: 2002,
+        // {   // 35
+        //     id: 1001,
+        //     accounts: [
+        //             {
+        //             id: 101,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },
+        // {   // 40
+        //     id: 1002,
+        //     accounts: [
+        //             {
+        //             id: 102,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },        
+        // {   // 45
+        //     id: 1003,
+        //     accounts: [
+        //             {
+        //             id: 103,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },        
+        // {   // 50 0.0009
+        //     id: 1004,
+        //     accounts: [
+        //             {
+        //             id: 104,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },
+        // {   // 40 GUESTS
+        //     id: 2001,
+        //     accounts: [
+        //         {
+        //             id: 1,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //             {
+        //             id: 50,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //         {
+        //             id: 60,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //         {
+        //             id: 70,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },
+        // {   // 45 GUESTS
+        //     id: 2002,
+        //     accounts: [
+        //         {
+        //             id: 2,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //         {
+        //             id: 51,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //         {
+        //             id: 61,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         },
+        //         {
+        //             id: 71,
+        //             sl: 25,
+        //             tp: 0,
+        //             offset: 0,
+        //             symbol: 'GBPUSD',
+        //             volume: 0.1
+        //         }
+        //     ]
+        // },
+        {   // 1min
+            id: 677,
             accounts: [
                 {
-                    id: 2,
+                    id: 20,
+                    sl: 3000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL.WTI',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 3000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL.WTI',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 678,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'UK100',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'UK100',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 679,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 150000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'DE30',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 150000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'DE30',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 680,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 80000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'US500',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 80000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'US500',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 681,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'FRA40',
+                    volume: 0.1
+                },
+                {
+                    id: 21,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'FRA40',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 682,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EU50',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 300000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EU50',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 691,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 692,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 693,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 0,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 694,
+            accounts: [
+                {
+                    id: 20,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -128,24 +605,88 @@ module.exports = {
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
-                },
+                }
+            ]
+        },{   
+            id: 695,
+            accounts: [
                 {
-                    id: 61,
+                    id: 20,
                     sl: 25,
                     tp: 0,
                     offset: 0,
-                    symbol: 'GBPUSD',
+                    symbol: 'USDCAD',
                     volume: 0.1
                 },
                 {
-                    id: 71,
+                    id: 51,
                     sl: 25,
                     tp: 0,
                     offset: 0,
-                    symbol: 'GBPUSD',
+                    symbol: 'USDCAD',
                     volume: 0.1
                 }
             ]
-        },
+        },{   
+            id: 696,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 697,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },{   
+            id: 698,
+            accounts: [
+                {
+                    id: 20,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        }
     ]
 }
