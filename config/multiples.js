@@ -1,6 +1,7 @@
 module.exports = {
     accounts: [
-        {   // strategy 3
+// STRATEGY 3 //////////////////////////////////////////////////////////////
+        { 
             id: 577,
             accounts: [
                 {
@@ -21,8 +22,8 @@ module.exports = {
                 }
             ]
         },
-//////////////////////////////////////////////////////////////////////////        
-        {   // 5min
+// 5 MIN ////////////////////////////////////////////////////////////////////////        
+        {
             id: 777,
             accounts: [
                 {
@@ -283,6 +284,7 @@ module.exports = {
                 }
             ]
         },
+ // LIVE //////////////////////////////////////////////////////////////////////       
         // {   // 35
         //     id: 1001,
         //     accounts: [
@@ -335,81 +337,9 @@ module.exports = {
         //         }
         //     ]
         // },
-        // {   // 40 GUESTS
-        //     id: 2001,
-        //     accounts: [
-        //         {
-        //             id: 1,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //             {
-        //             id: 50,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //         {
-        //             id: 60,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //         {
-        //             id: 70,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         }
-        //     ]
-        // },
-        // {   // 45 GUESTS
-        //     id: 2002,
-        //     accounts: [
-        //         {
-        //             id: 2,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //         {
-        //             id: 51,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //         {
-        //             id: 61,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         },
-        //         {
-        //             id: 71,
-        //             sl: 25,
-        //             tp: 0,
-        //             offset: 0,
-        //             symbol: 'GBPUSD',
-        //             volume: 0.1
-        //         }
-        //     ]
-        // },
-        {   // 1min
+
+// 1 MIN /////////////////////////////////////////////////////////////////////
+        { 
             id: 677,
             accounts: [
                 {
@@ -420,14 +350,14 @@ module.exports = {
                     symbol: 'OIL.WTI',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 3000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'OIL.WTI',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 3000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'OIL.WTI',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 678,
@@ -440,14 +370,14 @@ module.exports = {
                     symbol: 'UK100',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 300000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'UK100',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 300000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'UK100',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 679,
@@ -460,14 +390,14 @@ module.exports = {
                     symbol: 'DE30',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 150000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'DE30',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 150000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'DE30',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 680,
@@ -480,14 +410,14 @@ module.exports = {
                     symbol: 'US500',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 80000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'US500',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 80000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'US500',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 681,
@@ -500,14 +430,14 @@ module.exports = {
                     symbol: 'FRA40',
                     volume: 0.1
                 },
-                {
-                    id: 21,
-                    sl: 300000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'FRA40',
-                    volume: 0.1
-                }
+                // {
+                //     id: 21,
+                //     sl: 300000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'FRA40',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 682,
@@ -520,14 +450,14 @@ module.exports = {
                     symbol: 'EU50',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 300000,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EU50',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 300000,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'EU50',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 691,
@@ -540,14 +470,14 @@ module.exports = {
                     symbol: 'EURUSD',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'EURUSD',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 692,
@@ -560,14 +490,14 @@ module.exports = {
                     symbol: 'USDCHF',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCHF',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'USDCHF',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 693,
@@ -580,14 +510,14 @@ module.exports = {
                     symbol: 'USDJPY',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 0,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDJPY',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 0,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'USDJPY',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 694,
@@ -600,14 +530,14 @@ module.exports = {
                     symbol: 'GBPUSD',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'GBPUSD',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 695,
@@ -620,14 +550,14 @@ module.exports = {
                     symbol: 'USDCAD',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCAD',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'USDCAD',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 697,
@@ -640,14 +570,14 @@ module.exports = {
                     symbol: 'AUDUSD',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'AUDUSD',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'AUDUSD',
+                //     volume: 0.1
+                // }
             ]
         },{   
             id: 698,
@@ -660,14 +590,14 @@ module.exports = {
                     symbol: 'NZDUSD',
                     volume: 0.1
                 },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'NZDUSD',
-                    volume: 0.1
-                }
+                // {
+                //     id: 51,
+                //     sl: 25,
+                //     tp: 0,
+                //     offset: 0,
+                //     symbol: 'NZDUSD',
+                //     volume: 0.1
+                // }
             ]
         }
     ]
