@@ -68,10 +68,6 @@ module.exports =
             account: 795
         },
         {
-            symbol: "EURUSD",
-            account: 796
-        }, 
-        {
             symbol: "AUDUSD",
             account: 797
         },

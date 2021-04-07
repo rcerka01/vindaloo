@@ -221,26 +221,6 @@ module.exports = {
                 }
             ]
         },{   
-            id: 796,
-            accounts: [
-                {
-                    id: 19,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                },
-                {
-                    id: 50,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                }
-            ]
-        },{   
             id: 797,
             accounts: [
                 {
@@ -624,26 +604,6 @@ module.exports = {
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCAD',
-                    volume: 0.1
-                }
-            ]
-        },{   
-            id: 696,
-            accounts: [
-                {
-                    id: 20,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                },
-                {
-                    id: 51,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
                     volume: 0.1
                 }
             ]
