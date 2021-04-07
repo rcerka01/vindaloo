@@ -1,5 +1,27 @@
 module.exports = {
     accounts: [
+        {   // strategy 3
+            id: 577,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 3000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL.WTI',
+                    volume: 0.1
+                },
+                {
+                    id: 51,
+                    sl: 3000,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'OIL.WTI',
+                    volume: 0.1
+                }
+            ]
+        },
+//////////////////////////////////////////////////////////////////////////        
         {   // 5min
             id: 777,
             accounts: [

@@ -35,9 +35,10 @@ module.exports = { run: function (app) {
         var factors = mfController.getFactors();
 
         let output = "<ul>";
+        let count = 1;
 
         for (let [key, value] of factors) {
-            output = output + "<li>" + key + ' => ' + value + "</li>";
+            output = output + "<li>" + count++  + " " + key + ' => ' + value + "</li>";
         }
 
         output = output + "</ul>";

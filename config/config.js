@@ -3,6 +3,7 @@ const locked = require("./locked");
 const multiples = require("./multiples");
 const strategy1 = require("./strategy1");
 const strategy2 = require("./strategy2");
+const strategy3 = require("./strategy3");
 
 module.exports = {
     app: {
@@ -20,6 +21,7 @@ module.exports = {
     multiples: multiples.accounts,
     strategies: [
         strategy1,
-        strategy2
+        strategy2,
+        strategy3
     ]
 }
