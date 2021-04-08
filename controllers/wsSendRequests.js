@@ -35,20 +35,20 @@ function sendGetPrice(symbol, ws) {
 }
 
 function sendStartTrade(action, symbol, price, volume, wSocket, sl, tp, offset) {
-    const slFormated = (sl) => { return Number(sl.toFixed(5)); }
+    const nrFormated = (nr) => { return Number(nr.toFixed(5)); }
     offset = offset * 10;
     if (action == "sell") { 
         var cmd = 1; 
         if (sl != 0) { sl = (price + sl / 10000); }
         if (tp != 0) { tp = (price - tp / 10000); }
-        sl = slFormated(sl);
-        tp = slFormated(tp);
+        sl = nrFormated(sl);
+        tp = nrFormated(tp);
     } else { 
         var cmd = 0;
         if (sl != 0) { sl = (price - sl / 10000); }
         if (tp != 0) { tp = (price + tp / 10000); }
-        sl = slFormated(sl);
-        tp = slFormated(tp);
+        sl = nrFormated(sl);
+        tp = nrFormated(tp);
     }
     var msg = {};
     msg.command = "tradeTransaction";

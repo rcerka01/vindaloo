@@ -29,7 +29,7 @@ module.exports = {
                 {
                     id: 19,
                     sl: 3000,
-                    tp: 0,
+                    tp: 2000,
                     offset: 0,
                     symbol: 'OIL.WTI',
                     volume: 0.1
@@ -37,7 +37,7 @@ module.exports = {
                 {
                     id: 50,
                     sl: 3000,
-                    tp: 0,
+                    tp: 2000,
                     offset: 0,
                     symbol: 'OIL.WTI',
                     volume: 0.1
@@ -431,7 +431,7 @@ module.exports = {
                     volume: 0.1
                 },
                 // {
-                //     id: 21,
+                //     id: 51,
                 //     sl: 300000,
                 //     tp: 0,
                 //     offset: 0,

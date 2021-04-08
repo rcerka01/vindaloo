@@ -119,6 +119,12 @@ module.exports = {
             type: 'demo',
             user: secret.user20,
             password: secret.password20
+        },    
+        {
+            id: 21,
+            type: 'demo',
+            user: secret.user21,
+            password: secret.password21
         },
 
 
