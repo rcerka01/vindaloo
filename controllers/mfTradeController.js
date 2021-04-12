@@ -1,4 +1,5 @@
 const conf = require("../config/config");
+const mfParametersModel = require("../models/MfParameters");
 const multipleTradeController = require("./multipleTradeController");     
 
 function isLockedAccount(account) {
@@ -120,6 +121,9 @@ function runMultipleFactorTrade(factors, key) {
             }
         }
     }
+
+    // save factors in DB
+    mfParametersModel.upsertParameters(strategyId, symbol, account, definedFactors);
 }
 
 module.exports = { 
