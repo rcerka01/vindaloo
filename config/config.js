@@ -1,3 +1,4 @@
+const secret = require("./secret");
 const login = require("./login");
 const locked = require("./locked");
 const multiples = require("./multiples");
@@ -15,6 +16,17 @@ module.exports = {
     },
     wsLive: {
         url: "wss://ws.xtb.com/real"
+    },
+    db: {
+        test: {
+            uri: "mongodb+srv://vindaloo:" + secret.db.test.password + "@cluster0.k5ziu.mongodb.net/vindaloo?retryWrites=true&w=majority",
+            name: "vindaloo"
+        },
+        live: {
+            uri: "",
+            name: "vindaloo"
+        }
+        
     },
     lockedAccounts: locked.accounts,
     login: login.accounts,
