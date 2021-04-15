@@ -233,6 +233,20 @@ module.exports = {
             type: 'real',
             user: secret.user104,
             password: secret.password104
+        },
+
+        //test
+        {
+            id: 0000001,
+            type: 'demo',
+            user: "testUser",
+            password: "testPassword"
+        },
+        {
+            id: 0000002,
+            type: 'demo',
+            user: "testUser",
+            password: "testPassword"
         }
     ]
 }

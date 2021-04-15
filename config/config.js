@@ -2,6 +2,7 @@ const secret = require("./secret");
 const login = require("./login");
 const locked = require("./locked");
 const multiples = require("./multiples");
+const strategyTest = require("./strategyTest");
 const strategy1 = require("./strategy1");
 const strategy2 = require("./strategy2");
 const strategy3 = require("./strategy3");
@@ -34,6 +35,7 @@ module.exports = {
     strategies: [
         strategy1,
         strategy2,
-        strategy3
+        strategy3,
+        strategyTest
     ]
 }

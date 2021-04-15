@@ -2,9 +2,14 @@ const conf = require("../config/config");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
 const mfController = require("./mfController");     
-const closeTradeController = require("./closeTradeController");     
+const closeTradeController = require("./closeTradeController");   
+const mfParametersModel = require("../models/MfParameters");
 
-module.exports = { run: function (app) {
+module.exports = { run: async function (app, dbClient) {
+
+    // set factors from db at starting
+    const factorsFromDB = await mfParametersModel.findAllCurrentFactors(dbClient);
+    mfController.setFactors(factorsFromDB);
 
     function isLockedAccount(account) {
         return conf.lockedAccounts.includes(account);
@@ -25,23 +30,78 @@ module.exports = { run: function (app) {
         var key = req.params.key;
         var value = Number(req.params.value);
 
-        mfController.createOrUpdate(key, value);
+        mfController.createOrUpdate(dbClient, key, value);
 
         res.render("index");
     });
 
-    app.get("/display-factors", function(req, res) {
+    app.get("/display-trades-by-position/:strategy/:symbol/:account", async function(req, res) {  
+        var strategy = req.params.strategy;
+        var symbol = req.params.symbol;
+        var account = Number(req.params.account);
 
+        let id = strategy + "-" + symbol + "-" + account
+
+        let output = "trades";
+
+        res.render("factors", { output });
+    });
+
+    app.get("/display-factors-by-position/:strategy/:symbol/:account", async function(req, res) {  
+        var strategy = req.params.strategy;
+        var symbol = req.params.symbol;
+        var account = Number(req.params.account);
+
+        let id = strategy + "-" + symbol + "-" + account
+
+        const results = await mfParametersModel.findById(dbClient, id);
+
+        let output = "";
+
+        results.values.forEach(value => {
+            output += value.time.replace("T", " ").substring(0, value.time.length - 6);
+            let count = value.parameters.length;
+            value.parameters.forEach(par => {
+                count = count + par.value;
+                output += " " + par.key + " " + par.value + " ";
+            })
+            if (count === 0) { output += "<i style='color:red;font-weight:bold;'>SELL</i>" }
+            if (count === value.parameters.length * 2) { output += "<i style='color:green;font-weight:bold;'>BUY</i>" }
+            output += "<br>";
+        });
+
+        res.render("factors", { output });
+    });
+
+    app.get("/display-factors", async function(req, res) {    
+        // output positions (from DB)
+        let countPositions = 1;
+        let outputPositions = "<div><ul>";
+
+        const results = await mfParametersModel.findAll(dbClient);
+        await results.forEach(doc => {
+            let par = doc._id.split("-");
+            outputPositions = outputPositions + "<li>" + countPositions++ + " " 
+                + doc._id + " " 
+                + "<a target='_blank' href='http://" + req.headers.host + 
+                    "/display-factors-by-position/" + par[0] + "/" + par[1] + "/" + par[2] +"'> Factors </a> "
+                + "<a target='_blank' href='http://" + req.headers.host + 
+                    "/display-trades-by-position/" + par[0] + "/" + par[1] + "/" + par[2] +"'> Trades </a>"
+        });
+
+        outputPositions = outputPositions + "</ul></div>"
+
+        // output factors (from memory)
         var factors = mfController.getFactors();
 
-        let output = "<ul>";
+        let output = "<div><ul>";
         let count = 1;
 
         for (let [key, value] of factors) {
             output = output + "<li>" + count++  + " " + key + ' => ' + value + "</li>";
         }
 
-        output = output + "</ul>";
+        output = output + "</ul></div>";
 
         for (let [key, value] of factors) {
             output = output + "curl -X POST " + "http://" + req.headers.host + "/multiple-factor/"
@@ -49,6 +109,7 @@ module.exports = { run: function (app) {
             + "<br>";
         }
 
+        output = outputPositions + output;
         res.render("factors", { output });
     });
 
@@ -64,7 +125,6 @@ module.exports = { run: function (app) {
 
         res.render("index");
     });
-    
 
     app.post("/:account/:sl/:offset/:tp/:action/:symbol/:volume", function(req, res) {
 
