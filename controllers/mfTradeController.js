@@ -83,7 +83,7 @@ function closeBuyOrSell(configParameters, factors) {
     return false;
 }
 
-function runMultipleFactorTrade(factors, key) {
+function runMultipleFactorTrade(dbClient, factors, key) {
 
     const symbolAndStrategyId = getSymbolAndStrategyId(key);
 
@@ -123,7 +123,7 @@ function runMultipleFactorTrade(factors, key) {
     }
 
     // save factors in DB
-    mfParametersModel.upsertParameters(strategyId, symbol, account, definedFactors);
+    mfParametersModel.upsertParameters(dbClient, strategyId, symbol, account, definedFactors);
 }
 
 module.exports = { 

@@ -1,11 +1,12 @@
-const mfTradeController = require("./mfTradeController");    
+const mfTradeController = require("./mfTradeController");  
 
 let factors = new Map();
 
 module.exports = { 
-    createOrUpdate: (key, value) => {
+    createOrUpdate: (dbClient, key, value) => {
         factors.set(key, value);
-        mfTradeController.runMultipleFactorTrade(factors, key);
+        mfTradeController.runMultipleFactorTrade(dbClient, factors, key);
     },
-    getFactors: () => { return factors; }
+    getFactors: () => { return factors; },
+    setFactors: (f) => { factors = f; }
 }
