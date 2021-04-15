@@ -1,5 +1,6 @@
 const conf = require("../config/config");
 const mfParametersModel = require("../models/MfParameters");
+const mfTradesModel = require("../models/MfTrades");
 const multipleTradeController = require("./multipleTradeController");     
 
 function isLockedAccount(account) {
@@ -103,21 +104,25 @@ function runMultipleFactorTrade(dbClient, factors, key) {
         if (buyOrSell(strategy.buy, definedFactors)) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(account, "buy");
+                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "buy")
             }
         }
         if (buyOrSell(strategy.sell, definedFactors)) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(account, "sell");
+                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "sell")
             }
         }
         if (closeBuyOrSell(strategy.closeBuy, definedFactors)) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(account, "buy");
+                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeBuy")
             }
         }        
         if (closeBuyOrSell(strategy.closeSell, definedFactors)) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(account, "sell");
+                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeSell")
             }
         }
     }
