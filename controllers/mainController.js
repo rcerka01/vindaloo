@@ -1,9 +1,10 @@
 const conf = require("../config/config");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
+const closeTradeController = require("./closeTradeController");  
 const mfController = require("./mfController");     
-const closeTradeController = require("./closeTradeController");   
 const mfParametersModel = require("../models/MfParameters");
+const mfTradesModel = require("../models/MfTrades");
 
 module.exports = { run: async function (app, dbClient) {
 
@@ -13,6 +14,10 @@ module.exports = { run: async function (app, dbClient) {
 
     function isLockedAccount(account) {
         return conf.lockedAccounts.includes(account);
+    }
+
+    function formatTime(time) {
+        return time.replace("T", " ").substring(0, time.length - 6);
     }
 
     app.post("/close/:account/:symbol", function(req, res) {
@@ -40,9 +45,17 @@ module.exports = { run: async function (app, dbClient) {
         var symbol = req.params.symbol;
         var account = Number(req.params.account);
 
-        let id = strategy + "-" + symbol + "-" + account
+        const results = await mfTradesModel.find(dbClient, strategy, symbol, account);
 
-        let output = "trades";
+        let output = "";
+        let color = "";
+        await results.forEach(trade => {
+            if (trade.type === "buy") { color = "green"; }
+            if (trade.type === "sell") { color = "red"; }
+            if (trade.type === "closeSell") { color = "#ff9966"; }
+            if (trade.type === "closeBuy") { color = "#333300"; }
+            output += " " + formatTime(trade.time) + " <i style='color:" + color + ";'>" + trade.type + "</i><br>";
+        });
 
         res.render("factors", { output });
     });
@@ -59,7 +72,7 @@ module.exports = { run: async function (app, dbClient) {
         let output = "";
 
         results.values.forEach(value => {
-            output += value.time.replace("T", " ").substring(0, value.time.length - 6);
+            output += formatTime(value.time);
             let count = value.parameters.length;
             value.parameters.forEach(par => {
                 count = count + par.value;

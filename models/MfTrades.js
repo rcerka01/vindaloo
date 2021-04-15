@@ -17,15 +17,14 @@ async function insertListing(client, strategyId, symbol, account, type) {
         .insertOne(trade);
 };
 
-//async function findOneListing(client, query) {
-//     const result = await client.db(conf.db.name).collection("mfParameters")
-//         .findOne(query);
-//     return result;     
-// };
+async function findListings(client, query, projection) {
+    const results = client.db(conf.db.name).collection("mfTrades")
+        .find(query, projection)
+        .sort( { _id: -1 } );    
+    return results;     
+};
 
-
-
-
+//
 async function insertTrade(client, strategyId, symbol, account, type) {
     try {
         await  insertListing(client, strategyId, symbol, account, type);
@@ -34,23 +33,32 @@ async function insertTrade(client, strategyId, symbol, account, type) {
     }
 }
 
-// async function findListings(client, query, projection) {
-//     const results = client.db(conf.db.name).collection("mfParameters")
-//         .find(query, projection)
-//         .sort( { _id: 1 } );
-//     return results;     
-// };
+async function find(client, strategy, symbol, account) {
+    const query = {
+        $and: [
+          {
+            strategyId: strategy
+          },
+          {
+            symbol: symbol
+          },
+          {
+            account: account
+          }
+        ]
+      };
 
-// async function findById(client, id) {
-//     const query = { _id: id };
-//     try {
-//         const result = await findOneListing(client, query);
-//         return result;
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
+    const projection = {};
+
+    try {
+        const result = await findListings(client, query, projection);
+        return result;
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 module.exports = {
-    insertTrade: insertTrade
+    insertTrade: insertTrade,
+    find, find
 }
