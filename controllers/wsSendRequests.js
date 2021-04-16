@@ -1,6 +1,12 @@
 const conf = require("../config/config");
+const errorsModel = require("../models/Errors");
 
-function sendLogin(ws, account) {
+function validateErrorMsg(msg) {
+    if (!typeof msg === undefined) { return msg; }
+    return "";
+}
+
+function sendLogin(dbClient, ws, account) {
     var msg = {};
     msg.command = "login";
     var arguments = {};
@@ -16,10 +22,11 @@ function sendLogin(ws, account) {
        // console.log('Sent ' + msg.length + ' bytes of data: ' + msg);
     } catch(Exception) {
         console.error('Error while sending data: ' + Exception.message);
+        errorsModel.saveError(dbClient, 0, "", account, 'WS, sendGetPrice(), MESSAGE' + JSON.stringify(msg)  + ' ERROR: ' + validateErrorMsg(Exception.message));
     }
 }
 
-function sendGetPrice(symbol, ws) {
+function sendGetPrice(dbClient, symbol, ws) {
     var msg = {};
     msg.command = "getSymbol";
     var arguments = {};
@@ -31,10 +38,11 @@ function sendGetPrice(symbol, ws) {
         // console.log('Sent ' + msg.length + ' bytes of data: ' + msg);
     } catch(Exception) {
         console.error('Error while sending data: ' + Exception.message);
+        errorsModel.saveError(dbClient, 0, symbol, 0, 'WS, sendGetPrice(), MESSAGE' + JSON.stringify(msg)  + ' ERROR: ' + validateErrorMsg(Exception.message));
     }
 }
 
-function sendStartTrade(action, symbol, price, volume, wSocket, sl, tp, offset) {
+function sendStartTrade(dbClient, action, symbol, price, volume, wSocket, sl, tp, offset) {
     const nrFormated = (nr) => { return Number(nr.toFixed(5)); }
     offset = offset * 10;
     if (action == "sell") { 
@@ -70,10 +78,11 @@ function sendStartTrade(action, symbol, price, volume, wSocket, sl, tp, offset) 
         // console.log('Sent ' + msg.length + ' bytes of data: ' + msg);
     } catch(Exception) {
         console.error('Error while sending data: ' + Exception.message);
+        errorsModel.saveError(dbClient, 0, symbol, 0, 'WS, sendStartTrade(), MESSAGE' + JSON.stringify(msg)  + ' ERROR: ' + validateErrorMsg(Exception.message));
     }
 }
 
-function sendCloseTrade(position, volume, price, symbol, wSocket) {
+function sendCloseTrade(dbClient, position, volume, price, symbol, wSocket) {
     var msg = {};
     msg.command = "tradeTransaction";
     var arguments = {};
@@ -92,10 +101,11 @@ function sendCloseTrade(position, volume, price, symbol, wSocket) {
         // console.log('Sent ' + msg.length + ' bytes of data: ' + msg);
     } catch(Exception) {
         console.error('Error while sending data: ' + Exception.message);
+        errorsModel.saveError(dbClient, 0, symbol, 0, 'WS, sendCloseTrade(), MESSAGE' + JSON.stringify(msg)  + ' ERROR: ' + validateErrorMsg(Exception.message));
     }
 }
 
-function sendGetPreviousTrades(wSocket) {
+function sendGetPreviousTrades(dbClient, wSocket) {
    var msg = {};
    msg.command = "getTrades";
    var arguments = {};
@@ -107,13 +117,14 @@ function sendGetPreviousTrades(wSocket) {
        // console.log('Sent ' + msg.length + ' bytes of data: ' + msg);
     } catch(Exception) {
        console.error('Error while sending data: ' + Exception.message);
+       errorsModel.saveError(dbClient, 0, "", 0, 'WS, sendGetPreviousTrades(), MESSAGE' + JSON.stringify(msg)  + ' ERROR: ' + validateErrorMsg(Exception.message));
     }
 }
 
 module.exports = {
-    login: function login(ws, account) { sendLogin(ws, account); },
-    getPrice: function getPrice(symbol, ws) { sendGetPrice(symbol, ws); },
-    startTrade: function startTrade(action, symbol, price, volume, wSocket, sl, tp, offset) { sendStartTrade(action, symbol, price, volume, wSocket, sl, tp, offset); },
-    closeTrade: function closeTrade(position, volume, price, symbol, wSocket) { sendCloseTrade(position, volume, price, symbol, wSocket); },
-    getPreviousTrades: function getPreviousTrades(wSocket) { sendGetPreviousTrades(wSocket); }
+    login: function login(dbClient, ws, account) { sendLogin(dbClient, ws, account); },
+    getPrice: function getPrice(dbClient, symbol, ws) { sendGetPrice(dbClient, symbol, ws); },
+    startTrade: function startTrade(dbClient, action, symbol, price, volume, wSocket, sl, tp, offset) { sendStartTrade(dbClient, action, symbol, price, volume, wSocket, sl, tp, offset); },
+    closeTrade: function closeTrade(dbClient, position, volume, price, symbol, wSocket) { sendCloseTrade(dbClient, position, volume, price, symbol, wSocket); },
+    getPreviousTrades: function getPreviousTrades(dbClient, wSocket) { sendGetPreviousTrades(dbClient, wSocket); }
 }

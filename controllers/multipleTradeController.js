@@ -7,20 +7,20 @@ function isLockedAccount(account) {
 }
 
 module.exports = { 
-    trade: function (account, action) {
+    trade: function (dbClient, account, action) {
         let multiple = conf.multiples.find(m => Number(m.id) === account);
 
         multiple.accounts.map(a => {
             if (!isLockedAccount(a.id)) {
-                singleTradeController.trade(a.id, a.sl, a.tp, a.offset, action, a.symbol, a.volume);
+                singleTradeController.trade(dbClient,a.id, a.sl, a.tp, a.offset, action, a.symbol, a.volume);
             }
         });
     },
-    close: function (account, direction) {
+    close: function (dbClient, account, direction) {
         let multiple = conf.multiples.find(m => Number(m.id) === account);
 
         multiple.accounts.map(a => {
-            closeTradeController.close(a.id, a.symbol, direction);
+            closeTradeController.closedbClient(dbClient, a.id, a.symbol, direction);
         });
     }
 }
