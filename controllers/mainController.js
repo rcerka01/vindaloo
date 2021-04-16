@@ -25,7 +25,7 @@ module.exports = { run: async function (app, dbClient) {
         var account = Number(req.params.account);
         var name = req.params.symbol;
 
-        closeTradeController.close(account, name);
+        closeTradeController.close(dbClient, account, name);
 
         res.render("index");
     });
@@ -133,7 +133,7 @@ module.exports = { run: async function (app, dbClient) {
 
         // lock account 
         if (!isLockedAccount(account)) {
-            multipleTradeController.trade(account, action);
+            multipleTradeController.trade(dbClient, account, action);
         }
 
         res.render("index");
@@ -151,7 +151,7 @@ module.exports = { run: async function (app, dbClient) {
 
         // lock account 
         if (!isLockedAccount(account)) {
-            singleTradeController.trade(account, sl, tp, offset, action, symbol, volume);
+            singleTradeController.trade(dbClient, account, sl, tp, offset, action, symbol, volume);
         }
 
         res.render("index");

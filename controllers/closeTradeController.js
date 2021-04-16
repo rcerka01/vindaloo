@@ -1,5 +1,6 @@
 const conf = require("../config/config");
-const send = require("./wsSendRequests");     
+const send = require("./wsSendRequests");
+const errorsModel = require("../models/Errors");
 const WebSocket = require('ws');
 
 function connect(account) {
@@ -25,7 +26,12 @@ function tradeDirectionToDigit(direction) {
     }
 }
 
-module.exports = { close: function (account, symbol, tradeDirection) {
+module.exports = { close: function (dbClient, account, symbol, tradeDirection) {
+
+    function validateErrorMsg(msg) {
+        if (!typeof msg === undefined) { return msg; }
+        return "";
+    }
 
     const cmd = tradeDirectionToDigit(tradeDirection);
 
@@ -59,9 +65,11 @@ module.exports = { close: function (account, symbol, tradeDirection) {
                 }
             } else {
                 console.log('Error: ' + response.errorDescr);
+                errorsModel.saveError(dbClient, 0, symbol, account, 'CloseTradeController, Error: ' + validateErrorMsg(response.errorDescr));
             }
         } catch (Exception) {
             console.log('Fatal error while receiving data! :(');
+            errorsModel.saveError(dbClient, 0, symbol, account, 'CloseTradeController, Fatal error while receiving data! :(, Error: ' + validateErrorMsg(Exception.message));
         }
     }
 

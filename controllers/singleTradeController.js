@@ -1,5 +1,7 @@
 const conf = require("../config/config");
-const send = require("./wsSendRequests");     
+const send = require("./wsSendRequests");  
+const errorsModel = require("../models/Errors");
+
 const WebSocket = require('ws');
 
 function connect(account) {
@@ -14,12 +16,12 @@ function actionStringToInt(action) {
     if (action == "buy") { return 0; } else { return 1; }
 }
 
-function closeTrades(trades, symbol, wSocket, action) {
+function closeTrades(dbClient, trades, symbol, wSocket, action) {
     var cmd = actionStringToInt(action);
     for (i in trades) {
         // close only trades of oposite direction
         if (trades[i].symbol == symbol && trades[i].cmd != cmd) {
-            send.closeTrade(trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
+            send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
         }
     }
 }
@@ -28,12 +30,17 @@ function isExistingTrade(trades, symbol, cmd) {
     return trades.some(item =>  item.cmd === cmd && item.symbol === symbol )
 }
 
-module.exports = { trade: function (account, sl, tp, offset, action, symbol, volume) {
+function validateErrorMsg(msg) {
+    if (!typeof msg === undefined) { return msg; }
+    return "";
+}
+
+module.exports = { trade: function (dbClient, account, sl, tp, offset, action, symbol, volume) {
     const wSocket = connect(account);
 
     wSocket.onopen = function() {
         console.log('Connected');
-        ws = send.login(wSocket, account);
+        ws = send.login(dbClient, wSocket, account);
     };
 
     wSocket.onmessage = function(evt) {
@@ -43,13 +50,13 @@ module.exports = { trade: function (account, sl, tp, offset, action, symbol, vol
                 if(response.streamSessionId != undefined) {
                     console.log("Login successful");
 
-                    send.getPreviousTrades(wSocket);
+                    send.getPreviousTrades(dbClient, wSocket);
 
                 } else if (response.returnData.ask != undefined) {
                     /* return getPrice */
 
                     if (action == "sell") { var price = response.returnData.bid; } else { var price = response.returnData.ask; }
-                    send.startTrade(action, symbol, price, volume, wSocket, sl, tp, offset)
+                    send.startTrade(dbClient, action, symbol, price, volume, wSocket, sl, tp, offset)
             
                 } else if (response.returnData.order != undefined) {
                     /* return startTrade. Jusr order ID */
@@ -65,23 +72,26 @@ module.exports = { trade: function (account, sl, tp, offset, action, symbol, vol
 
                     // only if trade is NOT in same direction (buy / sell)
                     if (!isExistingTrade(response.returnData, symbol, cmd)) {
-                        send.getPrice(symbol, wSocket) // ignites new order
-                        closeTrades(response.returnData, symbol, wSocket, action);
+                        send.getPrice(dbClient, symbol, wSocket) // ignites new order
+                        closeTrades(dbClient, response.returnData, symbol, wSocket, action);
                     }
 
                 } else if (response.returnData.length == 0) {
                     /* return getPreviousTrades, none exist. Start first one */
 
-                    send.getPrice(symbol, wSocket)
+                    send.getPrice(dbClient, symbol, wSocket)
 
                 } else {
                     console.log("Disconecting, no action taken.");
                 }
             } else {
                 console.log('Error: ' + response.errorDescr);
+                errorsModel.saveError(dbClient, 0, symbol, account, 'SingleTradeController, Error:' + sl + " " + tp + " " + offset + " " + action + " " + symbol + " " + volume  + ' ERROR: ' + validateErrorMsg(response.errorDescr));
+
             }
         } catch (Exception) {
             console.log('Fatal error while receiving data! :(');
+            errorsModel.saveError(dbClient, 0, symbol, account, 'SingleTradeController, Fatal error while receiving data! :( '  + sl + " " + tp + " " + offset + " " + action + " " + symbol + " " + volume  + ' ERROR: ' + validateErrorMsg(Exception.message));    
         }
     }
 
