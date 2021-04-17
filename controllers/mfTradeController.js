@@ -103,25 +103,25 @@ function runMultipleFactorTrade(dbClient, factors, key) {
 
         if (buyOrSell(strategy.buy, definedFactors)) {
             if (!isLockedAccount(account)) {
-                multipleTradeController.trade(account, "buy");
+                multipleTradeController.trade(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "buy")
             }
         }
         if (buyOrSell(strategy.sell, definedFactors)) {
             if (!isLockedAccount(account)) {
-                multipleTradeController.trade(account, "sell");
+                multipleTradeController.trade(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "sell")
             }
         }
         if (closeBuyOrSell(strategy.closeBuy, definedFactors)) {
             if (!isLockedAccount(account)) {
-                multipleTradeController.close(account, "buy");
+                multipleTradeController.close(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeBuy")
             }
         }        
         if (closeBuyOrSell(strategy.closeSell, definedFactors)) {
             if (!isLockedAccount(account)) {
-                multipleTradeController.close(account, "sell");
+                multipleTradeController.close(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeSell")
             }
         }

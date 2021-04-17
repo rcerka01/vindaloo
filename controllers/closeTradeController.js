@@ -10,9 +10,9 @@ function connect(account) {
     return new WebSocket(url);
 }
 
-function closeTrades(trades, symbol, wSocket) {
+function closeTrades(dbClient, trades, symbol, wSocket) {
     for (i in trades) {
-        send.closeTrade(trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
+        send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
     }
 }
 
@@ -39,7 +39,7 @@ module.exports = { close: function (dbClient, account, symbol, tradeDirection) {
 
     wSocket.onopen = function() {
         console.log('Connected');
-        ws = send.login(wSocket, account);
+        ws = send.login(dbClient, wSocket, account);
     };
 
     wSocket.onmessage = function(evt) {
@@ -48,16 +48,16 @@ module.exports = { close: function (dbClient, account, symbol, tradeDirection) {
             if(response.status == true) {
                 if(response.streamSessionId != undefined) {
                     console.log("Login successful");
-                    send.getPreviousTrades(wSocket);
+                    send.getPreviousTrades(dbClient, wSocket);
 
                 } else if (response.returnData.length > 0) {
                     
                     if (cmd < 0) {
-                        closeTrades(response.returnData, symbol, wSocket);
+                        closeTrades(dbClient, response.returnData, symbol, wSocket);
                     } else {
                         const tradesToClose =  response.returnData.filter(data => 
                             data.symbol === symbol && data.cmd === cmd);
-                        closeTrades(tradesToClose, symbol, wSocket);
+                        closeTrades(dbClient, tradesToClose, symbol, wSocket);
                     }                    
 
                 } else {

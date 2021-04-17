@@ -12,7 +12,7 @@ module.exports = {
 
         multiple.accounts.map(a => {
             if (!isLockedAccount(a.id)) {
-                singleTradeController.trade(dbClient,a.id, a.sl, a.tp, a.offset, action, a.symbol, a.volume);
+                singleTradeController.trade(dbClient, a.id, a.sl, a.tp, a.offset, action, a.symbol, a.volume);
             }
         });
     },
@@ -20,7 +20,7 @@ module.exports = {
         let multiple = conf.multiples.find(m => Number(m.id) === account);
 
         multiple.accounts.map(a => {
-            closeTradeController.closedbClient(dbClient, a.id, a.symbol, direction);
+            closeTradeController.close(dbClient, a.id, a.symbol, direction);
         });
     }
 }
