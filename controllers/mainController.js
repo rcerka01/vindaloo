@@ -5,6 +5,7 @@ const closeTradeController = require("./closeTradeController");
 const mfController = require("./mfController");     
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
+const errorsModel = require("../models/Errors");
 
 module.exports = { run: async function (app, dbClient) {
 
@@ -18,6 +19,15 @@ module.exports = { run: async function (app, dbClient) {
 
     function formatTime(time) {
         return time.replace("T", " ").substring(0, time.length - 6);
+    }
+
+    function is(value) {
+        if (typeof value === undefined) { return ""; }
+        return value;
+    }
+
+    function strong(value) {
+        return "<strong>" + value + "</strong>";
     }
 
     app.post("/close/:account/:symbol", function(req, res) {
@@ -38,6 +48,26 @@ module.exports = { run: async function (app, dbClient) {
         mfController.createOrUpdate(dbClient, key, value);
 
         res.render("index");
+    });
+
+    app.get("/display-exceptions", async function(req, res) {  
+        const results = await errorsModel.find(dbClient);
+
+        let output = "";
+        let count = 1;
+        await results.forEach(doc => {
+            output += 
+            strong(count++) 
+            + " " + formatTime(doc.time) 
+            + " " + strong(is(doc.strategyId))
+            + " " + is(doc.account)
+            + " " + strong(is(doc. symbol))
+            + " " + is(doc.description)
+            + " " + strong(is(doc.response))
+            + "<br>"
+        });
+
+        res.render("factors", { output });
     });
 
     app.get("/display-trades-by-position/:strategy/:symbol/:account", async function(req, res) {  
@@ -86,7 +116,10 @@ module.exports = { run: async function (app, dbClient) {
         res.render("factors", { output });
     });
 
-    app.get("/display-factors", async function(req, res) {    
+    app.get("/display-factors", async function(req, res) {  
+        const outputLinkToExceptions = "<div><a href='http://" + req.headers.host 
+            + "/display-exceptions' target='_blank'>Exceptions</a></div>";
+        
         // output positions (from DB)
         let countPositions = 1;
         let outputPositions = "<div><ul>";
@@ -122,7 +155,7 @@ module.exports = { run: async function (app, dbClient) {
             + "<br>";
         }
 
-        output = outputPositions + output;
+        output = outputLinkToExceptions + outputPositions + output;
         res.render("factors", { output });
     });
 

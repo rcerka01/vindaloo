@@ -18,12 +18,12 @@ async function insertListing(client, strategyId, symbol, account, description, r
         .insertOne(msg);
 };
 
-// async function findListings(client, query, projection) {
-//     const results = client.db(conf.db.name).collection("mfTrades")
-//         .find(query, projection)
-//         .sort( { _id: -1 } );    
-//     return results;     
-// };
+async function findListings(client, query, projection) {
+    const results = client.db(conf.db.name).collection("Errors")
+        .find(query, projection)
+        .sort( { _id: -1 } );    
+    return results;     
+};
 
 //
 async function insertError(client, strategyId, symbol, account, description, response) {
@@ -34,32 +34,19 @@ async function insertError(client, strategyId, symbol, account, description, res
     }
 }
 
-// async function find(client, strategy, symbol, account) {
-//     const query = {
-//         $and: [
-//           {
-//             strategyId: strategy
-//           },
-//           {
-//             symbol: symbol
-//           },
-//           {
-//             account: account
-//           }
-//         ]
-//       };
+async function find(client) {
+    const query = {};
+    const projection = {};
 
-//     const projection = {};
-
-//     try {
-//         const result = await findListings(client, query, projection);
-//         return result;
-//     } catch (e) {
-//         console.error(e);
-//     }
-// }
+    try {
+        const result = await findListings(client, query, projection);
+        return result;
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 module.exports = {
     saveError: insertError,
-  //  find, find
+    find, find
 }
