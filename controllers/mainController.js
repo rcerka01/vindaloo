@@ -3,6 +3,7 @@ const singleTradeController = require("./singleTradeController");
 const multipleTradeController = require("./multipleTradeController");     
 const closeTradeController = require("./closeTradeController");  
 const mfController = require("./mfController");     
+const scheduleController = require("./scheduleController");     
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
 const errorsModel = require("../models/Errors");
@@ -12,6 +13,9 @@ module.exports = { run: async function (app, dbClient) {
     // set factors from db at starting
     const factorsFromDB = await mfParametersModel.findAllCurrentFactors(dbClient);
     mfController.setFactors(factorsFromDB);
+
+    // start scheduler
+    scheduleController.run();
 
     function isLockedAccount(account) {
         return conf.lockedAccounts.includes(account);
