@@ -4,7 +4,6 @@ const schedule = require('node-schedule');
 function stringToCoand(str) {
     if (str === "closeTrades") {
         //todo close trades contr -> acetion
-        console      
     }
     if (str === "addToLockedAccounts") {
         //todo close trades contr -> acetion      
@@ -16,17 +15,17 @@ function stringToCoand(str) {
 
 function run() {
 
-    conf.schedules.forEach(t=> console.log(t));
+    // conf.schedules.forEach(t=> console.log(t));
 
 
 
 
-    const rule = new schedule.RecurrenceRule();
-    rule.second = 42;
-    rule.dayOfWeek = "0-6";
-    const job = schedule.scheduleJob(rule, function(){
-        console.log('The answer to life, the universe, and everything!');
-    });
+    // const rule = new schedule.RecurrenceRule();
+    // rule.second = 42;
+    // rule.dayOfWeek = "0-6";
+    // const job = schedule.scheduleJob(rule, function(){
+    //     console.log('The answer to life, the universe, and everything!');
+    // });
 
 
 // second (0-59)
