@@ -1,7 +1,7 @@
 const conf = require("../config/config");
 const moment = require('moment');
 
-async function insertListing(client, strategyId, symbol, account, description) {
+async function insertListing(client, strategyId, symbol, account, description, response) {
     const timestump = Date.now();
     const time = moment().format();
     const msg = {
@@ -10,7 +10,8 @@ async function insertListing(client, strategyId, symbol, account, description) {
         strategyId,
         symbol,
         account,
-        description
+        description,
+        response
     }
 
     const result = await client.db(conf.db.name).collection("Errors")
@@ -25,9 +26,9 @@ async function insertListing(client, strategyId, symbol, account, description) {
 // };
 
 //
-async function insertError(client, strategyId, symbol, account, description) {
+async function insertError(client, strategyId, symbol, account, description, response) {
     try {
-        await  insertListing(client, strategyId, symbol, account, description);
+        await  insertListing(client, strategyId, symbol, account, description, response);
     } catch (e) {
         console.error(e);
     }

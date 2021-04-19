@@ -65,7 +65,7 @@ module.exports = { close: function (dbClient, account, symbol, tradeDirection) {
                 }
             } else {
                 console.log('Error: ' + response.errorDescr);
-                errorsModel.saveError(dbClient, 0, symbol, account, 'CloseTradeController, Error: ' + validateErrorMsg(response.errorDescr));
+                errorsModel.saveError(dbClient, 0, symbol, account, 'CloseTradeController, Error: ' + validateErrorMsg(response.errorDescr), response);
             }
         } catch (Exception) {
             console.log('Fatal error while receiving data! :(');
