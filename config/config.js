@@ -2,6 +2,7 @@ const secret = require("./secret");
 const login = require("./login");
 const locked = require("./locked");
 const multiples = require("./multiples");
+const schedules = require("./schedules");
 const strategyTest = require("./strategyTest");
 const strategy1 = require("./strategy1");
 const strategy2 = require("./strategy2");
@@ -32,6 +33,7 @@ module.exports = {
     lockedAccounts: locked.accounts,
     login: login.accounts,
     multiples: multiples.accounts,
+    schedules: schedules.tasks,
     strategies: [
         strategy1,
         strategy2,
