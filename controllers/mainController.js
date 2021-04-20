@@ -4,6 +4,7 @@ const multipleTradeController = require("./multipleTradeController");
 const closeTradeController = require("./closeTradeController");  
 const mfController = require("./mfController");     
 const scheduleController = require("./scheduleController");     
+const lockedAccountsController = require("./lockedAccountsController");     
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
 const errorsModel = require("../models/Errors");
@@ -14,11 +15,15 @@ module.exports = { run: async function (app, dbClient) {
     const factorsFromDB = await mfParametersModel.findAllCurrentFactors(dbClient);
     mfController.setFactors(factorsFromDB);
 
+    // set locked accounts
+    await lockedAccountsController.synchronizeDbToConfig(dbClient);
+    await lockedAccountsController.setLockedAccounts(dbClient);
+
     // start scheduler
-    scheduleController.run();
+    scheduleController.run(dbClient);
 
     function isLockedAccount(account) {
-        return conf.lockedAccounts.includes(account);
+        return lockedAccountsController.isLockedAccount(account);
     }
 
     function formatTime(time) {
@@ -33,6 +38,22 @@ module.exports = { run: async function (app, dbClient) {
     function strong(value) {
         return "<strong>" + value + "</strong>";
     }
+
+    app.post("/lock/:account/", function(req, res) {
+        var account = Number(req.params.account);
+
+        lockedAccountsController.lock(dbClient, account);
+
+        res.render("index");
+    });
+
+    app.post("/unlock/:account/", function(req, res) {
+        var account = Number(req.params.account);
+
+        lockedAccountsController.unlock(dbClient, account);
+
+        res.render("index");
+    });
 
     app.post("/close/:account/:symbol", function(req, res) {
 
@@ -123,6 +144,9 @@ module.exports = { run: async function (app, dbClient) {
     });
 
     app.get("/display-factors", async function(req, res) {  
+        const lockedAccounts = lockedAccountsController.getLockedAccounts();
+        const outputLockedAccounts = "<div><strong>Locked accounts: " + lockedAccounts + "</strong></div>";
+
         const outputLinkToExceptions = "<div><a href='http://" + req.headers.host 
             + "/display-exceptions' target='_blank'>Exceptions</a></div>";
         
@@ -161,7 +185,7 @@ module.exports = { run: async function (app, dbClient) {
             + "<br>";
         }
 
-        output = outputLinkToExceptions + outputPositions + output;
+        output = outputLinkToExceptions + outputLockedAccounts + outputPositions + output;
         res.render("factors", { output });
     });
 

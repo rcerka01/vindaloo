@@ -237,13 +237,13 @@ module.exports = {
 
         //test
         {
-            id: 0000001,
+            id: 1000000,
             type: 'demo',
             user: "testUser",
             password: "testPassword"
         },
         {
-            id: 0000002,
+            id: 2000000,
             type: 'demo',
             user: "testUser",
             password: "testPassword"

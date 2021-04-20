@@ -329,7 +329,8 @@ module.exports = {
         //     accounts: [
         //             {
         //             id: 104,
-        //             sl: 25,
+        //             sl: 25,        {   
+
         //             tp: 0,
         //             offset: 0,
         //             symbol: 'GBPUSD',
