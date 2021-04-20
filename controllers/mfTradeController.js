@@ -1,10 +1,11 @@
 const conf = require("../config/config");
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
-const multipleTradeController = require("./multipleTradeController");     
+const multipleTradeController = require("./multipleTradeController");
+const lockedAccountsController = require("./lockedAccountsController");     
 
 function isLockedAccount(account) {
-    return conf.lockedAccounts.includes(account);
+    return lockedAccountsController.isLockedAccount(account);
 }
 
 function getSymbolAndStrategyId(key) {

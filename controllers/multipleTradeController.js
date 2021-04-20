@@ -1,9 +1,10 @@
 const conf = require("../config/config");
 const singleTradeController = require("./singleTradeController");
-const closeTradeController = require("./closeTradeController");     
+const closeTradeController = require("./closeTradeController");  
+const lockedAccountsController = require("./lockedAccountsController");     
 
 function isLockedAccount(account) {
-    return conf.lockedAccounts.includes(account);
+    return lockedAccountsController.isLockedAccount(account);
 }
 
 module.exports = { 

@@ -1,44 +1,43 @@
 const conf = require("../config/config");
 const schedule = require('node-schedule');
+const lockedAccountsController = require("./lockedAccountsController");
+const multipleTradeController = require("./multipleTradeController");
 
-function stringToComand(str) {
+function stringToComand(dbClient, str, account, symbol) {
     if (str === "closeTrades") {
         //todo close trades contr -> acetion
+        // tesst if close sell and buy
+        // multipleTradeController.close(dbClient, account);
+        console.log('invoked stringToComand ' + account + " " + symbol)
     }
     if (str === "addToLockedAccounts") {
-        //todo close trades contr -> acetion      
+        //todo close trades contr -> acetion    
+        //lockedAccountsController.lock(dbClient, account);
+        console.log('invoked addToLockedAccounts ' + account + " " + symbol)
     }
     if (str === "removeFromLockedAccounts") {
-        //todo close trades contr -> acetion      
-    }
+        //todo close trades contr -> acetion  
+        //lockedAccountsController.unlock(dbClient, account);
+        console.log('invoked removeFromLockedAccounts ' + account + " " + symbol)    
+    }   
 }
 
-function run() {
-    // conf.schedules.forEach(t=> console.log(t));
+function run(dbClient) {
+    conf.schedules.forEach(sch => {
 
-    // const rule = new schedule.RecurrenceRule();
-    // rule.second = 42;
-    // rule.dayOfWeek = "0-6";
-    // const job = schedule.scheduleJob(rule, function(){
-    //     console.log('The answer to life, the universe, and everything!');
-    // });
+        sch.accounts.forEach( acc => {
 
+            sch.symbols.forEach( symb => {
 
-// second (0-59)
-// minute (0-59)
-// hour (0-23)
-// date (1-31)
-// month (0-11)
-// year
-// dayOfWeek (0-6) Starting with Sunday
-// tz
+                sch.actions.forEach( act => {
 
-
-
-
-    //     schedule.scheduleJob('0 * 0-7,19-23 * * 1-5', function(){
-
-
+                    schedule.scheduleJob(sch.cron, function() {
+                        stringToComand(dbClient, act, acc, symb)
+                    });
+                });
+            });
+        });
+    });
 }
 
 module.exports = { 
