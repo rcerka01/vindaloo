@@ -145,7 +145,11 @@ module.exports = { run: async function (app, dbClient) {
 
     app.get("/display-factors", async function(req, res) {  
         const lockedAccounts = lockedAccountsController.getLockedAccounts();
-        const outputLockedAccounts = "<div><strong>Locked accounts: " + lockedAccounts + "</strong></div>";
+        const outputLockedAccounts = "<div><strong>Locked accounts: " + lockedAccounts + "</strong></div>"
+            + "<br>"
+            + "curl -X POST " + "http://" + req.headers.host + "/lock/1<br>"
+            + "curl -X POST " + "http://" + req.headers.host + "/unlock/1<br>"
+            + "<br>";
 
         const outputLinkToExceptions = "<div><a href='http://" + req.headers.host 
             + "/display-exceptions' target='_blank'>Exceptions</a></div>";
