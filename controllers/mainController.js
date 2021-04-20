@@ -25,9 +25,9 @@ module.exports = { run: async function (app, dbClient) {
         return time.replace("T", " ").substring(0, time.length - 6);
     }
 
-    function is(value) {
-        if (typeof value === undefined) { return ""; }
-        return value;
+    function hasResponse(doc, value) {
+        if (doc.hasOwnProperty('response') && doc.response !== null) { return doc.response[value]; }
+        return '';
     }
 
     function strong(value) {
@@ -63,11 +63,13 @@ module.exports = { run: async function (app, dbClient) {
             output += 
             strong(count++) 
             + " " + formatTime(doc.time) 
-            + " " + strong(is(doc.strategyId))
-            + " " + is(doc.account)
-            + " " + strong(is(doc. symbol))
-            + " " + is(doc.description)
-            + " " + strong(is(doc.response))
+            + " " + strong(doc.strategyId)
+            + " " + doc.account
+            + " " + strong(doc. symbol)
+            + " " + doc.description
+            + " " + "status: " + strong(hasResponse(doc, 'status'))
+            + " " + hasResponse(doc, 'errorCode')
+            + " " + strong(hasResponse(doc, 'errorDescr'))
             + "<br>"
         });
 
