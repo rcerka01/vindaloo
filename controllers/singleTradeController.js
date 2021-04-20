@@ -86,7 +86,7 @@ module.exports = { trade: function (dbClient, account, sl, tp, offset, action, s
                 }
             } else {
                 console.log('Error: ' + response.errorDescr);
-                errorsModel.saveError(dbClient, 0, symbol, account, 'SingleTradeController, Error:' + sl + " " + tp + " " + offset + " " + action + " " + symbol + " " + volume  + ' ERROR: ' + validateErrorMsg(response.errorDescr));
+                errorsModel.saveError(dbClient, 0, symbol, account, 'SingleTradeController, Error:' + sl + " " + tp + " " + offset + " " + action + " " + symbol + " " + volume  + ', ' + validateErrorMsg(response.errorDescr), response);
 
             }
         } catch (Exception) {

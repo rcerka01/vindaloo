@@ -1,7 +1,7 @@
 const conf = require("../config/config");
 const schedule = require('node-schedule');
 
-function stringToCoand(str) {
+function stringToComand(str) {
     if (str === "closeTrades") {
         //todo close trades contr -> acetion
     }
@@ -14,11 +14,7 @@ function stringToCoand(str) {
 }
 
 function run() {
-
     // conf.schedules.forEach(t=> console.log(t));
-
-
-
 
     // const rule = new schedule.RecurrenceRule();
     // rule.second = 42;
