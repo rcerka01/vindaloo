@@ -7,29 +7,22 @@ const schEventsModel = require("../models/SchEvents");
 
 async function stringToComand(dbClient, str, account, symbol) {
     if (str === "closeTrades") {
-        //todo close trades contr -> acetion
-        //tesst if close sell and buy
         if (account > 99 ) {
             multipleTradeController.close(dbClient, account);
         } else {
             closeTradeController.close(dbClient, account, symbol);
         }
         await schEventsModel.insertEvent(dbClient, str, account, symbol);
-        console.log('invoked closeTrades ' + account + " " + symbol)
     }
 
     if (str === "addToLockedAccounts") {
-        //todo close trades contr -> acetion    
         await lockedAccountsController.lock(dbClient, account);
         await schEventsModel.insertEvent(dbClient, str, account, symbol);
-        console.log('invoked addToLockedAccounts ' + account + " " + symbol)
     }
 
     if (str === "removeFromLockedAccounts") {
-        //todo close trades contr -> acetion  
         await lockedAccountsController.unlock(dbClient, account);
         await schEventsModel.insertEvent(dbClient, str, account, symbol);
-        console.log('invoked removeFromLockedAccounts ' + account + " " + symbol)    
     }   
 }
 
