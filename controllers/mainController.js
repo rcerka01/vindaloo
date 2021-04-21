@@ -8,6 +8,7 @@ const lockedAccountsController = require("./lockedAccountsController");
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
 const errorsModel = require("../models/Errors");
+const schEventsModel = require("../models/SchEvents");
 
 module.exports = { run: async function (app, dbClient) {
 
@@ -97,6 +98,24 @@ module.exports = { run: async function (app, dbClient) {
         res.render("factors", { output });
     });
 
+    app.get("/display-schedules", async function(req, res) {  
+        const results = await schEventsModel.find(dbClient);
+
+        let output = "";
+        let count = 1;
+        await results.forEach(doc => {
+            output += 
+            strong(count++) 
+            + " " + formatTime(doc.time) 
+            + " " + strong(doc.comand)
+            + " " + doc.account
+            + " " + strong(doc. symbol)
+            + "<br>"
+        });
+
+        res.render("factors", { output });
+    });
+
     app.get("/display-trades-by-position/:strategy/:symbol/:account", async function(req, res) {  
         var strategy = req.params.strategy;
         var symbol = req.params.symbol;
@@ -151,8 +170,11 @@ module.exports = { run: async function (app, dbClient) {
             + "curl -X POST " + "http://" + req.headers.host + "/unlock/1<br>"
             + "<br>";
 
-        const outputLinkToExceptions = "<div><a href='http://" + req.headers.host 
+            const outputLinkToExceptions = "<div><a href='http://" + req.headers.host 
             + "/display-exceptions' target='_blank'>Exceptions</a></div>";
+
+            const outputLinkToScheduledEvents = "<div><a href='http://" + req.headers.host 
+                + "/display-schedules' target='_blank'>Scheduled tasks</a></div>";
         
         // output positions (from DB)
         let countPositions = 1;
@@ -189,7 +211,7 @@ module.exports = { run: async function (app, dbClient) {
             + "<br>";
         }
 
-        output = outputLinkToExceptions + outputLockedAccounts + outputPositions + output;
+        output = outputLinkToExceptions + outputLinkToScheduledEvents + outputLockedAccounts + outputPositions + output;
         res.render("factors", { output });
     });
 
