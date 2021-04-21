@@ -52,19 +52,19 @@ async function synchronizeDbToConfig(dbClient) {
 async function setLockedAccounts(dbClient) {
     const lockedAccountsFromDb = await lockedAccountsModel.getAllLockedAccounts(dbClient);
     lockedAccounts = [];
-    lockedAccountsFromDb.forEach( account => {
-        if (account.isLocked) { lockedAccounts.push( account._id ) }
+    await lockedAccountsFromDb.forEach( account => {
+        if (account.isLocked && !lockedAccounts.includes(account._id)) { lockedAccounts.push( account._id ) }
     });
 }
 
 async function lock(dbClient, account) {
     await lockedAccountsModel.updateAccount(dbClient, account, { isLocked: true });
-    setLockedAccounts(dbClient);
+    await setLockedAccounts(dbClient);
 }
 
 async function unlock(dbClient, account) {
     await lockedAccountsModel.updateAccount(dbClient, account, { isLocked: false });
-    setLockedAccounts(dbClient);
+    await setLockedAccounts(dbClient);
 }
 
 function getLockedAccounts() { return lockedAccounts; }

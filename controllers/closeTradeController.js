@@ -12,7 +12,9 @@ function connect(account) {
 
 function closeTrades(dbClient, trades, symbol, wSocket) {
     for (i in trades) {
-        send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
+        if (trades[i].symbol === symbol) {
+            send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
+        }
     }
 }
 
