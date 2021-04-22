@@ -40,9 +40,10 @@ module.exports = {
         //     symbols: ["AUDUSD", "NZDUSD", "USDCHF", "UK100", "DE30", "EU50", "USDCAD", "EURUSD", "FRA40", "US500"], 
         //     accounts: [17]
         // },
-                                              // multiples
+        
+    // FOR STRATEGY 1 (multiples)
         {
-            id: 005,
+            id: 001,
             name: "",
             cron: "0 00 20 * * 1-5",
             actions: ["closeTrades", "addToLockedAccounts"],
@@ -50,12 +51,46 @@ module.exports = {
             accounts: [777]
         },
         {
-            id: 006,
+            id: 002,
             name: "",
             cron: "0 30 12 * * 1-5",
             actions: ["removeFromLockedAccounts"],
             symbols: ["OIL.WTI"],
             accounts: [777]
+        },
+    
+    // CLOSE FOR FRIDAY      
+        {
+            id: 100,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            accounts: [17]
+        },
+        {
+            id: 101,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["OIL.WTI"],
+            accounts: [600, 777]
+        },
+        {
+            id: 102,
+            name: "",
+            cron: "0 30 22 * * 7",
+            actions: ["removeFromLockedAccounts"],
+            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            accounts: [17]
+        },
+        {
+            id: 103,
+            name: "",
+            cron: "0 30 22 * * 7",
+            actions: ["removeFromLockedAccounts"],
+            symbols: ["OIL.WTI"],
+            accounts: [600, 777]
         }
     ]
 }

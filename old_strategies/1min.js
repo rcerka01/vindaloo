@@ -8,14 +8,14 @@ module.exports =
 // DE30
 // UK100
 
-// NZDUSD
-// AUDUSD
-// EURUSD
-// USDCAD
-// GBPUSD
-// USDJPY
-// USDCHF
-// EURUSD
+// http://trade.raitis.co.uk/17/25/0/0/buy/USDJPY/0.1
+//  NZDUSD
+//  AUDUSD
+//  EURUSD
+//  USDCAD
+//  GBPUSD
+//  USDJPY
+//  USDCHF
 {
     id: 0002,
     name: "1min MA5/20 MACD",
