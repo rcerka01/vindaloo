@@ -13,6 +13,10 @@ module.exports = {
         {
             key: "higherHistogramTreshold",
             value: 1
+        },
+        {
+            key: "positiveHistogram",
+            value: 1
         }
     ],
     // or
@@ -27,7 +31,11 @@ module.exports = {
         {
             key: "lowerHistogramTreshold",
             value: -1
-        }
+        },
+        {
+            key: "positiveHistogram",
+            value: -1
+        },
     ],
     // or
     closeSell: [
