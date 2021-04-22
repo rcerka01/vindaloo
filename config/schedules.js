@@ -41,21 +41,21 @@ module.exports = {
         //     accounts: [17]
         // },
                                               // multiples
-        // {
-        //     id: 005,
-        //     name: "",
-        //     cron: "0 49 11 * * 3",
-        //     actions: ["closeTrades", "addToLockedAccounts"],
-        //     symbols: ["OIL.WTI"],
-        //     accounts: [677]
-        // },
-        // {
-        //     id: 006,
-        //     name: "",
-        //     cron: "30 49 11 * * 3",
-        //     actions: ["removeFromLockedAccounts"],
-        //     symbols: ["OIL.WTI"],
-        //     accounts: [677]
-        // },
+        {
+            id: 005,
+            name: "",
+            cron: "0 00 20 * * 1-5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["OIL.WTI"],
+            accounts: [777]
+        },
+        {
+            id: 006,
+            name: "",
+            cron: "0 30 12 * * 1-5",
+            actions: ["removeFromLockedAccounts"],
+            symbols: ["OIL.WTI"],
+            accounts: [777]
+        }
     ]
 }
