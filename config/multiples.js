@@ -105,7 +105,7 @@ module.exports = {
                 }
             ]
         },
-// STRATEGY 2. HISTOGRAM ABOVE / BELOW TRESHOLD, CLOSE AT POSITIVE / NEGATIVE      
+// STRATEGY 2. HISTOGRAM ABOVE / BELOW TRESHOLD   
         {   
             id: 600,
             accounts: [
@@ -115,6 +115,20 @@ module.exports = {
                     tp: 0,
                     offset: 0,
                     symbol: 'OIL.WTI',
+                    volume: 0.1
+                }
+            ]
+        },
+// STRATEGY 4. HMA, CLOSE AT MIDDLE  
+        {   
+            id: 500,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
                     volume: 0.1
                 }
             ]

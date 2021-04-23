@@ -1,6 +1,6 @@
 module.exports = {
     id: 0002,
-    name: "1min MA5/20 MACD",
+    name: "5 MIN, MACD HISTOGRAM, ABOVE / BELOW THRESHOLD",
     parameterCount: 2,
     bind: [
         {

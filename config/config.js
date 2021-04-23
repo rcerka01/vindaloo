@@ -6,6 +6,7 @@ const strategyTest = require("./strategyTest");
 const strategy1 = require("./strategy1");
 const strategy2 = require("./strategy2");
 const strategy3 = require("./strategy3");
+const strategy4 = require("./strategy4");
 
 module.exports = {
     app: {
@@ -36,6 +37,7 @@ module.exports = {
         strategy1,
         strategy2,
         strategy3,
+        strategy4,
         strategyTest
     ]
 }
