@@ -61,7 +61,7 @@ module.exports = {
     
     // CLOSE FOR FRIDAY      
         {
-            id: 100,
+            id: 1001,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
@@ -69,7 +69,7 @@ module.exports = {
             accounts: [17]
         },
         {
-            id: 101,
+            id: 1011,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
@@ -77,7 +77,15 @@ module.exports = {
             accounts: [600, 777]
         },
         {
-            id: 102,
+            id: 1021,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["GBPUSD","AUDUSD","USDCHF"],
+            accounts: [500]
+        },
+        {
+            id: 1002,
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
@@ -85,12 +93,20 @@ module.exports = {
             accounts: [17]
         },
         {
-            id: 103,
+            id: 1012,
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["OIL.WTI"],
             accounts: [600, 777]
+        },
+        {
+            id: 1022,
+            name: "",
+            cron: "0 30 22 * * 7",
+            actions: ["removeFromLockedAccounts"],
+            symbols: ["GBPUSD","AUDUSD","USDCHF"],
+            accounts: [500]
         }
     ]
 }
