@@ -1,7 +1,7 @@
 module.exports = {
     id: 0002,
     name: "1min MA5/20 MACD",
-    parameterCount: 3,
+    parameterCount: 2,
     bind: [
         {
             symbol: "OIL.WTI",
