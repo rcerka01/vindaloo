@@ -9,11 +9,11 @@ module.exports = {
         },
         {
             symbol: "AUDUSD",
-            account: 500
+            account: 501
         },
         {
             symbol: "USDCHF",
-            account: 500
+            account: 502
         }
     ],
     // and

@@ -112,6 +112,32 @@ module.exports = {
                     volume: 0.1
                 }
             ]
+        },
+        {   
+            id: 501,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 502,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
         }
     ]
 }
