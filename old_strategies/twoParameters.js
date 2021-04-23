@@ -1,3 +1,4 @@
+
 module.exports = {
     id: 0002,
     name: "1min MA5/20 MACD",
@@ -11,28 +12,36 @@ module.exports = {
     // and
     buy: [
         {
-            key: "abovePositiveTreshold",
+            key: "higherHistogramTreshold",
+            value: 1
+        },
+        {
+            key: "positiveHistogram",
             value: 1
         }
     ],
     // or
     closeBuy: [
         {
-            key: "abovePositiveTreshold",
+            key: "positiveHistogram",
             value: -1
         }
     ],
     // and
     sell: [
         {
-            key: "belowNegativeTreshold",
+            key: "lowerHistogramTreshold",
             value: -1
-        }
+        },
+        {
+            key: "positiveHistogram",
+            value: -1
+        },
     ],
     // or
     closeSell: [
         {
-            key: "belowNegativeTreshold",
+            key: "positiveHistogram",
             value: 1
         }
     ]
