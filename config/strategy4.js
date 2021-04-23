@@ -6,6 +6,14 @@ module.exports = {
         {
             symbol: "GBPUSD",
             account: 500
+        },
+        {
+            symbol: "AUDUSD",
+            account: 500
+        },
+        {
+            symbol: "USDCHF",
+            account: 500
         }
     ],
     // and
