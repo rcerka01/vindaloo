@@ -225,7 +225,7 @@ module.exports = {
             accounts: [
                 {
                     id: 2,
-                    sl: 25,
+                    sl: 2500,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDJPY',
