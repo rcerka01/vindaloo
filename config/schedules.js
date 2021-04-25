@@ -66,7 +66,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
-            accounts: [17]
+            accounts: [17,1]
         },
         {
             id: 1011,
@@ -85,12 +85,20 @@ module.exports = {
             accounts: [500, 501, 502]
         },
         {
+            id: 1031,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            accounts: [400, 401, 402, 403, 404, 405, 406]
+        },
+        {
             id: 1002,
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
-            accounts: [17]
+            accounts: [17,1]
         },
         {
             id: 1012,
@@ -107,6 +115,14 @@ module.exports = {
             actions: ["removeFromLockedAccounts"],
             symbols: ["GBPUSD","AUDUSD","USDCHF"],
             accounts: [500, 501, 502]
+        },
+        {
+            id: 1023,
+            name: "",
+            cron: "0 30 22 * * 7",
+            actions: ["removeFromLockedAccounts"],
+            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            accounts: [400, 401, 402, 403, 404, 405, 406]
         }
     ]
 }

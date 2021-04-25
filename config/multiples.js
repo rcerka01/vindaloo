@@ -56,6 +56,7 @@ module.exports = {
 //     ]
 // },
 
+
 // TEST
         {   
             id: 9999,
@@ -75,6 +76,7 @@ module.exports = {
                     symbol: 'OIL.WTI',
                     volume: 0.1
                 },
+                // Nipun
                 {
                     id: 50,
                     sl: 3000,
@@ -135,6 +137,98 @@ module.exports = {
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+    // STRATEGY 3. HMA, DEPENDING ON TREND  
+        {   
+            id: 400,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 401,
+            accounts: [
+                {                
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 402,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 403,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 404,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 405,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 406,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
                     volume: 0.1
                 }
             ]
