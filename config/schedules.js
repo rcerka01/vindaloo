@@ -92,12 +92,13 @@ module.exports = {
             symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
             accounts: [400, 401, 402, 403, 404, 405, 406]
         },
+        // TO REMOVE ACCOUNT IS ENOUGH TO HJAVE ONE (any) SYMBOL 
         {
             id: 1002,
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
-            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            symbols: ["EURUSD"], 
             accounts: [17,1]
         },
         {
@@ -113,7 +114,7 @@ module.exports = {
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
-            symbols: ["GBPUSD","AUDUSD","USDCHF"],
+            symbols: ["EURUSD"],
             accounts: [500, 501, 502]
         },
         {
@@ -121,7 +122,7 @@ module.exports = {
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
-            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
+            symbols: ["EURUSD"], 
             accounts: [400, 401, 402, 403, 404, 405, 406]
         }
     ]
