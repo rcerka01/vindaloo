@@ -35,8 +35,8 @@ module.exports = {
     // and
     buy: [
         {
-            key: "buy",
-            value: 1
+            key: "low",
+            value: -1
         },
         {
             key: "trend",
@@ -46,15 +46,15 @@ module.exports = {
     // or
     closeBuy: [
         {
-            key: "sell",
-            value: -1
+            key: "high",
+            value: 1
         }
     ],
     // and
     sell: [
         {
-            key: "sell",
-            value: -1
+            key: "high",
+            value: 1
         },
         {
             key: "trend",
@@ -64,8 +64,8 @@ module.exports = {
     // or
     closeSell: [
         {
-            key: "buy",
-            value: 1
+            key: "low",
+            value: -1
         }
     ]
 }
