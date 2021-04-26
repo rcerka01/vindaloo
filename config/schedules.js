@@ -107,7 +107,7 @@ module.exports = {
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["OIL.WTI"],
-            accounts: [600, 777]
+            accounts: [600]
         },
         {
             id: 1022,
