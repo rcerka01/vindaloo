@@ -143,17 +143,25 @@ module.exports = { run: async function (app, dbClient) {
 
         let id = strategy + "-" + symbol + "-" + account
 
+        const strategyConf = conf.strategies.find(s => s.id == strategy);
         const results = await mfParametersModel.findById(dbClient, id);
 
-        let output = "";
+        let output = "<strong>" + id + "</strong><br><br>"
+        + "BUY: " + JSON.stringify(strategyConf.buy)  + "<br>"
+        + "CLOSE BUY: " + JSON.stringify(strategyConf.closeBuy) + "<br>"
+        + "SELL: " + JSON.stringify(strategyConf.sell) + "<br>"
+        + "CLOSE SELL: " + JSON.stringify(strategyConf.closeSell) + "<br><br>";    
 
+        let lineCount = 1;
         results.values.forEach(value => {
-            output += formatTime(value.time);
-            let count = value.parameters.length;
+            output += lineCount++ +" " + formatTime(value.time);
+            let count = value.parameters.length; 
+
             value.parameters.forEach(par => {
                 count = count + par.value;
                 output += " " + par.key + " " + par.value + " ";
             })
+            
             if (count === 0) { output += "<i style='color:red;font-weight:bold;'>SELL</i>" }
             if (count === value.parameters.length * 2) { output += "<i style='color:green;font-weight:bold;'>BUY</i>" }
             output += "<br>";
