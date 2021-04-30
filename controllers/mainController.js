@@ -163,19 +163,19 @@ module.exports = { run: async function (app, dbClient) {
                 output += " " + par.key + " " + par.value + " ";
             })
 
-            if (utilities.isMatch(strategyConf.buy, value.parameters)) {
+            if (utilities.isMatchAND(strategyConf.buy, value.parameters)) {
                 output += "<i style='color:green;font-weight:bold;'> BUY </i>"
             }
 
-            if (utilities.isMatch(strategyConf.sell, value.parameters)) {
+            if (utilities.isMatchAND(strategyConf.sell, value.parameters)) {
                 output += "<i style='color:red;font-weight:bold;'> SELL </i>"
             }
 
-            if (utilities.isMatch(strategyConf.closeBuy, value.parameters)) {
+            if (utilities.isMatchOR(strategyConf.closeBuy, value.parameters)) {
                 output += "<i style=''> close buy </i>"
             }
 
-            if (utilities.isMatch(strategyConf.closeSell, value.parameters)) {
+            if (utilities.isMatchOR(strategyConf.closeSell, value.parameters)) {
                 output += "<i style='color:brown;'> close sell </i>"
             }
             

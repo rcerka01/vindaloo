@@ -8,7 +8,7 @@ function mapToArray(map) {
     return arr;
 }
 
-function isMatch(st, params) {
+function isMatchAND(st, params) {
     let flag;
     for (const s of st) {
         flag = false;
@@ -20,7 +20,20 @@ function isMatch(st, params) {
     return flag;
 }
 
+function isMatchOR(st, params) {
+    let flag;
+    for (const s of st) {
+        flag = false;
+        params.forEach(p => {
+            if (_.isEqual(s, p)) { flag = true; };
+        })
+        if (flag) { break; }
+    };
+    return flag;
+}
+
 module.exports = {
-    isMatch: isMatch,
+    isMatchAND: isMatchAND,
+    isMatchOR: isMatchOR,
     mapToArray: mapToArray
 }

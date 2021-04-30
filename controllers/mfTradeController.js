@@ -81,25 +81,25 @@ function runMultipleFactorTrade(dbClient, factors, key) {
 
     if (run) {
 
-        if (utilities.isMatch(strategy.buy, utilities.mapToArray(definedFactors))) {
+        if (utilities.isMatchAND(strategy.buy, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "buy")
             }
         }
-        if (utilities.isMatch(strategy.sell, utilities.mapToArray(definedFactors))) {
+        if (utilities.isMatchAND(strategy.sell, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "sell")
             }
         }
-        if (utilities.isMatch(strategy.closeBuy, utilities.mapToArray(definedFactors))) {
+        if (utilities.isMatchOR(strategy.closeBuy, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeBuy")
             }
         }        
-        if (utilities.isMatch(strategy.closeSell, utilities.mapToArray(definedFactors))) {
+        if (utilities.isMatchOR(strategy.closeSell, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeSell")
