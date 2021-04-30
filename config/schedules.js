@@ -66,7 +66,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
-            accounts: [17,1]
+            accounts: [17,1,2,3]
         },
         {
             id: 1011,
@@ -99,7 +99,7 @@ module.exports = {
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [17,1]
+            accounts: [17,1,2,3]
         },
         {
             id: 1012,
