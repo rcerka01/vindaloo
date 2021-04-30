@@ -1,4 +1,5 @@
 const conf = require("../config/config");
+const utilities = require("./utilities");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
 const closeTradeController = require("./closeTradeController");  
@@ -128,8 +129,8 @@ module.exports = { run: async function (app, dbClient) {
         await results.forEach(trade => {
             if (trade.type === "buy") { color = "green"; }
             if (trade.type === "sell") { color = "red"; }
-            if (trade.type === "closeSell") { color = "#ff9966"; }
-            if (trade.type === "closeBuy") { color = "#333300"; }
+            if (trade.type === "closeSell") { color = "brown"; }
+            if (trade.type === "closeBuy") { color = "black"; }
             output += " " + formatTime(trade.time) + " <i style='color:" + color + ";'>" + trade.type + "</i><br>";
         });
 
@@ -141,7 +142,7 @@ module.exports = { run: async function (app, dbClient) {
         var symbol = req.params.symbol;
         var account = Number(req.params.account);
 
-        let id = strategy + "-" + symbol + "-" + account
+        let id = strategy + "-" + symbol + "-" + account;
 
         const strategyConf = conf.strategies.find(s => s.id == strategy);
         const results = await mfParametersModel.findById(dbClient, id);
@@ -161,9 +162,23 @@ module.exports = { run: async function (app, dbClient) {
                 count = count + par.value;
                 output += " " + par.key + " " + par.value + " ";
             })
+
+            if (utilities.isMatch(strategyConf.buy, value.parameters)) {
+                output += "<i style='color:green;font-weight:bold;'> BUY </i>"
+            }
+
+            if (utilities.isMatch(strategyConf.sell, value.parameters)) {
+                output += "<i style='color:red;font-weight:bold;'> SELL </i>"
+            }
+
+            if (utilities.isMatch(strategyConf.closeBuy, value.parameters)) {
+                output += "<i style=''> close buy </i>"
+            }
+
+            if (utilities.isMatch(strategyConf.closeSell, value.parameters)) {
+                output += "<i style='color:brown;'> close sell </i>"
+            }
             
-            if (count === 0) { output += "<i style='color:red;font-weight:bold;'>SELL</i>" }
-            if (count === value.parameters.length * 2) { output += "<i style='color:green;font-weight:bold;'>BUY</i>" }
             output += "<br>";
         });
 
