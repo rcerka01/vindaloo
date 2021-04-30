@@ -130,7 +130,7 @@ module.exports = { run: async function (app, dbClient) {
             if (trade.type === "buy") { color = "green"; }
             if (trade.type === "sell") { color = "red"; }
             if (trade.type === "closeSell") { color = "brown"; }
-            if (trade.type === "closeBuy") { color = "black"; }
+            if (trade.type === "closeBuy") { color = "#013220"; }
             output += " " + formatTime(trade.time) + " <i style='color:" + color + ";'>" + trade.type + "</i><br>";
         });
 
@@ -172,7 +172,7 @@ module.exports = { run: async function (app, dbClient) {
             }
 
             if (utilities.isMatchOR(strategyConf.closeBuy, value.parameters)) {
-                output += "<i style=''> close buy </i>"
+                output += "<i style='color:#013220'> close buy </i>"
             }
 
             if (utilities.isMatchOR(strategyConf.closeSell, value.parameters)) {
