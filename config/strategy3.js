@@ -48,6 +48,10 @@ module.exports = {
         {
             key: "high",
             value: 1
+        },
+        {
+            key: "trend",
+            value: -1
         }
     ],
     // and
@@ -66,6 +70,10 @@ module.exports = {
         {
             key: "low",
             value: -1
+        },
+        {
+            key: "trend",
+            value: 1
         }
     ]
 }
