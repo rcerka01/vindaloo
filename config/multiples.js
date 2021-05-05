@@ -62,8 +62,6 @@ module.exports = {
             id: 9999,
             accounts: []
         },
-// STRATEGY 3 //////////////////////////////////////////////////////////////
-        { },
 // STRATEGY 1 ////////////////////////////////////////////////////////////////////////        
         {
             id: 777,
@@ -106,20 +104,7 @@ module.exports = {
             id: 500,
             accounts: [
                 {
-                    id: 18,
-                    sl: 25,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 501,
-            accounts: [
-                {
-                    id: 18,
+                    id: 2,
                     sl: 25,
                     tp: 0,
                     offset: 0,
@@ -129,14 +114,79 @@ module.exports = {
             ]
         },
         {   
+            id: 501,
+            accounts: [
+                {                
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
             id: 502,
             accounts: [
                 {
-                    id: 18,
+                    id: 2,
                     sl: 25,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 503,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 504,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 505,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 506,
+            accounts: [
+                {
+                    id: 2,
+                    sl: 2500,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
                     volume: 0.1
                 }
             ]

@@ -4,16 +4,32 @@ module.exports = {
     parameterCount: 3,
     bind: [
         {
-            symbol: "GBPUSD",
+            symbol: "AUDUSD",
             account: 500
         },
         {
-            symbol: "AUDUSD",
+            symbol: "NZDUSD",
             account: 501
         },
         {
             symbol: "USDCHF",
             account: 502
+        },
+        {
+            symbol: "USDCAD",
+            account: 503
+        },
+        {
+            symbol: "EURUSD",
+            account: 504
+        },
+        {
+            symbol: "GBPUSD",
+            account: 505
+        },
+        {
+            symbol: "USDJPY",
+            account: 506
         }
     ],
     // and
