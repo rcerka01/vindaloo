@@ -11,28 +11,36 @@ module.exports = {
     // and
     buy: [
         {
-            key: "abovePositiveTreshold",
+            key: "histogram",
+            value: 1
+        },
+        {
+            key: "signal",
             value: 1
         }
     ],
     // or
     closeBuy: [
         {
-            key: "abovePositiveTreshold",
+            key: "side",
             value: -1
         }
     ],
     // and
     sell: [
         {
-            key: "belowNegativeTreshold",
+            key: "histogram",
+            value: -1
+        },
+        {
+            key: "signal",
             value: -1
         }
     ],
     // or
     closeSell: [
         {
-            key: "belowNegativeTreshold",
+            key: "side",
             value: 1
         }
     ]
