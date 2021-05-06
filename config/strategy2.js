@@ -10,7 +10,7 @@ module.exports = {
     ],
     // and
     buy: [
-        {``
+        {
             key: "histogram",
             value: 1
         },
