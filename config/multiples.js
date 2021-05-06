@@ -104,8 +104,8 @@ module.exports = {
             id: 500,
             accounts: [
                 {
-                    id: 2,
-                    sl: 11,
+                    id: 18,
+                    sl: 5.5,
                     tp: 0,
                     offset: 0,
                     symbol: 'AUDUSD',
@@ -117,8 +117,8 @@ module.exports = {
             id: 501,
             accounts: [
                 {                
-                    id: 2,
-                    sl: 11,
+                    id: 18,
+                    sl: 5.5,
                     tp: 0,
                     offset: 0,
                     symbol: 'NZDUSD',
@@ -130,8 +130,8 @@ module.exports = {
             id: 502,
             accounts: [
                 {
-                    id: 2,
-                    sl: 10,
+                    id: 18,
+                    sl: 5,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCHF',
@@ -143,8 +143,8 @@ module.exports = {
             id: 503,
             accounts: [
                 {
-                    id: 2,
-                    sl: 14,
+                    id: 18,
+                    sl: 7,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCAD',
@@ -156,8 +156,8 @@ module.exports = {
             id: 504,
             accounts: [
                 {
-                    id: 2,
-                    sl: 11,
+                    id: 18,
+                    sl: 5.5,
                     tp: 0,
                     offset: 0,
                     symbol: 'EURUSD',
@@ -169,8 +169,8 @@ module.exports = {
             id: 505,
             accounts: [
                 {
-                    id: 2,
-                    sl: 11,
+                    id: 18,
+                    sl: 5.5,
                     tp: 0,
                     offset: 0,
                     symbol: 'GBPUSD',
@@ -182,8 +182,8 @@ module.exports = {
             id: 506,
             accounts: [
                 {
-                    id: 2,
-                    sl: 1200,
+                    id: 18,
+                    sl: 600,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDJPY',
