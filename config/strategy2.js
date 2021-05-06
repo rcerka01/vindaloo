@@ -1,7 +1,7 @@
 module.exports = {
     id: 0002,
     name: "5 MIN, MACD HISTOGRAM, ABOVE / BELOW THRESHOLD",
-    parameterCount: 2,
+    parameterCount: 3,
     bind: [
         {
             symbol: "OIL.WTI",
@@ -10,7 +10,7 @@ module.exports = {
     ],
     // and
     buy: [
-        {
+        {``
             key: "histogram",
             value: 1
         },
