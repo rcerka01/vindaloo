@@ -61,69 +61,78 @@ module.exports = {
     
     // CLOSE FOR FRIDAY      
         {
-            id: 1001,
-            name: "",
-            cron: "0 45 20 * * 5",
-            actions: ["closeTrades", "addToLockedAccounts"],
-            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
-            accounts: [17,1,2,3]
-        },
-        {
-            id: 1011,
+            id: 0000,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["OIL.WTI"],
             accounts: [600, 777]
         },
+        // FX
         {
-            id: 1021,
+            id: 0000,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
-            symbols: ["GBPUSD","AUDUSD","USDCHF"],
-            accounts: [500, 501, 502]
+            symbols: ["AUDUSD"], 
+            accounts: [400, 410, 410]
         },
         {
-            id: 1031,
+            id: 0000,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
-            symbols: ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"], 
-            accounts: [400, 401, 402, 403, 404, 405, 406]
+            symbols: ["NZDUSD"], 
+            accounts: [401, 411, 411]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["USDCHF"], 
+            accounts: [402, 412, 412]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["USDCAD"], 
+            accounts: [403, 413, 413]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["EURUSD"], 
+            accounts: [404, 414, 414]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["GBPUSD"], 
+            accounts: [405, 415, 415]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 45 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["USDJPY"], 
+            accounts: [406, 416, 416]
         },
         // TO REMOVE ACCOUNT IS ENOUGH TO HJAVE ONE (any) SYMBOL 
         {
-            id: 1002,
+            id: 0000,
             name: "",
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [17,1,2,3]
-        },
-        {
-            id: 1012,
-            name: "",
-            cron: "0 30 22 * * 7",
-            actions: ["removeFromLockedAccounts"],
-            symbols: ["OIL.WTI"],
-            accounts: [600]
-        },
-        {
-            id: 1022,
-            name: "",
-            cron: "0 30 22 * * 7",
-            actions: ["removeFromLockedAccounts"],
-            symbols: ["EURUSD"],
-            accounts: [500, 501, 502]
-        },
-        {
-            id: 1023,
-            name: "",
-            cron: "0 30 22 * * 7",
-            actions: ["removeFromLockedAccounts"],
-            symbols: ["EURUSD"], 
-            accounts: [400, 401, 402, 403, 404, 405, 406]
+            accounts: [500, 600, 400, 401, 402, 403, 404, 405, 406, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504, 505, 506]
         }
     ]
 }
