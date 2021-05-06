@@ -64,17 +64,7 @@ function isAllParametersPresent(factors, strategy) {
     return false;
 }
 
-function runMultipleFactorTrade(dbClient, factors, key) {
-
-    const symbolAndStrategyId = getSymbolAndStrategyId(key);
-
-    const symbol = symbolAndStrategyId.symbol;
-    const strategyId = symbolAndStrategyId.strategyId;
-
-    const definedFactors = getFactorsDefinedBySymbolAndStrategyId(factors, symbol, strategyId);
-
-    const strategy = getStrategy(strategyId); 
-
+function startTrade(dbClient, strategy, symbol, definedFactors) {
     const account = getAccount(strategy, symbol);
 
     let run = isAllParametersPresent(definedFactors, strategy);
@@ -84,30 +74,50 @@ function runMultipleFactorTrade(dbClient, factors, key) {
         if (utilities.isMatchAND(strategy.buy, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "buy");
-                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "buy")
+                mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "buy")
             }
         }
         if (utilities.isMatchAND(strategy.sell, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "sell");
-                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "sell")
+                mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "sell")
             }
         }
         if (utilities.isMatchOR(strategy.closeBuy, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "buy");
-                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeBuy")
+                mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeBuy")
             }
         }        
         if (utilities.isMatchOR(strategy.closeSell, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "sell");
-                mfTradesModel.insertTrade(dbClient, strategyId, symbol, account, "closeSell")
+                mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeSell")
             }
         }
     }
+}
+
+function runMultipleFactorTrade(dbClient, factors, key) {
+
+    const symbolAndStrategyId = getSymbolAndStrategyId(key);
+
+    const symbol = symbolAndStrategyId.symbol;
+    const strategyId = symbolAndStrategyId.strategyId;
+
+    const definedFactors = getFactorsDefinedBySymbolAndStrategyId(factors, symbol, strategyId);
+
+    // start trade for strategy
+    const strategy = getStrategy(strategyId); 
+    startTrade(dbClient, strategy, symbol, definedFactors)
+
+    // start trades for sub-strategies
+    strategy.subStrategies.map(id => {
+        startTrade(dbClient, getStrategy(id), symbol, definedFactors);
+    });
 
     // save factors in DB
+    const account = getAccount(strategy, symbol);
     mfParametersModel.upsertParameters(dbClient, strategyId, symbol, account, definedFactors);
 }
 

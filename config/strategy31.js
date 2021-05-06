@@ -1,36 +1,35 @@
 module.exports = {
-    id: 0003,
-    name: "1 MIN HMA, FOLLOW TREND",
+    id: 1003,
+    name: "1 MIN HMA, AGAINST TREND",
     parameterCount: 3,
-    subStrategies: [1003],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 400
+            account: 410
         },
         {
             symbol: "NZDUSD",
-            account: 401
+            account: 411
         },
         {
             symbol: "USDCHF",
-            account: 402
+            account: 412
         },
         {
             symbol: "USDCAD",
-            account: 403
+            account: 413
         },
         {
             symbol: "EURUSD",
-            account: 404
+            account: 414
         },
         {
             symbol: "GBPUSD",
-            account: 405
+            account: 415
         },
         {
             symbol: "USDJPY",
-            account: 406
+            account: 416
         }
     ],
     // and
@@ -41,7 +40,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: 1
+            value: -1
         }
     ],
     // or
@@ -52,7 +51,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: -1
+            value: 1
         }
     ],
     // and
@@ -63,7 +62,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: -1
+            value: 1
         }
     ],
     // or
@@ -74,7 +73,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: 1
+            value: -1
         }
     ]
 }

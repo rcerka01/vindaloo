@@ -105,7 +105,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 5.5,
+                    sl: 11,
                     tp: 0,
                     offset: 0,
                     symbol: 'AUDUSD',
@@ -118,7 +118,7 @@ module.exports = {
             accounts: [
                 {                
                     id: 18,
-                    sl: 5.5,
+                    sl: 11,
                     tp: 0,
                     offset: 0,
                     symbol: 'NZDUSD',
@@ -131,7 +131,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 5,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCHF',
@@ -144,7 +144,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 7,
+                    sl: 14,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCAD',
@@ -157,7 +157,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 5.5,
+                    sl: 11,
                     tp: 0,
                     offset: 0,
                     symbol: 'EURUSD',
@@ -170,7 +170,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 5.5,
+                    sl: 11,
                     tp: 0,
                     offset: 0,
                     symbol: 'GBPUSD',
@@ -183,7 +183,7 @@ module.exports = {
             accounts: [
                 {
                     id: 18,
-                    sl: 600,
+                    sl: 1200,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDJPY',
@@ -275,6 +275,98 @@ module.exports = {
             accounts: [
                 {
                     id: 2,
+                    sl: 2500,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+    // STRATEGY 3.1. HMA, DEPENDING ON TREND  
+        {   
+            id: 410,
+            accounts: [
+                {
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 411,
+            accounts: [
+                {                
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 412,
+            accounts: [
+                {
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 413,
+            accounts: [
+                {
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 414,
+            accounts: [
+                {
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 415,
+            accounts: [
+                {
+                    id: 4,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 416,
+            accounts: [
+                {
+                    id: 4,
                     sl: 2500,
                     tp: 0,
                     offset: 0,
