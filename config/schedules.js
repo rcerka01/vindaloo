@@ -1,4 +1,6 @@
 module.exports = {
+    // ["AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "EURUSD", "GBPUSD", "USDJPY"]
+
     // id and name not used jet
 
     // 0 Sun
@@ -100,7 +102,7 @@ module.exports = {
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCAD"], 
             accounts: [403, 413, 413]
-        },
+        },       
         {
             id: 0000,
             name: "",
