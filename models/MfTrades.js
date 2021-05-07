@@ -24,6 +24,12 @@ async function findListings(client, query, projection) {
     return results;     
 };
 
+async function deleteListings(client, query) {
+    const results = client.db(conf.db.name).collection("mfTrades")
+        .deleteMany(query)
+    return results;     
+};
+
 //
 async function insertTrade(client, strategyId, symbol, account, type) {
     try {
@@ -58,7 +64,16 @@ async function find(client, strategy, symbol, account) {
     }
 }
 
+async function deletePosition(client, strategyId, symbol, account) {
+    try {
+        await  deleteListings(client, { strategyId, symbol, account });
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 module.exports = {
     insertTrade: insertTrade,
-    find, find
+    find: find,
+    deletePosition: deletePosition
 }

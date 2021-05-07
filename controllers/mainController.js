@@ -80,7 +80,10 @@ module.exports = { run: async function (app, dbClient) {
     app.get("/display-exceptions", async function(req, res) {  
         const results = await errorsModel.find(dbClient);
 
-        let output = "";
+        const outputClearLink = "<a href='http://" + req.headers.host 
+        + "/delete-errors'>clear</a>";
+
+        let output = outputClearLink + "<br>";
         let count = 1;
         await results.forEach(doc => {
             output += 
@@ -102,7 +105,10 @@ module.exports = { run: async function (app, dbClient) {
     app.get("/display-schedules", async function(req, res) {  
         const results = await schEventsModel.find(dbClient);
 
-        let output = "";
+        const outputClearLink = "<a href='http://" + req.headers.host 
+        + "/delete-schedules'>clear</a>";
+
+        let output = outputClearLink + "<br>";
         let count = 1;
         await results.forEach(doc => {
             output += 
@@ -124,7 +130,11 @@ module.exports = { run: async function (app, dbClient) {
 
         const results = await mfTradesModel.find(dbClient, strategy, symbol, account);
 
-        let output = "";
+        const outputClearLink = "<a href='http://" + req.headers.host 
+        + "/delete-trades/" + strategy + "/" + symbol + "/" + account + "'>clear</a>";
+
+        let output = outputClearLink + "<br>"
+
         let color = "";
         await results.forEach(trade => {
             if (trade.type === "buy") { color = "green"; }
@@ -300,5 +310,28 @@ module.exports = { run: async function (app, dbClient) {
 
         res.redirect("/display-factors-by-position/" + strategy + "/" + symbol + "/" + account);
     });
-    
+
+    app.get("/delete-schedules", async function(req, res) {  
+
+        schEventsModel.deleteAll(dbClient);
+
+        res.redirect("/display-schedules");
+    });
+
+    app.get("/delete-errors", async function(req, res) {  
+
+        errorsModel.deleteAll(dbClient);
+
+        res.redirect("/display-exceptions");
+    });
+
+    app.get("/delete-trades/:strategy/:symbol/:account", async function(req, res) {  
+        var strategy = req.params.strategy;
+        var symbol = req.params.symbol;
+        var account = Number(req.params.account);
+
+        await mfTradesModel.deletePosition(dbClient, strategy, symbol, account);
+
+        res.redirect("/display-trades-by-position/" + strategy + "/" + symbol + "/" + account);
+    });
 }}

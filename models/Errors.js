@@ -25,6 +25,12 @@ async function findListings(client, query, projection) {
     return results;     
 };
 
+async function deleteListings(client, query) {
+    const results = client.db(conf.db.name).collection("Errors")
+        .deleteMany(query)
+    return results;     
+};
+
 //
 async function insertError(client, strategyId, symbol, account, description, response) {
     try {
@@ -46,7 +52,16 @@ async function find(client) {
     }
 }
 
+async function deleteAll(client) {
+    try {
+        await  deleteListings(client, {});
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 module.exports = {
     saveError: insertError,
-    find, find
+    find: find,
+    deleteAll: deleteAll
 }

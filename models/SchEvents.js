@@ -23,6 +23,12 @@ async function findListings(client, query, projection) {
     return results;     
 };
 
+async function deleteListings(client, query) {
+    const results = client.db(conf.db.name).collection("schEvents")
+        .deleteMany(query)
+    return results;     
+};
+
 async function insertTask(client, comand, symbol, account) {
     try {
         await  insertListing(client, comand, symbol, account);
@@ -43,7 +49,16 @@ async function find(client) {
     }
 }
 
+async function deleteAll(client) {
+    try {
+        await  deleteListings(client, {});
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 module.exports = {
     insertEvent: insertTask,
-    find, find
+    find: find,
+    deleteAll: deleteAll
 }
