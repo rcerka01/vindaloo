@@ -49,6 +49,13 @@ async function findListings(client, query, projection) {
     return results;     
 };
 
+async function deleteListing(client, query) {
+    const result = await client.db(conf.db.name).collection("mfParameters")
+        .deleteOne(query);
+    return result;     
+};
+
+//
 
 async function upsertParameters(client, strategyId, symbol, account, parameters) {
     try {
@@ -99,9 +106,19 @@ async function findAllCurrentFactors(client) {
     }
 }
 
+async function deleteById(client, id) {
+    try {
+        const results = await deleteListing(client, { _id: id });
+        return results;
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 module.exports = {
     upsertParameters: upsertParameters,
     findById: findById,
     findAll: findAll,
-    findAllCurrentFactors: findAllCurrentFactors
+    findAllCurrentFactors: findAllCurrentFactors,
+    deleteById: deleteById
 }

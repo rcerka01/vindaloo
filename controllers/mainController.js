@@ -147,7 +147,11 @@ module.exports = { run: async function (app, dbClient) {
         const strategyConf = conf.strategies.find(s => s.id == strategy);
         const results = await mfParametersModel.findById(dbClient, id);
 
-        let output = "<strong>" + id + "</strong><br><br>"
+        const outputClearLink = "<a href='http://" + req.headers.host 
+            + "/delete-factors/" + strategy + "/" + symbol + "/" + account + "'>clear</a>";
+
+        let output = "<strong>" + id + "</strong><br>"
+        + outputClearLink + "<br>"
         + "BUY: " + JSON.stringify(strategyConf.buy)  + "<br>"
         + "CLOSE BUY: " + JSON.stringify(strategyConf.closeBuy) + "<br>"
         + "SELL: " + JSON.stringify(strategyConf.sell) + "<br>"
@@ -267,6 +271,34 @@ module.exports = { run: async function (app, dbClient) {
         }
 
         res.render("index");
+    });
+
+    app.get("/delete-factors/:strategy/:symbol/:account", async function(req, res) {  
+        var strategy = req.params.strategy;
+        var symbol = req.params.symbol;
+        var account = Number(req.params.account);
+
+        const id = strategy + "-" + symbol + "-" + account;
+
+        function arrayToMap(arr) {
+            let arrAsMap = new Map();
+            arr.forEach(par => {
+                arrAsMap.set(par.key, par.value);
+            });
+            return arrAsMap;
+        }
+
+        // get one line parameters
+        const factors = await mfParametersModel.findById(dbClient, id);
+        const factorsAsMap = arrayToMap(factors.values[0].parameters);
+
+        // delete listing
+        await mfParametersModel.deleteById(dbClient, id);
+
+        // insert one line parameters
+        await mfParametersModel.upsertParameters(dbClient, strategy, symbol, account, factorsAsMap);
+
+        res.redirect("/display-factors-by-position/" + strategy + "/" + symbol + "/" + account);
     });
     
 }}
