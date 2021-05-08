@@ -64,10 +64,8 @@ function isAllParametersPresent(factors, strategy) {
     return false;
 }
 
-function startTrade(dbClient, strategy, symbol, definedFactors) {
+function startTrade(dbClient, strategy, symbol, definedFactors, run) {
     const account = getAccount(strategy, symbol);
-
-    let run = isAllParametersPresent(definedFactors, strategy);
 
     if (run) {
 
@@ -107,18 +105,22 @@ function runMultipleFactorTrade(dbClient, factors, key) {
 
     const definedFactors = getFactorsDefinedBySymbolAndStrategyId(factors, symbol, strategyId);
 
+    let run = isAllParametersPresent(definedFactors, strategy);
+
     // start trade for strategy
     const strategy = getStrategy(strategyId); 
-    startTrade(dbClient, strategy, symbol, definedFactors)
+    startTrade(dbClient, strategy, symbol, definedFactors, run)
 
-    // start trades for sub-strategies
+    // start trades for sub-strategie
     strategy.subStrategies.map(id => {
-        startTrade(dbClient, getStrategy(id), symbol, definedFactors);
+        startTrade(dbClient, getStrategy(id), symbol, definedFactors, run);
     });
 
     // save factors in DB
-    const account = getAccount(strategy, symbol);
-    mfParametersModel.upsertParameters(dbClient, strategyId, symbol, account, definedFactors);
+    if (run) {
+        const account = getAccount(strategy, symbol);
+        mfParametersModel.upsertParameters(dbClient, strategyId, symbol, account, definedFactors);
+    }
 }
 
 module.exports = { 
