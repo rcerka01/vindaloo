@@ -2,6 +2,7 @@ module.exports = {
     id: 0002,
     name: "5 MIN, MACD HISTOGRAM, ABOVE / BELOW THRESHOLD",
     parameterCount: 3,
+    subStrategies: [],
     bind: [
         {
             symbol: "OIL.WTI",

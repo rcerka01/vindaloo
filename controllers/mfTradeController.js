@@ -105,10 +105,10 @@ function runMultipleFactorTrade(dbClient, factors, key) {
 
     const definedFactors = getFactorsDefinedBySymbolAndStrategyId(factors, symbol, strategyId);
 
+    const strategy = getStrategy(strategyId); 
     let run = isAllParametersPresent(definedFactors, strategy);
 
     // start trade for strategy
-    const strategy = getStrategy(strategyId); 
     startTrade(dbClient, strategy, symbol, definedFactors, run)
 
     // start trades for sub-strategie

@@ -2,6 +2,7 @@ module.exports = {
     id: 1003,
     name: "1 MIN HMA, AGAINST TREND",
     parameterCount: 3,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
