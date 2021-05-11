@@ -99,7 +99,7 @@ module.exports = {
                 }
             ]
         },
-        // STRATEGY 5. HMA, CLOSE AT MIDDLE AND UPTREND
+// STRATEGY 5. HMA, CLOSE AT MIDDLE AND UPTREND
         {   
             id: 700,
             accounts: [
@@ -183,6 +183,98 @@ module.exports = {
             accounts: [
                 {
                     id: 5,
+                    sl: 600,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+        // STRATEGY 5.1. HMA, CLOSE AT MIDDLE AND DOWNTREND
+        {   
+            id: 710,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 711,
+            accounts: [
+                {                
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 712,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 713,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 6,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 714,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 715,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 716,
+            accounts: [
+                {
+                    id: 6,
                     sl: 600,
                     tp: 0,
                     offset: 0,

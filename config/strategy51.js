@@ -1,36 +1,36 @@
 module.exports = {
-    id: 0005,
-    name: "1 MIN HMA, CLOSE AT MIDDLE DEPENDING ON UPTREND",
+    id: 1005,
+    name: "1 MIN HMA, CLOSE AT MIDDLE DEPENDING ON DOWNTREND",
     parameterCount: 4,
-    subStrategies: [1005],
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 700
+            account: 710
         },
         {
             symbol: "NZDUSD",
-            account: 701
+            account: 711
         },
         {
             symbol: "USDCHF",
-            account: 702
+            account: 712
         },
         {
             symbol: "USDCAD",
-            account: 703
+            account: 713
         },
         {
             symbol: "EURUSD",
-            account: 704
+            account: 714
         },
         {
             symbol: "GBPUSD",
-            account: 705
+            account: 715
         },
         {
             symbol: "USDJPY",
-            account: 706
+            account: 716
         }
     ],
     // and
@@ -45,7 +45,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: 1
+            value: -1
         },
     ],
     // or
@@ -67,7 +67,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: -1
+            value: 1
         }
     ],
     // or
