@@ -3,9 +3,9 @@ const utilities = require("./utilities");
 const singleTradeController = require("./singleTradeController");     
 const multipleTradeController = require("./multipleTradeController");     
 const closeTradeController = require("./closeTradeController");  
-const mfController = require("./mfController");     
 const scheduleController = require("./scheduleController");     
-const lockedAccountsController = require("./lockedAccountsController");     
+const lockedAccountsController = require("./lockedAccountsController");  
+const mfController = require("./mfController");     
 const mfParametersModel = require("../models/MfParameters");
 const mfTradesModel = require("../models/MfTrades");
 const errorsModel = require("../models/Errors");
@@ -68,11 +68,28 @@ module.exports = { run: async function (app, dbClient) {
     });
 
     app.post("/multiple-factor/:key/:value", function(req, res) {
+        
+        function splitFactorForStrategies(factor) {
+            let dividedFactors = [];
+            const sp1 = factor.split("-");
+            const sp2 = sp1[1].split("_");
+            const symbol = sp1[0];
+            const parameter = sp2[1];
+            const strategies = sp2[0].split(",");
+            strategies.forEach( strategy => {
+                dividedFactors.push(symbol + "-" + strategy + "_" + parameter);
+            });
+            return dividedFactors;
+        }
 
-        var key = req.params.key;
+        const keys = req.params.key;
+        const keysAarr = splitFactorForStrategies(keys); 
+        
         var value = Number(req.params.value);
 
-        mfController.createOrUpdate(dbClient, key, value);
+        keysAarr.forEach(key => {
+            mfController.createOrUpdate(dbClient, key, value);
+        });
 
         res.render("index");
     });

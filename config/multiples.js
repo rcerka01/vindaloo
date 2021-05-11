@@ -99,6 +99,98 @@ module.exports = {
                 }
             ]
         },
+        // STRATEGY 5. HMA, CLOSE AT MIDDLE AND UPTREND
+        {   
+            id: 700,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 701,
+            accounts: [
+                {                
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 702,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 703,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 6,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 704,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 705,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 706,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 600,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
 // STRATEGY 4. HMA, CLOSE AT MIDDLE  
         {   
             id: 500,
