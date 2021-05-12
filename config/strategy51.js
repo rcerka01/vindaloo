@@ -1,6 +1,6 @@
 module.exports = {
     id: 1005,
-    name: "1 MIN HMA, CLOSE AT MIDDLE DEPENDING ON DOWNTREND",
+    name: "1 MIN HMA, CLOSE AT MIDDLE (treshold), FOLLOW DOWNTREND",
     parameterCount: 4,
     subStrategies: [],
     bind: [
@@ -36,7 +36,7 @@ module.exports = {
     // and
     buy: [
         {
-            key: "beloweLowerThershold",
+            key: "low",
             value: -1
         },
         {
@@ -58,7 +58,7 @@ module.exports = {
     // and
     sell: [
         {
-            key: "aboveUpperThershold",
+            key: "high",
             value: 1
         },
         {

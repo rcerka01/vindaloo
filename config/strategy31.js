@@ -1,6 +1,6 @@
 module.exports = {
     id: 1003,
-    name: "1 MIN HMA, AGAINST TREND",
+    name: "1 MIN HMA, FOLLOW DOWNTREND",
     parameterCount: 3,
     subStrategies: [],
     bind: [

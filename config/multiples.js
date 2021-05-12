@@ -62,7 +62,7 @@ module.exports = {
             id: 9999,
             accounts: []
         },
-// STRATEGY 1 ////////////////////////////////////////////////////////////////////////        
+// STRATEGY 1, NIPUN
         {
             id: 777,
             accounts: [
@@ -85,7 +85,7 @@ module.exports = {
                 }
             ]
         },
-// STRATEGY 2. HISTOGRAM ABOVE / BELOW TRESHOLD   
+// STRATEGY 2, HISTOGRAM ABOVE / BELOW TRESHOLD   
         {   
             id: 600,
             accounts: [
@@ -99,283 +99,7 @@ module.exports = {
                 }
             ]
         },
-// STRATEGY 5. HMA, CLOSE AT MIDDLE AND UPTREND
-        {   
-            id: 700,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'AUDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 701,
-            accounts: [
-                {                
-                    id: 5,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'NZDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 702,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCHF',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 703,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 6,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCAD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 704,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 705,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 706,
-            accounts: [
-                {
-                    id: 5,
-                    sl: 600,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDJPY',
-                    volume: 0.1
-                }
-            ]
-        },
-        // STRATEGY 5.1. HMA, CLOSE AT MIDDLE AND DOWNTREND
-        {   
-            id: 710,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'AUDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 711,
-            accounts: [
-                {                
-                    id: 6,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'NZDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 712,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCHF',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 713,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 6,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCAD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 714,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 715,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 716,
-            accounts: [
-                {
-                    id: 6,
-                    sl: 600,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDJPY',
-                    volume: 0.1
-                }
-            ]
-        },
-// STRATEGY 4. HMA, CLOSE AT MIDDLE  
-        {   
-            id: 500,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'AUDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 501,
-            accounts: [
-                {                
-                    id: 18,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'NZDUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 502,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCHF',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 503,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 6,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDCAD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 504,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'EURUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 505,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 5.5,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'GBPUSD',
-                    volume: 0.1
-                }
-            ]
-        },
-        {   
-            id: 506,
-            accounts: [
-                {
-                    id: 18,
-                    sl: 600,
-                    tp: 0,
-                    offset: 0,
-                    symbol: 'USDJPY',
-                    volume: 0.1
-                }
-            ]
-        },
-    // STRATEGY 3. HMA, DEPENDING ON TREND  
+// STRATEGY 3, 1 MIN HMA, FOLLOW UPTREND  
         {   
             id: 400,
             accounts: [
@@ -467,7 +191,7 @@ module.exports = {
                 }
             ]
         },
-    // STRATEGY 3.1. HMA, DEPENDING ON TREND  
+        // STRATEGY 3.1, 1 MIN HMA, FOLLOW DOWNTREND
         {   
             id: 410,
             accounts: [
@@ -558,6 +282,283 @@ module.exports = {
                     volume: 0.1
                 }
             ]
+        },
+// STRATEGY 4, 1 MIN HMA, CLOSE AT MIDDLE (threshold)
+        {   
+            id: 500,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 501,
+            accounts: [
+                {                
+                    id: 18,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 502,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 503,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 6,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 504,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 505,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 506,
+            accounts: [
+                {
+                    id: 18,
+                    sl: 600,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+// STRATEGY 5, 1 MIN HMA, CLOSE AT MIDDLE (treshold), FOLLOW UPTREND
+        {   
+            id: 700,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 701,
+            accounts: [
+                {                
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 702,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 703,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 6,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 704,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 705,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 706,
+            accounts: [
+                {
+                    id: 5,
+                    sl: 600,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+        // STRATEGY 5.1, 1 MIN HMA, CLOSE AT MIDDLE (treshold), FOLLOW DOWNTREND
+        {   
+            id: 710,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 711,
+            accounts: [
+                {                
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 712,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 713,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 6,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 714,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 715,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 5.5,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 716,
+            accounts: [
+                {
+                    id: 6,
+                    sl: 600,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
         }
+    
     ]
 }
