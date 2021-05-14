@@ -77,7 +77,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["AUDUSD"], 
-            accounts: [400, 410, 500, 17, 1, 3]
+            accounts: [400, 410, 500, 700, 710, 17, 1, 3]
         },
         {
             id: 0000,
@@ -85,7 +85,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["NZDUSD"], 
-            accounts: [401, 411, 501, 17, 1, 3]
+            accounts: [401, 411, 501, 701, 711, 17, 1, 3]
         },
         {
             id: 0000,
@@ -93,7 +93,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCHF"], 
-            accounts: [402, 412, 502, 17, 1, 3]
+            accounts: [402, 412, 502, 702, 712, 17, 1, 3]
         },
         {
             id: 0000,
@@ -101,7 +101,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCAD"], 
-            accounts: [403, 413, 503, 17, 1, 3]
+            accounts: [403, 413, 503, 703, 713, 17, 1, 3]
         },       
         {
             id: 0000,
@@ -109,7 +109,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [404, 414, 504, 17, 1, 3]
+            accounts: [404, 414, 504, 704, 714, 17, 1, 3]
         },
         {
             id: 0000,
@@ -117,7 +117,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["GBPUSD"], 
-            accounts: [405, 415, 505, 17, 1, 3]
+            accounts: [405, 415, 505, 705, 715, 17, 1, 3]
         },
         {
             id: 0000,
@@ -125,7 +125,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDJPY"], 
-            accounts: [406, 416, 506, 17, 1, 3]
+            accounts: [406, 416, 506, 706, 716, 17, 1, 3]
         },
         // TO REMOVE ACCOUNT IS ENOUGH TO HJAVE ONE (any) SYMBOL 
         {
@@ -134,7 +134,7 @@ module.exports = {
             cron: "0 30 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [500, 600, 17, 1, 3, 400, 401, 402, 403, 404, 405, 406, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504, 505, 506]
+            accounts: [500, 600, 17, 1, 3, 400, 401, 402, 403, 404, 405, 406, 410, 411, 412, 413, 414, 415, 416, 500, 501, 502, 503, 504, 505, 506, 700, 701, 702, 703, 704, 705, 706, 710, 711, 712, 713, 714, 715, 716]
         }
     ]
 }
