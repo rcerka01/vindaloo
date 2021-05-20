@@ -74,7 +74,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 46 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["AUDUSD"], 
             accounts: [400, 410, 500, 700, 710, 17, 1, 3]
@@ -82,7 +82,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 47 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["NZDUSD"], 
             accounts: [401, 411, 501, 701, 711, 17, 1, 3]
@@ -90,7 +90,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 48 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCHF"], 
             accounts: [402, 412, 502, 702, 712, 17, 1, 3]
@@ -98,7 +98,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 49 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCAD"], 
             accounts: [403, 413, 503, 703, 713, 17, 1, 3]
@@ -106,7 +106,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 50 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURUSD"], 
             accounts: [404, 414, 504, 704, 714, 17, 1, 3]
@@ -114,7 +114,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 51 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["GBPUSD"], 
             accounts: [405, 415, 505, 705, 715, 17, 1, 3]
@@ -122,7 +122,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 45 20 * * 5",
+            cron: "0 52 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDJPY"], 
             accounts: [406, 416, 506, 706, 716, 17, 1, 3]
