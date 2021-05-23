@@ -141,7 +141,7 @@ module.exports = { run: async function (app, dbClient) {
     });
 
     app.get("/display-trades-by-position/:strategy/:symbol/:account", async function(req, res) {  
-        var strategy = req.params.strategy;
+        var strategy = Number(req.params.strategy);
         var symbol = req.params.symbol;
         var account = Number(req.params.account);
 
@@ -343,7 +343,7 @@ module.exports = { run: async function (app, dbClient) {
     });
 
     app.get("/delete-trades/:strategy/:symbol/:account", async function(req, res) {  
-        var strategy = req.params.strategy;
+        var strategy = Number(req.params.strategy);
         var symbol = req.params.symbol;
         var account = Number(req.params.account);
 
