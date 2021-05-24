@@ -197,7 +197,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'AUDUSD',
@@ -210,7 +210,7 @@ module.exports = {
             accounts: [
                 {                
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'NZDUSD',
@@ -223,7 +223,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCHF',
@@ -236,7 +236,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDCAD',
@@ -249,7 +249,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'EURUSD',
@@ -262,7 +262,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 25,
+                    sl: 10,
                     tp: 0,
                     offset: 0,
                     symbol: 'GBPUSD',
@@ -275,7 +275,7 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 2500,
+                    sl: 1000,
                     tp: 0,
                     offset: 0,
                     symbol: 'USDJPY',
