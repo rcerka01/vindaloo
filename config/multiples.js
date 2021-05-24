@@ -558,7 +558,98 @@ module.exports = {
                     volume: 0.1
                 }
             ]
+        },
+    // STRATEGY 6, 1 MIN RSI
+        {   
+            id: 800,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 801,
+            accounts: [
+                {                
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 802,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 803,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 804,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 805,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 5,
+                    tp: 8,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 806,
+            accounts: [
+                {
+                    id: 10,
+                    sl: 500,
+                    tp: 800,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
         }
-    
     ]
 }
