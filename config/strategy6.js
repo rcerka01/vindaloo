@@ -53,7 +53,7 @@ module.exports = {
     // and
     sell: [
         {
-            key: "upperblock",
+            key: "upperblocked",
             value: -1
         },
         {
