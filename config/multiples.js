@@ -566,7 +566,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'AUDUSD',
                     volume: 0.1
@@ -579,7 +579,7 @@ module.exports = {
                 {                
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'NZDUSD',
                     volume: 0.1
@@ -592,7 +592,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'USDCHF',
                     volume: 0.1
@@ -605,7 +605,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'USDCAD',
                     volume: 0.1
@@ -618,7 +618,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'EURUSD',
                     volume: 0.1
@@ -631,7 +631,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 5,
-                    tp: 8,
+                    tp: 3,
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
@@ -644,7 +644,7 @@ module.exports = {
                 {
                     id: 10,
                     sl: 500,
-                    tp: 800,
+                    tp: 300,
                     offset: 0,
                     symbol: 'USDJPY',
                     volume: 0.1
