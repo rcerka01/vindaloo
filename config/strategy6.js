@@ -1,7 +1,7 @@
 module.exports = {
     id: 0006,
     name: "1 MIN RSI",
-    parameterCount: 5,
+    parameterCount: 7,
     subStrategies: [],
     bind: [
         {
@@ -40,6 +40,10 @@ module.exports = {
             value: -1
         },
         {
+            key: "lowermiddleblocked",
+            value: -1
+        },
+        {
             key: "lowerstart",
             value: 1
         },
@@ -54,6 +58,10 @@ module.exports = {
     sell: [
         {
             key: "upperblocked",
+            value: -1
+        },
+        {
+            key: "uppermiddleblocked",
             value: -1
         },
         {
