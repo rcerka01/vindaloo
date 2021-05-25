@@ -197,8 +197,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'AUDUSD',
                     volume: 0.1
@@ -210,8 +210,8 @@ module.exports = {
             accounts: [
                 {                
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'NZDUSD',
                     volume: 0.1
@@ -223,8 +223,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'USDCHF',
                     volume: 0.1
@@ -236,8 +236,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'USDCAD',
                     volume: 0.1
@@ -249,8 +249,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'EURUSD',
                     volume: 0.1
@@ -262,8 +262,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 10,
-                    tp: 0,
+                    sl: 5,
+                    tp: 5,
                     offset: 0,
                     symbol: 'GBPUSD',
                     volume: 0.1
@@ -275,8 +275,8 @@ module.exports = {
             accounts: [
                 {
                     id: 4,
-                    sl: 1000,
-                    tp: 0,
+                    sl: 500,
+                    tp: 500,
                     offset: 0,
                     symbol: 'USDJPY',
                     volume: 0.1
