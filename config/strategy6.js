@@ -53,7 +53,12 @@ module.exports = {
         },
     ],
     // or
-    closeBuy: [],
+    closeBuy: [
+        {
+            key: "lowerstart",
+            value: -1
+        }
+    ],
     // and
     sell: [
         {
@@ -74,5 +79,10 @@ module.exports = {
         }
     ],
     // or
-    closeSell: []
+    closeSell: [
+        {
+            key: "upperstart",
+            value: -1
+        }
+    ]
 }
