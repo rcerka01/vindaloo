@@ -36,7 +36,7 @@ module.exports = {
     // and
     buy: [
         {
-            key: "lowerblocked",
+            key: "lowerblockedDESCRIPTIVE",
             value: -1
         },
         // {
@@ -63,7 +63,7 @@ module.exports = {
     // and
     sell: [
         {
-            key: "upperblocked",
+            key: "upperblockedDESCRIPTIVE",
             value: -1
         },
         // {
