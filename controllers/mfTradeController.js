@@ -44,13 +44,14 @@ function getAccount(strategy, symbol) {
 }
 
 function isAllParametersPresent(factors, strategy) {
-
     function loopParameters(parameters) {
         for (i in parameters) {
            if (!factors.has(parameters[i].key)) return false;
         }
         return true;
     }
+    
+    if (strategy.disableParameterCheck) { return true; }
 
     if (strategy.parameterCount === factors.size) {
         if (

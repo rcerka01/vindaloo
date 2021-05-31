@@ -1,36 +1,37 @@
 module.exports = {
-    id: 0006,
-    name: "1 MIN RSI FOLLOW TREND",
-    parameterCount: 5,
-    subStrategies: [1006,2006],
+    id: 2006,
+    name: "1 MIN RSI NOT DEPENDANT ON TREND",
+    disableParameterCheck: true,
+    parameterCount: 4,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 800
+            account: 820
         },
         {
             symbol: "NZDUSD",
-            account: 801
+            account: 821
         },
         {
             symbol: "USDCHF",
-            account: 802
+            account: 822
         },
         {
             symbol: "USDCAD",
-            account: 803
+            account: 823
         },
         {
             symbol: "EURUSD",
-            account: 804
+            account: 824
         },
         {
             symbol: "GBPUSD",
-            account: 805
+            account: 825
         },
         {
             symbol: "USDJPY",
-            account: 806
+            account: 826
         }
     ],
     // and
@@ -46,12 +47,7 @@ module.exports = {
         {
             key: "lowerstart",
             value: 1
-        },
-        // descriptive only, not starting trade
-        {
-            key: "emaDESCRIPTIVE",
-            value: 1,
-        },
+        }
     ],
     // or
     closeBuy: [
@@ -73,11 +69,6 @@ module.exports = {
         {
             key: "upperstart",
             value: 1
-        },
-        // descriptive only, not starting trade
-        {
-            key: "emaDESCRIPTIVE",
-            value: -1
         }
     ],
     // or

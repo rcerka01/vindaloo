@@ -1,36 +1,36 @@
 module.exports = {
-    id: 0006,
-    name: "1 MIN RSI FOLLOW TREND",
+    id: 1006,
+    name: "1 MIN RSI AGAINST TREND",
     parameterCount: 5,
-    subStrategies: [1006,2006],
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 800
+            account: 810
         },
         {
             symbol: "NZDUSD",
-            account: 801
+            account: 811
         },
         {
             symbol: "USDCHF",
-            account: 802
+            account: 812
         },
         {
             symbol: "USDCAD",
-            account: 803
+            account: 813
         },
         {
             symbol: "EURUSD",
-            account: 804
+            account: 814
         },
         {
             symbol: "GBPUSD",
-            account: 805
+            account: 815
         },
         {
             symbol: "USDJPY",
-            account: 806
+            account: 816
         }
     ],
     // and
@@ -50,7 +50,7 @@ module.exports = {
         // descriptive only, not starting trade
         {
             key: "emaDESCRIPTIVE",
-            value: 1,
+            value: -1,
         },
     ],
     // or
@@ -77,7 +77,7 @@ module.exports = {
         // descriptive only, not starting trade
         {
             key: "emaDESCRIPTIVE",
-            value: -1
+            value: 1
         }
     ],
     // or
