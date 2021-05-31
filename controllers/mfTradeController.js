@@ -64,10 +64,11 @@ function isAllParametersPresent(factors, strategy) {
     return false;
 }
 
-function startTrade(dbClient, strategy, symbol, definedFactors, run) {
+function startTrade(dbClient, strategy, symbol, definedFactors, runFlag, descriptiveOnlyFlag) {
     const account = getAccount(strategy, symbol);
 
-    if (run) {
+    // not start trade if parameters are missing, or parameter is only descriptive
+    if (runFlag && !descriptiveOnlyFlag) {
 
         if (utilities.isMatchAND(strategy.buy, utilities.mapToArray(definedFactors))) {
             if (!isLockedAccount(account)) {
@@ -98,6 +99,8 @@ function startTrade(dbClient, strategy, symbol, definedFactors, run) {
 
 function runMultipleFactorTrade(dbClient, factors, key) {
 
+    const descriptiveOnlyFlag = key.includes('DESCRIPTIVE');
+
     const symbolAndStrategyId = getSymbolAndStrategyId(key);
 
     const symbol = symbolAndStrategyId.symbol;
@@ -106,18 +109,19 @@ function runMultipleFactorTrade(dbClient, factors, key) {
     const definedFactors = getFactorsDefinedBySymbolAndStrategyId(factors, symbol, strategyId);
 
     const strategy = getStrategy(strategyId); 
-    let run = isAllParametersPresent(definedFactors, strategy);
+    let runFlag = isAllParametersPresent(definedFactors, strategy);
 
     // start trade for strategy
-    startTrade(dbClient, strategy, symbol, definedFactors, run)
+    startTrade(dbClient, strategy, symbol, definedFactors, runFlag, descriptiveOnlyFlag)
 
     // start trades for sub-strategie
     strategy.subStrategies.map(id => {
-        startTrade(dbClient, getStrategy(id), symbol, definedFactors, run);
+        startTrade(dbClient, getStrategy(id), symbol, definedFactors, runFlag, descriptiveOnlyFlag);
     });
 
-    // save factors in DB
-    if (run) {
+    // save factors in DB, also descriptive only (ones which shall not start the trade)
+    // save only when all parameters present in memory
+    if (runFlag) {
         const account = getAccount(strategy, symbol);
         mfParametersModel.upsertParameters(dbClient, strategyId, symbol, account, definedFactors);
     }
