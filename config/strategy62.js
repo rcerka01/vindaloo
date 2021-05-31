@@ -1,7 +1,8 @@
 module.exports = {
     id: 2006,
     name: "1 MIN RSI",
-    parameterCount: 5,
+    disableParameterCheck: true,
+    parameterCount: 4,
     subStrategies: [],
     bind: [
         {
