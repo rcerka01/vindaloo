@@ -47,9 +47,10 @@ module.exports = {
             key: "lowerstart",
             value: 1
         },
+        // descriptive only, not starting trade
         {
-            key: "ema",
-            value: 1
+            key: "emaDESCRIPTIVE",
+            value: 1,
         },
     ],
     // or
@@ -73,8 +74,9 @@ module.exports = {
             key: "upperstart",
             value: 1
         },
+        // descriptive only, not starting trade
         {
-            key: "ema",
+            key: "emaDESCRIPTIVE",
             value: -1
         }
     ],
