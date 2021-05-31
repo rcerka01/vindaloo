@@ -568,7 +568,7 @@ module.exports = {
                 }
             ]
         },
-    // STRATEGY 6, 1 MIN RSI
+    // STRATEGY 6, 1 MIN RSI WITH TREND
         {   
             id: 800,
             accounts: [
@@ -652,6 +652,190 @@ module.exports = {
             accounts: [
                 {
                     id: 10,
+                    sl: 2500,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+        // SUB STRATEGY 6.1, 1 MIN RSI AGAINST TREND
+        {   
+            id: 810,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 811,
+            accounts: [
+                {                
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 812,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 813,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 814,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 815,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 816,
+            accounts: [
+                {
+                    id: 9,
+                    sl: 2500,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDJPY',
+                    volume: 0.1
+                }
+            ]
+        },
+        // STRATEGY 6.2, 1 MIN RSI NO TREND
+        {   
+            id: 820,
+            accounts: [
+                {
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'AUDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 821,
+            accounts: [
+                {                
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'NZDUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 822,
+            accounts: [
+                {
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCHF',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 823,
+            accounts: [
+                {
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'USDCAD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 824,
+            accounts: [
+                {
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'EURUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 825,
+            accounts: [
+                {
+                    id: 8,
+                    sl: 25,
+                    tp: 0,
+                    offset: 0,
+                    symbol: 'GBPUSD',
+                    volume: 0.1
+                }
+            ]
+        },
+        {   
+            id: 826,
+            accounts: [
+                {
+                    id: 8,
                     sl: 2500,
                     tp: 0,
                     offset: 0,
