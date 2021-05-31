@@ -1,6 +1,6 @@
 module.exports = {
     id: 2006,
-    name: "1 MIN RSI",
+    name: "1 MIN RSI NOT DEPENDANT ON TREND",
     disableParameterCheck: true,
     parameterCount: 4,
     subStrategies: [],

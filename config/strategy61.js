@@ -1,6 +1,6 @@
 module.exports = {
     id: 1006,
-    name: "1 MIN RSI",
+    name: "1 MIN RSI AGAINST TREND",
     parameterCount: 5,
     subStrategies: [],
     bind: [
