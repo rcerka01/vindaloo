@@ -1,80 +1,80 @@
 module.exports = {
-    id: 0007,
-    name: "15 MIN RSI NOT DEPENDANT ON TREND",
-    disableParameterCheck: true,
+    id: 7,
+    name: "HMA, 1 min, close at 'threshold above middle', against trend",
+    disableParameterCheck: false,
     parameterCount: 4,
     subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 900
+            account: 700
         },
         {
             symbol: "NZDUSD",
-            account: 901
+            account: 701
         },
         {
             symbol: "USDCHF",
-            account: 902
+            account: 702
         },
         {
             symbol: "USDCAD",
-            account: 903
+            account: 703
         },
         {
             symbol: "EURUSD",
-            account: 904
+            account: 704
         },
         {
             symbol: "GBPUSD",
-            account: 905
+            account: 705
         },
         {
             symbol: "USDJPY",
-            account: 906
+            account: 706
         }
     ],
     // and
     buy: [
         {
-            key: "15lowerblockedDESCRIPTIVE",
+            key: "low",
             value: -1
         },
-        // {
-        //     key: "lowermiddleblocked",
-        //     value: -1
-        // },
         {
-            key: "15lowerstart",
+            key: "positive",
+            value: -1
+        },
+        {
+            key: "trend",
             value: 1
-        }
+        },
     ],
     // or
     closeBuy: [
         {
-            key: "15lowerstart",
-            value: -1
+            key: "positive",
+            value: 1
         }
     ],
     // and
     sell: [
         {
-            key: "15upperblockedDESCRIPTIVE",
-            value: -1
-        },
-        // {
-        //     key: "uppermiddleblocked",
-        //     value: -1
-        // },
-        {
-            key: "15upperstart",
+            key: "high",
             value: 1
+        },
+        {
+            key: "positive",
+            value: 1
+        },
+        {
+            key: "trend",
+            value: -1
         }
     ],
     // or
     closeSell: [
         {
-            key: "15upperstart",
+            key: "positive",
             value: -1
         }
     ]

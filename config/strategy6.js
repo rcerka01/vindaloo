@@ -1,89 +1,72 @@
 module.exports = {
-    id: 0006,
-    name: "1 MIN RSI FOLLOW TREND",
-    parameterCount: 5,
-    subStrategies: [1006,2006],
+    id: 6,
+    name: "1 min, close at 'threshold above middle'",
+    disableParameterCheck: false,
+    parameterCount: 3,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 800
+            account: 600
         },
         {
             symbol: "NZDUSD",
-            account: 801
+            account: 601
         },
         {
             symbol: "USDCHF",
-            account: 802
+            account: 602
         },
         {
             symbol: "USDCAD",
-            account: 803
+            account: 603
         },
         {
             symbol: "EURUSD",
-            account: 804
+            account: 604
         },
         {
             symbol: "GBPUSD",
-            account: 805
+            account: 505
         },
         {
             symbol: "USDJPY",
-            account: 806
+            account: 606
         }
     ],
     // and
     buy: [
         {
-            key: "lowerblockedDESCRIPTIVE",
+            key: "low",
             value: -1
         },
-        // {
-        //     key: "lowermiddleblocked",
-        //     value: -1
-        // },
         {
-            key: "lowerstart",
-            value: 1
-        },
-        // descriptive only, not starting trade
-        {
-            key: "emaDESCRIPTIVE",
-            value: 1,
-        },
+            key: "positive",
+            value: -1
+        }
     ],
     // or
     closeBuy: [
         {
-            key: "lowerstart",
-            value: -1
+            key: "positive",
+            value: 1
         }
     ],
     // and
     sell: [
         {
-            key: "upperblockedDESCRIPTIVE",
-            value: -1
-        },
-        // {
-        //     key: "uppermiddleblocked",
-        //     value: -1
-        // },
-        {
-            key: "upperstart",
+            key: "high",
             value: 1
         },
-        // descriptive only, not starting trade
         {
-            key: "emaDESCRIPTIVE",
-            value: -1
+            key: "positive",
+            value: 1
         }
     ],
     // or
     closeSell: [
         {
-            key: "upperstart",
+            key: "positive",
             value: -1
         }
     ]

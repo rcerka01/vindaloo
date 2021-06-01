@@ -3,17 +3,14 @@ const login = require("./login");
 const multiples = require("./multiples");
 const schedules = require("./schedules");
 const strategyTest = require("./strategyTest");
-const strategy1 = require("./strategy1");
-const strategy2 = require("./strategy2");
-const strategy3 = require("./strategy3");
-const strategy31 = require("./strategy31");
-const strategy4 = require("./strategy4");
 const strategy5 = require("./strategy5");
-const strategy51 = require("./strategy51");
 const strategy6 = require("./strategy6");
-const strategy61 = require("./strategy61");
-const strategy62 = require("./strategy62");
 const strategy7 = require("./strategy7");
+const strategy8 = require("./strategy8");
+const strategy9 = require("./strategy9");
+const strategy10 = require("./strategy10");
+const strategy11 = require("./strategy11");
+const strategy12 = require("./strategy12");
 
 module.exports = {
     app: {
@@ -41,17 +38,14 @@ module.exports = {
     multiples: multiples.accounts,
     schedules: schedules.tasks,
     strategies: [
-        strategy1,
-        strategy2,
-        strategy3,
-        strategy31,
-        strategy4,
         strategy5,
-        strategy51,
         strategy6,
-        strategy61,
-        strategy62,
         strategy7,
+        strategy8,
+        strategy9,
+        strategy10,
+        strategy11,
+        strategy12,
         strategyTest
     ]
 }

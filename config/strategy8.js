@@ -1,12 +1,13 @@
 module.exports = {
-    id: 0001,
-    name: "5min MA5/20 MACD",
+    id: 8,
+    name: "5min MA5/20 MACD. NIPUN",
+    disableParameterCheck: false,
     parameterCount: 4,
     subStrategies: [],
     bind: [
         {
             symbol: "OIL.WTI",
-            account: 777
+            account: 800
         },
     ],
     // and

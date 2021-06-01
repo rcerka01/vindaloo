@@ -1,80 +1,73 @@
 module.exports = {
-    id: 0003,
-    name: "1 MIN HMA, FOLLOW UPTREND",
-    parameterCount: 3,
-    subStrategies: [1003],
+    id: 10,
+    name: "15 MIN RSI NOT DEPENDANT ON TREND",
+    disableParameterCheck: true,
+    parameterCount: 4,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 400
+            account: 1000
         },
         {
             symbol: "NZDUSD",
-            account: 401
+            account: 1001
         },
         {
             symbol: "USDCHF",
-            account: 402
+            account: 1002
         },
         {
             symbol: "USDCAD",
-            account: 403
+            account: 1003
         },
         {
             symbol: "EURUSD",
-            account: 404
+            account: 1004
         },
         {
             symbol: "GBPUSD",
-            account: 405
+            account: 1005
         },
         {
             symbol: "USDJPY",
-            account: 406
+            account: 1006
         }
     ],
     // and
     buy: [
         {
-            key: "low",
+            key: "15lowerblockedDESCRIPTIVE",
             value: -1
         },
         {
-            key: "trend",
+            key: "15lowerstart",
             value: 1
         }
     ],
     // or
     closeBuy: [
         {
-            key: "high",
-            value: 1
-        },
-        {
-            key: "trend",
+            key: "15lowerstart",
             value: -1
         }
     ],
     // and
     sell: [
         {
-            key: "high",
-            value: 1
+            key: "15upperblockedDESCRIPTIVE",
+            value: -1
         },
         {
-            key: "trend",
-            value: -1
+            key: "15upperstart",
+            value: 1
         }
     ],
     // or
     closeSell: [
         {
-            key: "low",
+            key: "15upperstart",
             value: -1
-        },
-        {
-            key: "trend",
-            value: 1
         }
     ]
 }

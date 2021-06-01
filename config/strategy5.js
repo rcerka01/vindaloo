@@ -1,36 +1,37 @@
 module.exports = {
-    id: 0005,
-    name: "1 MIN HMA, CLOSE AT MIDDLE (treshold), FOLLOW UPTREND",
-    parameterCount: 4,
-    subStrategies: [1005],
+    id: 5,
+    name: "1 min, HMA CD, against trend",
+    disableParameterCheck: false,
+    parameterCount: 3,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 700
+            account: 500
         },
         {
             symbol: "NZDUSD",
-            account: 701
+            account: 501
         },
         {
             symbol: "USDCHF",
-            account: 702
+            account: 502
         },
         {
             symbol: "USDCAD",
-            account: 703
+            account: 503
         },
         {
             symbol: "EURUSD",
-            account: 704
+            account: 504
         },
         {
             symbol: "GBPUSD",
-            account: 705
+            account: 505
         },
         {
             symbol: "USDJPY",
-            account: 706
+            account: 506
         }
     ],
     // and
@@ -40,18 +41,18 @@ module.exports = {
             value: -1
         },
         {
-            key: "positive",
-            value: -1
-        },
-        {
             key: "trend",
-            value: 1
-        },
+            value: -1
+        }
     ],
     // or
     closeBuy: [
         {
-            key: "positive",
+            key: "high",
+            value: 1
+        },
+        {
+            key: "trend",
             value: 1
         }
     ],
@@ -62,18 +63,18 @@ module.exports = {
             value: 1
         },
         {
-            key: "positive",
-            value: 1
-        },
-        {
             key: "trend",
-            value: -1
+            value: 1
         }
     ],
     // or
     closeSell: [
         {
-            key: "positive",
+            key: "low",
+            value: -1
+        },
+        {
+            key: "trend",
             value: -1
         }
     ]
