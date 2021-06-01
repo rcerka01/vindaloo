@@ -1,45 +1,41 @@
 module.exports = {
-    id: 10,
-    name: "15 MIN RSI NOT DEPENDANT ON TREND",
+    id: 101,
+    name: "15 MIN RSI NOT BLOCKING 75 / 25",
     disableParameterCheck: true,
-    parameterCount: 4,
-    subStrategies: [101,102,103],
+    parameterCount: 2,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 1000
+            account: 1100
         },
         {
             symbol: "NZDUSD",
-            account: 1001
+            account: 1101
         },
         {
             symbol: "USDCHF",
-            account: 1002
+            account: 1102
         },
         {
             symbol: "USDCAD",
-            account: 1003
+            account: 1103
         },
         {
             symbol: "EURUSD",
-            account: 1004
+            account: 1104
         },
         {
             symbol: "GBPUSD",
-            account: 1005
+            account: 1105
         },
         {
             symbol: "USDJPY",
-            account: 1006
+            account: 1106
         }
     ],
     // and
     buy: [
-        {
-            key: "15lowerblockedDESCRIPTIVE",
-            value: -1
-        },
         {
             key: "15lowerstart",
             value: 1
@@ -54,10 +50,6 @@ module.exports = {
     ],
     // and
     sell: [
-        {
-            key: "15upperblockedDESCRIPTIVE",
-            value: -1
-        },
         {
             key: "15upperstart",
             value: 1

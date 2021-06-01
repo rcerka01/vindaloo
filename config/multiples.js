@@ -471,9 +471,279 @@ module.exports = {
     {},
 
     // SUB STRATEGY 10.1, RSI, 15 min, close / open between 40 / 60, not blocking 25 / 75
-    {},
+    {   
+        id: 1100,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1101,
+        accounts: [
+            {                
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1102,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1103,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1104,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1105,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1106,
+        accounts: [
+            {
+                id: 13,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
     // SUB STRATEGY 10.2, RSI, 15 min, close / open between 40 / 60, FOLLOW TREND
-    {},
+    {   
+        id: 1200,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1201,
+        accounts: [
+            {                
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1202,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1203,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1204,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1205,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1206,
+        accounts: [
+            {
+                id: 14,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
     // SUB STRATEGY 10.3, RSI, 15 min, close / open between 40 / 60, AGAINST TREND
-    {},
+    {   
+        id: 1300,
+        accounts: [
+            {
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1301,
+        accounts: [
+            {                
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1302,
+        accounts: [
+            {
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1303,
+        accounts: [
+            {
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1304,
+        accounts: [
+            {
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1305,
+        accounts: [
+            {
+                id: 15,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1306,
+        accounts: [
+            {
+                id: 15,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
 ]}

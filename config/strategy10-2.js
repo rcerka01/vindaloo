@@ -1,37 +1,37 @@
 module.exports = {
-    id: 10,
-    name: "15 MIN RSI NOT DEPENDANT ON TREND",
+    id: 102,
+    name: "15 MIN RSI FOLLOW TREND",
     disableParameterCheck: true,
-    parameterCount: 4,
-    subStrategies: [101,102,103],
+    parameterCount: 6,
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 1000
+            account: 1200
         },
         {
             symbol: "NZDUSD",
-            account: 1001
+            account: 1201
         },
         {
             symbol: "USDCHF",
-            account: 1002
+            account: 1202
         },
         {
             symbol: "USDCAD",
-            account: 1003
+            account: 1203
         },
         {
             symbol: "EURUSD",
-            account: 1004
+            account: 1204
         },
         {
             symbol: "GBPUSD",
-            account: 1005
+            account: 1205
         },
         {
             symbol: "USDJPY",
-            account: 1006
+            account: 1206
         }
     ],
     // and
@@ -42,6 +42,10 @@ module.exports = {
         },
         {
             key: "15lowerstart",
+            value: 1
+        },
+        {
+            key: "15trend",
             value: 1
         }
     ],
@@ -61,6 +65,10 @@ module.exports = {
         {
             key: "15upperstart",
             value: 1
+        },
+        {
+            key: "15trend",
+            value: -1
         }
     ],
     // or
