@@ -7,31 +7,31 @@ module.exports = {
     bind: [
         {
             symbol: "AUDUSD",
-            account: 1300
+            account: 1030
         },
         {
             symbol: "NZDUSD",
-            account: 1301
+            account: 1031
         },
         {
             symbol: "USDCHF",
-            account: 1302
+            account: 1032
         },
         {
             symbol: "USDCAD",
-            account: 1303
+            account: 1033
         },
         {
             symbol: "EURUSD",
-            account: 1304
+            account: 1034
         },
         {
             symbol: "GBPUSD",
-            account: 1305
+            account: 1035
         },
         {
             symbol: "USDJPY",
-            account: 1306
+            account: 1036
         }
     ],
     // and
