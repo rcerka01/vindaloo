@@ -1,6 +1,6 @@
 module.exports = {
     id: 7,
-    name: "HMA, 1 min, close at 'threshold above middle', against trend",
+    name: "HMA, 1 min, close at 'threshold above middle', with trend",
     disableParameterCheck: false,
     parameterCount: 4,
     subStrategies: [],

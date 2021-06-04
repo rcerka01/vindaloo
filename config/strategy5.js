@@ -1,6 +1,6 @@
 module.exports = {
     id: 5,
-    name: "1 min, HMA CD, against trend",
+    name: "1 min, HMA CD, with trend",
     disableParameterCheck: false,
     parameterCount: 3,
     subStrategies: [],
@@ -42,7 +42,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: -1
+            value: 1
         }
     ],
     // or
@@ -64,7 +64,7 @@ module.exports = {
         },
         {
             key: "trend",
-            value: 1
+            value: -1
         }
     ],
     // or

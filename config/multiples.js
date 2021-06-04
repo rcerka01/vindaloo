@@ -70,14 +70,14 @@ module.exports = {
 //             ]
 //         },
 
-// STRATEGY 5, HMA CD, against trend
+// STRATEGY 5, HMA CD, with trend
     {   
         id: 500,
         accounts: [
             {
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
@@ -89,8 +89,8 @@ module.exports = {
         accounts: [
             {                
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
@@ -102,8 +102,8 @@ module.exports = {
         accounts: [
             {
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
@@ -115,8 +115,8 @@ module.exports = {
         accounts: [
             {
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'USDCAD',
                 volume: 0.1
@@ -128,8 +128,8 @@ module.exports = {
         accounts: [
             {
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'EURUSD',
                 volume: 0.1
@@ -141,8 +141,8 @@ module.exports = {
         accounts: [
             {
                 id: 5,
-                sl: 10,
-                tp: 0,
+                sl: 7,
+                tp: 7,
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
@@ -154,8 +154,8 @@ module.exports = {
         accounts: [
             {
                 id: 5,
-                sl: 2500,
-                tp: 0,
+                sl: 700,
+                tp: 700,
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
@@ -168,8 +168,8 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
@@ -181,8 +181,8 @@ module.exports = {
         accounts: [
             {                
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
@@ -194,8 +194,8 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
@@ -207,8 +207,8 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCAD',
                 volume: 0.1
@@ -220,8 +220,8 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'EURUSD',
                 volume: 0.1
@@ -233,8 +233,8 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
@@ -246,22 +246,22 @@ module.exports = {
         accounts: [
             {
                 id: 6,
-                sl: 300,
-                tp: 0,
+                sl: 400,
+                tp: 400,
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
             }
         ]
     },
- // STRATEGY 7, HMA, 1 min, close at "threshold above middle", against trend
+ // STRATEGY 7, HMA, 1 min, close at "threshold above middle", with trend
     {   
         id: 700,
         accounts: [
             {
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
@@ -273,8 +273,8 @@ module.exports = {
         accounts: [
             {                
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
@@ -286,8 +286,8 @@ module.exports = {
         accounts: [
             {
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
@@ -299,8 +299,8 @@ module.exports = {
         accounts: [
             {
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCAD',
                 volume: 0.1
@@ -312,8 +312,8 @@ module.exports = {
         accounts: [
             {
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'EURUSD',
                 volume: 0.1
@@ -325,8 +325,8 @@ module.exports = {
         accounts: [
             {
                 id: 7,
-                sl: 3,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
@@ -338,8 +338,8 @@ module.exports = {
         accounts: [
             {
                 id: 7,
-                sl: 300,
-                tp: 0,
+                sl: 400,
+                tp: 400,
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
