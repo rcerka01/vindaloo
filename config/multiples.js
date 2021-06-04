@@ -352,7 +352,7 @@ module.exports = {
         accounts: [
             {
                 id: 8,
-                sl: 3000,
+                sl: 1000,
                 tp: 2000,
                 offset: 0,
                 symbol: 'OIL.WTI',
@@ -361,7 +361,7 @@ module.exports = {
             // Nipun
             {
                 id: 50,
-                sl: 3000,
+                sl: 1000,
                 tp: 2000,
                 offset: 0,
                 symbol: 'OIL.WTI',
@@ -375,8 +375,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
@@ -388,8 +388,8 @@ module.exports = {
         accounts: [
             {                
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
@@ -401,8 +401,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
@@ -414,8 +414,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'USDCAD',
                 volume: 0.1
@@ -427,8 +427,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'EURUSD',
                 volume: 0.1
@@ -440,8 +440,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 25,
-                tp: 0,
+                sl: 4,
+                tp: 4,
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
@@ -453,8 +453,8 @@ module.exports = {
         accounts: [
             {
                 id: 9,
-                sl: 2500,
-                tp: 0,
+                sl: 400,
+                tp: 400,
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
