@@ -1,6 +1,6 @@
 module.exports = {
     id: 12,
-    name: "45 MIN RSI NOT DEPENDANT ON TREND",
+    name: "45 MIN RSI FOLLOW TREND",
     disableParameterCheck: true,
     parameterCount: 4,
     subStrategies: [],
@@ -43,6 +43,10 @@ module.exports = {
         {
             key: "45lowerstart",
             value: 1
+        },
+        {
+            key: "45trend",
+            value: 1
         }
     ],
     // or
@@ -61,6 +65,10 @@ module.exports = {
         {
             key: "45upperstart",
             value: 1
+        },
+        {
+            key: "45trend",
+            value: -1
         }
     ],
     // or
