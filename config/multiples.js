@@ -737,6 +737,98 @@ module.exports = {
             }
         ]
     },
+    // SUB STRATEGY 9.1, RSI, 5 min, close / open between 40 / 60. FOLLOW TREND
+    {   
+        id: 910,
+        accounts: [
+            {
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 911,
+        accounts: [
+            {                
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 912,
+        accounts: [
+            {
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 913,
+        accounts: [
+            {
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 914,
+        accounts: [
+            {
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 915,
+        accounts: [
+            {
+                id: 7,
+                sl: 4,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 916,
+        accounts: [
+            {
+                id: 7,
+                sl: 400,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
     // SUB STRATEGY 10.1, RSI, 15 min, close / open between 40 / 60, not blocking 25 / 75
     {   
         id: 1010,
@@ -913,6 +1005,98 @@ module.exports = {
         accounts: [
             {
                 id: 14,
+                sl: 2000,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
+     // SUB SUB STRATEGY 10.2.1, RSI, 15 min, close / open between 40 / 60, FOLLOW TREND (DESCRIPTIVE)
+     {   
+        id: 10210,
+        accounts: [
+            {
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10211,
+        accounts: [
+            {                
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10212,
+        accounts: [
+            {
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10213,
+        accounts: [
+            {
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10214,
+        accounts: [
+            {
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10215,
+        accounts: [
+            {
+                id: 6,
+                sl: 20,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 10216,
+        accounts: [
+            {
+                id: 6,
                 sl: 2000,
                 tp: 0,
                 offset: 0,

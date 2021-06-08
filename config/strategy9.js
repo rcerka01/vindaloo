@@ -3,7 +3,7 @@ module.exports = {
     name: "5 MIN RSI NOT DEPENDANT ON TREND",
     disableParameterCheck: true,
     parameterCount: 4,
-    subStrategies: [],
+    subStrategies: [91],
     bind: [
         {
             symbol: "AUDUSD",
