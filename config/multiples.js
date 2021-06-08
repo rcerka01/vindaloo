@@ -162,190 +162,190 @@ module.exports = {
             }
         ]
     },
-// STRATEGY 6, HMA, 1 min, close at "threshold above middle"
-    {   
-        id: 600,
-        accounts: [
-            {
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'AUDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 601,
-        accounts: [
-            {                
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'NZDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 602,
-        accounts: [
-            {
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'USDCHF',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 603,
-        accounts: [
-            {
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'USDCAD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 604,
-        accounts: [
-            {
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'EURUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 605,
-        accounts: [
-            {
-                id: 6,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'GBPUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 606,
-        accounts: [
-            {
-                id: 6,
-                sl: 400,
-                tp: 400,
-                offset: 0,
-                symbol: 'USDJPY',
-                volume: 0.1
-            }
-        ]
-    },
- // STRATEGY 7, HMA, 1 min, close at "threshold above middle", with trend
-    {   
-        id: 700,
-        accounts: [
-            {
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'AUDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 701,
-        accounts: [
-            {                
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'NZDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 702,
-        accounts: [
-            {
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'USDCHF',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 703,
-        accounts: [
-            {
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'USDCAD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 704,
-        accounts: [
-            {
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'EURUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 705,
-        accounts: [
-            {
-                id: 7,
-                sl: 4,
-                tp: 4,
-                offset: 0,
-                symbol: 'GBPUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 706,
-        accounts: [
-            {
-                id: 7,
-                sl: 400,
-                tp: 400,
-                offset: 0,
-                symbol: 'USDJPY',
-                volume: 0.1
-            }
-        ]
-    },
+// // STRATEGY 6, HMA, 1 min, close at "threshold above middle"
+    // {   
+    //     id: 600,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'AUDUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 601,
+    //     accounts: [
+    //         {                
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'NZDUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 602,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'USDCHF',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 603,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'USDCAD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 604,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'EURUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 605,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 4,
+    //             tp: 4,
+    //             offset: 0,
+    //             symbol: 'GBPUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 606,
+    //     accounts: [
+    //         {
+    //             id: 6,
+    //             sl: 400,
+    //             tp: 400,
+    //             offset: 0,
+    //             symbol: 'USDJPY',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+//  // STRATEGY 7, HMA, 1 min, close at "threshold above middle", with trend
+//     {   
+//         id: 700,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'AUDUSD',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 701,
+//         accounts: [
+//             {                
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'NZDUSD',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 702,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'USDCHF',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 703,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'USDCAD',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 704,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'EURUSD',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 705,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 4,
+//                 tp: 4,
+//                 offset: 0,
+//                 symbol: 'GBPUSD',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
+//     {   
+//         id: 706,
+//         accounts: [
+//             {
+//                 id: 7,
+//                 sl: 400,
+//                 tp: 400,
+//                 offset: 0,
+//                 symbol: 'USDJPY',
+//                 volume: 0.1
+//             }
+//         ]
+//     },
 // STRATEGY 8, NIPUN
     {
         id: 800,
