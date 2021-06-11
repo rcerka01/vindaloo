@@ -43,32 +43,74 @@ module.exports = {
         //     accounts: [17]
         // },
         
-    // FOR STRATEGY 8 (Nipun)
-        {
-            id: 001,
-            name: "",
-            cron: "0 00 20 * * 1-5",
-            actions: ["closeTrades", "addToLockedAccounts"],
-            symbols: ["OIL.WTI"],
-            accounts: [8]
-        },
-        {
-            id: 002,
-            name: "",
-            cron: "0 30 12 * * 1-5",
-            actions: ["removeFromLockedAccounts"],
-            symbols: ["OIL.WTI"],
-            accounts: [8]
-        },
+    // // FOR STRATEGY 8 (Nipun)
+    //     {
+    //         id: 001,
+    //         name: "",
+    //         cron: "0 00 20 * * 1-5",
+    //         actions: ["closeTrades", "addToLockedAccounts"],
+    //         symbols: ["OIL.WTI"],
+    //         accounts: [8]
+    //     },
+    //     {
+    //         id: 002,
+    //         name: "",
+    //         cron: "0 30 12 * * 1-5",
+    //         actions: ["removeFromLockedAccounts"],
+    //         symbols: ["OIL.WTI"],
+    //         accounts: [8]
+    //     },
     
     // CLOSE FOR FRIDAY      
+        // {
+        //     id: 0000,
+        //     name: "",
+        //     cron: "0 40 20 * * 5",
+        //     actions: ["closeTrades", "addToLockedAccounts"],
+        //     symbols: ["OIL.WTI"],
+        //     accounts: [8]
+        // },
+
+        // FX, not USD ["EURCHF". "EURGBP", "EURJPY", "GBPCHF", "GBPJPY"]
+        {
+            id: 0000,
+            name: "",
+            cron: "0 41 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["EURCHF"], 
+            accounts: [4]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 42 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["EURGBP"], 
+            accounts: [4]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 43 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["EURJPY"], 
+            accounts: [4]
+        },
+        {
+            id: 0000,
+            name: "",
+            cron: "0 44 20 * * 5",
+            actions: ["closeTrades", "addToLockedAccounts"],
+            symbols: ["GBPCHF"], 
+            accounts: [4]
+        },
         {
             id: 0000,
             name: "",
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
-            symbols: ["OIL.WTI"],
-            accounts: [8]
+            symbols: ["GBPJPY"], 
+            accounts: [4]
         },
         // FX
         {
