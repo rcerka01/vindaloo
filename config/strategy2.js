@@ -67,10 +67,10 @@ module.exports = {
     ],
     // or
     closeBuy: [
-        {
-            key: "1Hlowerstart",
-            value: -1
-        }
+        // {
+        //     key: "1Hlowerstart",
+        //     value: -1
+        // }
     ],
     // and
     sell: [
@@ -85,9 +85,9 @@ module.exports = {
     ],
     // or
     closeSell: [
-        {
-            key: "1Hupperstart",
-            value: -1
-        }
+        // {
+        //     key: "1Hupperstart",
+        //     value: -1
+        // }
     ]
 }
