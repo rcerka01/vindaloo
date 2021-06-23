@@ -2,7 +2,7 @@ module.exports = {
     id: 2,
     name: "1H RSI, 4h trend related",
     disableParameterCheck: false,
-    parameterCount: 4,
+    parameterCount: 6,
     subStrategies: [],
     bind: [
         {
