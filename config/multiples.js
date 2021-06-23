@@ -81,6 +81,15 @@ module.exports = {
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
+            },
+            // LIVE REPLICA 1
+            {                
+                id: 3,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.3
             }
         ]
     },
@@ -94,15 +103,6 @@ module.exports = {
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
-            },
-            // LIVE REPLICA 1
-            {                
-                id: 3,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'NZDUSD',
-                volume: 0.2
             }
         ]
     },
@@ -116,6 +116,15 @@ module.exports = {
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
+            },
+            // LIVE REPLICA 2
+            {
+                id: 3,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.3
             }
         ]
     },
@@ -130,14 +139,14 @@ module.exports = {
                 symbol: 'USDCAD',
                 volume: 0.1
             },
-            // LIVE REPLICA 2
+            // LIVE REPLICA 3
             {
                 id: 3,
                 sl: 25,
                 tp: 0,
                 offset: 0,
                 symbol: 'USDCAD',
-                volume: 0.2
+                volume: 0.3
             }
         ]
     },
@@ -164,15 +173,6 @@ module.exports = {
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
-            },
-            // LIVE REPLICA 3
-            {
-                id: 3,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'GBPUSD',
-                volume: 0.2
             }
         ]
     },
@@ -186,15 +186,6 @@ module.exports = {
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
-            },
-            // LIVE REPLICA 4
-            {
-                id: 3,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'USDJPY',
-                volume: 0.2
             }
         ]
     },
@@ -208,6 +199,15 @@ module.exports = {
                 offset: 0,
                 symbol: 'EURCHF',
                 volume: 0.1
+            },
+            // LIVE REPLICA 4
+            {
+                id: 3,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.3
             }
         ]
     },
@@ -234,15 +234,6 @@ module.exports = {
                 offset: 0,
                 symbol: 'EURJPY',
                 volume: 0.1
-            },
-            // LIVE REPLICA 5
-            {
-                id: 3,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'EURJPY',
-                volume: 0.2
             }
         ]
     },
@@ -269,15 +260,6 @@ module.exports = {
                 offset: 0,
                 symbol: 'GBPJPY',
                 volume: 0.1
-            },
-            // LIVE REPLICA 6
-            {
-                id: 3,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'GBPJPY',
-                volume: 0.2
             }
         ]
     },

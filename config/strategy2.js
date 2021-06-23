@@ -57,37 +57,61 @@ module.exports = {
     // and
     buy: [
         {
-            key: "4HlowerblockedDESCRIPTIVE",
+            key: "4HdowntrendDESCRIPTIVE",
             value: -1
         },
         {
             key: "1Hlowerstart",
             value: 1
+        },
+        {
+            key: "1Hupperstart",
+            value: -1
         }
     ],
     // or
     closeBuy: [
-        // {
-        //     key: "1Hlowerstart",
-        //     value: -1
-        // }
+        {
+            key: "4HdowntrendDESCRIPTIVE",
+            value: 1
+        },
+        {
+            key: "1Hlowerstart",
+            value: -1
+        },
+        {
+            key: "1Huppertop",
+            value: 1
+        },
     ],
     // and
     sell: [
         {
-            key: "4HupperblockedDESCRIPTIVE",
+            key: "4HuptrendDESCRIPTIVE",
             value: -1
         },
         {
             key: "1Hupperstart",
             value: 1
+        },
+        {
+            key: "1Hlowerstart",
+            value: -1
         }
     ],
     // or
     closeSell: [
-        // {
-        //     key: "1Hupperstart",
-        //     value: -1
-        // }
+        {
+            key: "4HuptrendDESCRIPTIVE",
+            value: 1
+        },
+        {
+            key: "1Hupperstart",
+            value: -1
+        },
+        {
+            key: "1Hlowerbottom",
+            value: 1
+        }
     ]
 }
