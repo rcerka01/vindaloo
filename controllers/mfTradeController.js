@@ -70,26 +70,30 @@ function startTrade(dbClient, strategy, symbol, definedFactors, runFlag, descrip
 
     // not start trade if parameters are missing, or parameter is only descriptive
     if (runFlag && !descriptiveOnlyFlag) {
+        const startBuy = utilities.isMatchAND(strategy.buy, utilities.mapToArray(definedFactors))
+        const startSell = utilities.isMatchAND(strategy.sell, utilities.mapToArray(definedFactors))
+        const closeBuy = utilities.isMatchOR(strategy.closeBuy, utilities.mapToArray(definedFactors))
+        const closeSell = utilities.isMatchOR(strategy.closeSell, utilities.mapToArray(definedFactors))
 
-        if (utilities.isMatchAND(strategy.buy, utilities.mapToArray(definedFactors))) {
+        if (startBuy) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "buy")
             }
         }
-        if (utilities.isMatchAND(strategy.sell, utilities.mapToArray(definedFactors))) {
+        if (startSell) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.trade(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "sell")
             }
         }
-        if (utilities.isMatchOR(strategy.closeBuy, utilities.mapToArray(definedFactors))) {
+        if (closeBuy) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeBuy")
             }
         }        
-        if (utilities.isMatchOR(strategy.closeSell, utilities.mapToArray(definedFactors))) {
+        if (closeSell) {
             if (!isLockedAccount(account)) {
                 multipleTradeController.close(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeSell")

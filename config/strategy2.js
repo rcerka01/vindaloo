@@ -2,7 +2,7 @@ module.exports = {
     id: 2,
     name: "1H RSI, 4h trend related",
     disableParameterCheck: false,
-    parameterCount: 6,
+    parameterCount: 4,
     subStrategies: [],
     bind: [
         {
@@ -67,22 +67,30 @@ module.exports = {
         {
             key: "1Hupperstart",
             value: -1
-        }
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
     ],
     // or
     closeBuy: [
-        {
-            key: "4HdowntrendDESCRIPTIVE",
-            value: 1
-        },
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: 1
+        // },
         {
             key: "1Hlowerstart",
             value: -1
         },
-        {
-            key: "1Huppertop",
-            value: 1
-        },
+        // {
+        //     key: "1Huppertop",
+        //     value: 1
+        // }
     ],
     // and
     sell: [
@@ -97,21 +105,29 @@ module.exports = {
         {
             key: "1Hlowerstart",
             value: -1
-        }
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
     ],
     // or
     closeSell: [
-        {
-            key: "4HuptrendDESCRIPTIVE",
-            value: 1
-        },
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: 1
+        // },
         {
             key: "1Hupperstart",
             value: -1
         },
-        {
-            key: "1Hlowerbottom",
-            value: 1
-        }
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: 1
+        // }
     ]
 }

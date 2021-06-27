@@ -165,6 +165,9 @@ module.exports = { run: async function (app, dbClient) {
     });
 
     app.get("/display-factors-by-position/:strategy/:symbol/:account", async function(req, res) {  
+        const styleGreen = "<span style='color:green'>";
+        const styleRed = "<span style='color:red'>";
+        const styleClose = "</span>";
         var strategy = req.params.strategy;
         var symbol = req.params.symbol;
         var account = Number(req.params.account);
@@ -190,25 +193,27 @@ module.exports = { run: async function (app, dbClient) {
             let count = value.parameters.length; 
 
             value.parameters.forEach(par => {
+                let style;
+                if (par.value > 0) { style = styleGreen } else { style = styleRed }
                 count = count + par.value;
-                output += " " + par.key + " " + par.value + " ";
+                output += style + " " + par.key + " <strong>" + par.value + "</strong>" + styleClose + " ";
             })
 
-            if (utilities.isMatchAND(strategyConf.buy, value.parameters)) {
-                output += "<i style='color:green;font-weight:bold;'> BUY </i>"
-            }
+            // if (utilities.isMatchAND(strategyConf.buy, value.parameters)) {
+            //     output += "<i style='color:green;font-weight:bold;'> BUY </i>"
+            // }
 
-            if (utilities.isMatchAND(strategyConf.sell, value.parameters)) {
-                output += "<i style='color:red;font-weight:bold;'> SELL </i>"
-            }
+            // if (utilities.isMatchAND(strategyConf.sell, value.parameters)) {
+            //     output += "<i style='color:red;font-weight:bold;'> SELL </i>"
+            // }
 
-            if (utilities.isMatchOR(strategyConf.closeBuy, value.parameters)) {
-                output += "<i style='color:#013220'> close buy </i>"
-            }
+            // if (utilities.isMatchOR(strategyConf.closeBuy, value.parameters)) {
+            //     output += "<i style='color:#013220'> close buy </i>"
+            // }
 
-            if (utilities.isMatchOR(strategyConf.closeSell, value.parameters)) {
-                output += "<i style='color:brown;'> close sell </i>"
-            }
+            // if (utilities.isMatchOR(strategyConf.closeSell, value.parameters)) {
+            //     output += "<i style='color:brown;'> close sell </i>"
+            // }
             
             output += "<br>";
         });
