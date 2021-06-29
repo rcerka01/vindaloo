@@ -1,65 +1,65 @@
 module.exports = {
-    id: 2,
+    id: 21,
     name: "1H RSI, 4h trend related",
-    disableParameterCheck: false,
+    disableParameterCheck: true,
     parameterCount: 4,
-    subStrategies: [21],
+    subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 200
+            account: 2001
         },
         {
             symbol: "NZDUSD",
-            account: 201
+            account: 2011
         },
         {
             symbol: "USDCHF",
-            account: 202
+            account: 2021
         },
         {
             symbol: "USDCAD",
-            account: 203
+            account: 2031
         },
         {
             symbol: "EURUSD",
-            account: 204
+            account: 2041
         },
         {
             symbol: "GBPUSD",
-            account: 205
+            account: 2051
         },
         {
             symbol: "USDJPY",
-            account: 206
+            account: 2061
         },
         {
             symbol: "EURCHF",
-            account: 207
+            account: 2071
         },
         {
             symbol: "EURGBP",
-            account: 208
+            account: 2081
         },
         {
             symbol: "EURJPY",
-            account: 209
+            account: 2091
         },
         {
             symbol: "GBPCHF",
-            account: 210
+            account: 2101
         },
         {
             symbol: "GBPJPY",
-            account: 211
+            account: 2111
         }
     ],
     // and
     buy: [
-        {
-            key: "4HdowntrendDESCRIPTIVE",
-            value: -1
-        },
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: -1
+        // },
         {
             key: "1Hlowerstart",
             value: 1
@@ -94,10 +94,10 @@ module.exports = {
     ],
     // and
     sell: [
-        {
-            key: "4HuptrendDESCRIPTIVE",
-            value: -1
-        },
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: -1
+        // },
         {
             key: "1Hupperstart",
             value: 1
