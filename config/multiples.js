@@ -70,7 +70,165 @@ module.exports = {
 //             ]
 //         },
 
-// STRATEGY 2, 1H RSI, 4h trend related
+ // STRATEGY 3, 1H RSI
+    {   
+        id: 300,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 301,
+        accounts: [
+            {                
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 302,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 303,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 304,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 305,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 306,
+        accounts: [
+            {
+                id: 4,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 307,
+        accounts: [
+            {
+                id: 4,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 308,
+        accounts: [
+            {
+                id: 4,
+                sl: 18,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURGBP',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 309,
+        accounts: [
+            {
+                id: 4,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 310,
+        accounts: [
+            {
+                id: 4,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 311,
+        accounts: [
+            {
+                id: 4,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPJPY',
+                volume: 0.1
+            }
+        ]
+    },
+
+// STRATEGY 4, 1H RSI, 4h trend related
     {   
         id: 400,
         accounts: [
@@ -281,12 +439,13 @@ module.exports = {
             }
         ]
     },
-    // STRATEGY 2.1, 1H RSI
+
+// STRATEGY 5, 1H RSI
     {   
-        id: 300,
+        id: 500,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -296,10 +455,10 @@ module.exports = {
         ]
     },
     {   
-        id: 301,
+        id: 501,
         accounts: [
             {                
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -309,10 +468,10 @@ module.exports = {
         ]
     },
     {   
-        id: 302,
+        id: 502,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -322,10 +481,10 @@ module.exports = {
         ]
     },
     {   
-        id: 303,
+        id: 503,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -335,10 +494,10 @@ module.exports = {
         ]
     },
     {   
-        id: 304,
+        id: 504,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -348,10 +507,10 @@ module.exports = {
         ]
     },
     {   
-        id: 305,
+        id: 505,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -361,10 +520,10 @@ module.exports = {
         ]
     },
     {   
-        id: 306,
+        id: 506,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 2500,
                 tp: 0,
                 offset: 0,
@@ -374,10 +533,10 @@ module.exports = {
         ]
     },
     {   
-        id: 307,
+        id: 507,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 23,
                 tp: 0,
                 offset: 0,
@@ -387,10 +546,10 @@ module.exports = {
         ]
     },
     {   
-        id: 308,
+        id: 508,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 18,
                 tp: 0,
                 offset: 0,
@@ -400,10 +559,10 @@ module.exports = {
         ]
     },
     {   
-        id: 309,
+        id: 509,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 2500,
                 tp: 0,
                 offset: 0,
@@ -413,10 +572,10 @@ module.exports = {
         ]
     },
     {   
-        id: 310,
+        id: 510,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 25,
                 tp: 0,
                 offset: 0,
@@ -426,10 +585,10 @@ module.exports = {
         ]
     },
     {   
-        id: 311,
+        id: 511,
         accounts: [
             {
-                id: 4,
+                id: 5,
                 sl: 2500,
                 tp: 0,
                 offset: 0,
@@ -438,7 +597,7 @@ module.exports = {
             }
         ]
     },
-
+   
 // STRATEGY 5, HMA CD, with trend
     // {   
     //     id: 500,

@@ -1,6 +1,6 @@
 module.exports = {
     id: 3,
-    name: "1H RSI, 4h trend related",
+    name: "1H RSI",
     disableParameterCheck: false,
     parameterCount: 2,
     subStrategies: [],
