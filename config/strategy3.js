@@ -1,57 +1,57 @@
 module.exports = {
-    id: 21,
+    id: 3,
     name: "1H RSI, 4h trend related",
-    disableParameterCheck: true,
-    parameterCount: 4,
+    disableParameterCheck: false,
+    parameterCount: 2,
     subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 2001
+            account: 300
         },
         {
             symbol: "NZDUSD",
-            account: 2011
+            account: 301
         },
         {
             symbol: "USDCHF",
-            account: 2021
+            account: 302
         },
         {
             symbol: "USDCAD",
-            account: 2031
+            account: 303
         },
         {
             symbol: "EURUSD",
-            account: 2041
+            account: 304
         },
         {
             symbol: "GBPUSD",
-            account: 2051
+            account: 305
         },
         {
             symbol: "USDJPY",
-            account: 2061
+            account: 306
         },
         {
             symbol: "EURCHF",
-            account: 2071
+            account: 307
         },
         {
             symbol: "EURGBP",
-            account: 2081
+            account: 308
         },
         {
             symbol: "EURJPY",
-            account: 2091
+            account: 309
         },
         {
             symbol: "GBPCHF",
-            account: 2101
+            account: 310
         },
         {
             symbol: "GBPJPY",
-            account: 2111
+            account: 311
         }
     ],
     // and

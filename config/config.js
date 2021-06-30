@@ -3,8 +3,8 @@ const login = require("./login");
 const multiples = require("./multiples");
 const schedules = require("./schedules");
 const strategyTest = require("./strategyTest");
-const strategy2 = require("./strategy2");
-const strategy2sub1 = require("./strategy2-1");
+const strategy3 = require("./strategy3");
+const strategy4 = require("./strategy4");
 const strategy5 = require("./strategy5");
 const strategy6 = require("./strategy6");
 const strategy7 = require("./strategy7");
@@ -45,8 +45,8 @@ module.exports = {
     multiples: multiples.accounts,
     schedules: schedules.tasks,
     strategies: [
-        strategy2,
-        strategy2sub1,
+        strategy3,
+        strategy4,
         strategy5,
         strategy6,
         strategy7,

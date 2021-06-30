@@ -72,7 +72,7 @@ module.exports = {
 
 // STRATEGY 2, 1H RSI, 4h trend related
     {   
-        id: 200,
+        id: 400,
         accounts: [
             {
                 id: 2,
@@ -94,7 +94,7 @@ module.exports = {
         ]
     },
     {   
-        id: 201,
+        id: 401,
         accounts: [
             {                
                 id: 2,
@@ -116,7 +116,7 @@ module.exports = {
         ]
     },
     {   
-        id: 202,
+        id: 402,
         accounts: [
             {
                 id: 2,
@@ -129,7 +129,7 @@ module.exports = {
         ]
     },
     {   
-        id: 203,
+        id: 403,
         accounts: [
             {
                 id: 2,
@@ -151,7 +151,7 @@ module.exports = {
         ]
     },
     {   
-        id: 204,
+        id: 404,
         accounts: [
             {
                 id: 2,
@@ -164,7 +164,7 @@ module.exports = {
         ]
     },
     {   
-        id: 205,
+        id: 405,
         accounts: [
             {
                 id: 2,
@@ -186,7 +186,7 @@ module.exports = {
         ]
     },
     {   
-        id: 206,
+        id: 406,
         accounts: [
             {
                 id: 2,
@@ -199,7 +199,7 @@ module.exports = {
         ]
     },
     {   
-        id: 207,
+        id: 407,
         accounts: [
             {
                 id: 2,
@@ -212,7 +212,7 @@ module.exports = {
         ]
     },
     {   
-        id: 208,
+        id: 408,
         accounts: [
             {
                 id: 2,
@@ -234,7 +234,7 @@ module.exports = {
         ]
     },
     {   
-        id: 209,
+        id: 409,
         accounts: [
             {
                 id: 2,
@@ -247,7 +247,7 @@ module.exports = {
         ]
     },
     {   
-        id: 210,
+        id: 410,
         accounts: [
             {
                 id: 2,
@@ -260,7 +260,7 @@ module.exports = {
         ]
     },
     {   
-        id: 211,
+        id: 411,
         accounts: [
             {
                 id: 2,
@@ -283,7 +283,7 @@ module.exports = {
     },
     // STRATEGY 2.1, 1H RSI
     {   
-        id: 2001,
+        id: 300,
         accounts: [
             {
                 id: 4,
@@ -296,7 +296,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2011,
+        id: 301,
         accounts: [
             {                
                 id: 4,
@@ -309,7 +309,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2021,
+        id: 302,
         accounts: [
             {
                 id: 4,
@@ -322,7 +322,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2031,
+        id: 303,
         accounts: [
             {
                 id: 4,
@@ -335,7 +335,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2041,
+        id: 304,
         accounts: [
             {
                 id: 4,
@@ -348,7 +348,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2051,
+        id: 305,
         accounts: [
             {
                 id: 4,
@@ -361,7 +361,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2061,
+        id: 306,
         accounts: [
             {
                 id: 4,
@@ -374,7 +374,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2071,
+        id: 307,
         accounts: [
             {
                 id: 4,
@@ -387,7 +387,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2081,
+        id: 308,
         accounts: [
             {
                 id: 4,
@@ -400,7 +400,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2091,
+        id: 309,
         accounts: [
             {
                 id: 4,
@@ -413,7 +413,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2101,
+        id: 310,
         accounts: [
             {
                 id: 4,
@@ -426,7 +426,7 @@ module.exports = {
         ]
     },
     {   
-        id: 2111,
+        id: 311,
         accounts: [
             {
                 id: 4,
