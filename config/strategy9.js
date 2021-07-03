@@ -1,73 +1,133 @@
-// module.exports = {
-//     id: 9,
-//     name: "5 MIN RSI NOT DEPENDANT ON TREND",
-//     disableParameterCheck: true,
-//     parameterCount: 4,
-//     subStrategies: [91],
-//     bind: [
-//         {
-//             symbol: "AUDUSD",
-//             account: 900
-//         },
-//         {
-//             symbol: "NZDUSD",
-//             account: 901
-//         },
-//         {
-//             symbol: "USDCHF",
-//             account: 902
-//         },
-//         {
-//             symbol: "USDCAD",
-//             account: 903
-//         },
-//         {
-//             symbol: "EURUSD",
-//             account: 904
-//         },
-//         {
-//             symbol: "GBPUSD",
-//             account: 905
-//         },
-//         {
-//             symbol: "USDJPY",
-//             account: 906
-//         }
-//     ],
-//     // and
-//     buy: [
-//         {
-//             key: "5lowerblockedDESCRIPTIVE",
-//             value: -1
-//         },
-//         {
-//             key: "5lowerstart",
-//             value: 1
-//         }
-//     ],
-//     // or
-//     closeBuy: [
-//         {
-//             key: "5lowerstart",
-//             value: -1
-//         }
-//     ],
-//     // and
-//     sell: [
-//         {
-//             key: "5upperblockedDESCRIPTIVE",
-//             value: -1
-//         },
-//         {
-//             key: "5upperstart",
-//             value: 1
-//         }
-//     ],
-//     // or
-//     closeSell: [
-//         {
-//             key: "5upperstart",
-//             value: -1
-//         }
-//     ]
-// }
+module.exports = {
+    id: 9,
+    name: "1H RSI 50 SELL",
+    disableParameterCheck: false,
+    parameterCount: 2,
+    subStrategies: [],
+    bind: [
+        {
+            symbol: "AUDUSD",
+            account: 900
+        },
+        {
+            symbol: "NZDUSD",
+            account: 901
+        },
+        {
+            symbol: "USDCHF",
+            account: 902
+        },
+        {
+            symbol: "USDCAD",
+            account: 903
+        },
+        {
+            symbol: "EURUSD",
+            account: 904
+        },
+        {
+            symbol: "GBPUSD",
+            account: 905
+        },
+        {
+            symbol: "USDJPY",
+            account: 906
+        },
+        {
+            symbol: "EURCHF",
+            account: 907
+        },
+        {
+            symbol: "EURGBP",
+            account: 908
+        },
+        {
+            symbol: "EURJPY",
+            account: 909
+        },
+        {
+            symbol: "GBPCHF",
+            account: 910
+        },
+        {
+            symbol: "GBPJPY",
+            account: 911
+        }
+    ],
+    // and
+    buy: [
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: -1
+        // },
+        {
+            key: "1Hlowerstart",
+            value: 1
+        },
+        {
+            key: "1Hupperstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
+    ],
+    // or
+    closeBuy: [
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: 1
+        // },
+        {
+            key: "1Hlowerstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: 1
+        // }
+    ],
+    // and
+    sell: [
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: -1
+        // },
+        {
+            key: "1Hupperstart50",
+            value: 1
+        },
+        {
+            key: "1Hlowerstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
+    ],
+    // or
+    closeSell: [
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: 1
+        // },
+        {
+            key: "1Hupperstart",
+            value: -1
+        },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: 1
+        // }
+    ]
+}

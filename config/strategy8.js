@@ -1,89 +1,133 @@
-// module.exports = {
-//     id: 8,
-//     name: "5min MA5/20 MACD. NIPUN",
-//     disableParameterCheck: false,
-//     parameterCount: 4,
-//     subStrategies: [],
-//     bind: [
-//         {
-//             symbol: "OIL.WTI",
-//             account: 800
-//         },
-//     ],
-//     // and
-//     buy: [
-//         {
-//             key: "5minMA",
-//             value: 1
-//         },
-//         {
-//             key: "5minHistogram",
-//             value: 1
-//         },
-//         {
-//             key: "5minSignal",
-//             value: 1
-//         },
-//         {
-//             key: "5minMacd",
-//             value: 1
-//         }
-//     ],
-//     // or
-//     closeBuy: [
-//         {
-//             key: "5minMA",
-//             value: -1
-//         },
-//         {
-//             key: "5minSignal",
-//             value: -1
-//         },
-//         {
-//             key: "5minMacd",
-//             value: -1
-//         },            
-//         {
-//             key: "5minHistogram",
-//             value: -1
-//         }
-//     ],
-//     // and
-//     sell: [
-//         {
-//             key: "5minMA",
-//             value: -1
-//         },
-//         {
-//             key: "5minHistogram",
-//             value: -1
-//         },
-//         {
-//             key: "5minSignal",
-//             value: -1
-//         },
-//         {
-//             key: "5minMacd",
-//             value: -1
-//         }
-//     ],
-//     // or
-//     closeSell: [
-//         {
-//             key: "5minHistogram",
-//             value: 1
-//         },
-//         {
-//             key: "5minMA",
-//             value: 1
-//         },
-//         {
-//             key: "5minSignal",
-//             value: 1
-//         },
-//         {
-//             key: "5minMacd",
-//             value: 1
-//         }
-//     ]
-// }
+module.exports = {
+    id: 8,
+    name: "1H RSI 55 SELL",
+    disableParameterCheck: false,
+    parameterCount: 2,
+    subStrategies: [],
+    bind: [
+        {
+            symbol: "AUDUSD",
+            account: 800
+        },
+        {
+            symbol: "NZDUSD",
+            account: 801
+        },
+        {
+            symbol: "USDCHF",
+            account: 802
+        },
+        {
+            symbol: "USDCAD",
+            account: 803
+        },
+        {
+            symbol: "EURUSD",
+            account: 804
+        },
+        {
+            symbol: "GBPUSD",
+            account: 805
+        },
+        {
+            symbol: "USDJPY",
+            account: 806
+        },
+        {
+            symbol: "EURCHF",
+            account: 807
+        },
+        {
+            symbol: "EURGBP",
+            account: 808
+        },
+        {
+            symbol: "EURJPY",
+            account: 809
+        },
+        {
+            symbol: "GBPCHF",
+            account: 810
+        },
+        {
+            symbol: "GBPJPY",
+            account: 811
+        }
+    ],
+    // and
+    buy: [
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: -1
+        // },
+        {
+            key: "1Hlowerstart",
+            value: 1
+        },
+        {
+            key: "1Hupperstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
+    ],
+    // or
+    closeBuy: [
+        // {
+        //     key: "4HdowntrendDESCRIPTIVE",
+        //     value: 1
+        // },
+        {
+            key: "1Hlowerstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: 1
+        // }
+    ],
+    // and
+    sell: [
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: -1
+        // },
+        {
+            key: "1Hupperstart55",
+            value: 1
+        },
+        {
+            key: "1Hlowerstart",
+            value: -1
+        },
+        // {
+        //     key: "1Huppertop",
+        //     value: -1
+        // },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: -1
+        // }
+    ],
+    // or
+    closeSell: [
+        // {
+        //     key: "4HuptrendDESCRIPTIVE",
+        //     value: 1
+        // },
+        {
+            key: "1Hupperstart",
+            value: -1
+        },
+        // {
+        //     key: "1Hlowerbottom",
+        //     value: 1
+        // }
+    ]
+}
