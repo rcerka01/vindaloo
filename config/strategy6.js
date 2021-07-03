@@ -2,7 +2,7 @@ module.exports = {
     id: 6,
     name: "1H RSI 45 BUY",
     disableParameterCheck: false,
-    parameterCount: 2,
+    parameterCount: 3,
     subStrategies: [],
     bind: [
         {
