@@ -2,7 +2,7 @@ module.exports = {
     id: 8,
     name: "1H RSI 55 SELL",
     disableParameterCheck: false,
-    parameterCount: 3,
+    parameterCount: 2,
     subStrategies: [],
     bind: [
         {
@@ -65,7 +65,7 @@ module.exports = {
             value: 1
         },
         {
-            key: "1Hupperstart",
+            key: "1Hupperstart55",
             value: -1
         },
         // {
@@ -122,7 +122,7 @@ module.exports = {
         //     value: 1
         // },
         {
-            key: "1Hupperstart",
+            key: "1Hupperstart55",
             value: -1
         },
         // {
