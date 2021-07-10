@@ -1,6 +1,6 @@
 module.exports = {
     id: 10,
-    name: "1H RSI 50 SELL / BUY",
+    name: "1H RSI 50 SELL / BUY, BLOCKING",
     disableParameterCheck: false,
     parameterCount: 3,
     subStrategies: [],

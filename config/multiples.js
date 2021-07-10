@@ -763,7 +763,7 @@ module.exports = {
             }
         ]
     },
-     // STRATEGY 6, 1H RSI 50 BUY
+     // STRATEGY 7, 1H RSI 50 BUY
      {   
         id: 700,
         accounts: [
@@ -1077,7 +1077,7 @@ module.exports = {
             }
         ]
     },
-     // STRATEGY 6, 1H RSI 50 SELL
+     // STRATEGY 9, 1H RSI 50 SELL
      {   
         id: 900,
         accounts: [
@@ -1234,8 +1234,8 @@ module.exports = {
             }
         ]
     },
-        // STRATEGY 6, 1H RSI 50 SELL AND BUY
-        {   
+    // STRATEGY 10, 1H RSI 50 SELL AND BUY, BLOCKED
+    {   
         id: 1000,
         accounts: [
             {
@@ -1383,6 +1383,163 @@ module.exports = {
         accounts: [
             {
                 id: 10,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPJPY',
+                volume: 0.3
+            }
+        ]
+    },
+     // STRATEGY 11, 1H RSI 50 SELL AND BUY
+    {   
+        id: 1100,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1101,
+        accounts: [
+            {                
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1102,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1103,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1104,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1105,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1106,
+        accounts: [
+            {
+                id: 11,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1107,
+        accounts: [
+            {
+                id: 11,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1108,
+        accounts: [
+            {
+                id: 11,
+                sl: 18,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURGBP',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1109,
+        accounts: [
+            {
+                id: 11,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURJPY',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1110,
+        accounts: [
+            {
+                id: 11,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1111,
+        accounts: [
+            {
+                id: 11,
                 sl: 2500,
                 tp: 0,
                 offset: 0,
