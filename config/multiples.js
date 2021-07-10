@@ -1233,5 +1233,162 @@ module.exports = {
                 volume: 0.1
             }
         ]
+    },
+        // STRATEGY 6, 1H RSI 50 SELL AND BUY
+        {   
+        id: 1000,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1001,
+        accounts: [
+            {                
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1002,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1003,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1004,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1005,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1006,
+        accounts: [
+            {
+                id: 10,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1007,
+        accounts: [
+            {
+                id: 10,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1008,
+        accounts: [
+            {
+                id: 10,
+                sl: 18,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURGBP',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1009,
+        accounts: [
+            {
+                id: 10,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURJPY',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1010,
+        accounts: [
+            {
+                id: 10,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPCHF',
+                volume: 0.3
+            }
+        ]
+    },
+    {   
+        id: 1011,
+        accounts: [
+            {
+                id: 10,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPJPY',
+                volume: 0.3
+            }
+        ]
     }
 ]}
