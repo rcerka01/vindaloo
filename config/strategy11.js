@@ -3,7 +3,7 @@ module.exports = {
     name: "1H RSI 50 SELL / BUY",
     disableParameterCheck: false,
     parameterCount: 2,
-    subStrategies: [],
+    subStrategies: [12],
     bind: [
         {
             symbol: "AUDUSD",
