@@ -1401,7 +1401,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'AUDUSD',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1414,7 +1414,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'NZDUSD',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1427,7 +1427,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'USDCHF',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1440,7 +1440,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'USDCAD',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1453,7 +1453,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'EURUSD',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1466,7 +1466,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'GBPUSD',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1479,7 +1479,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'USDJPY',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1492,7 +1492,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'EURCHF',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1505,7 +1505,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'EURGBP',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1518,7 +1518,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'EURJPY',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1531,7 +1531,7 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'GBPCHF',
-                volume: 0.3
+                volume: 0.1
             }
         ]
     },
@@ -1544,165 +1544,165 @@ module.exports = {
                 tp: 0,
                 offset: 0,
                 symbol: 'GBPJPY',
-                volume: 0.3
-            }
-        ]
-    },
-    // 12, SUB STRATEGY 11, 1H RSI 50 SELL AND BUY, 0.1
-    {   
-        id: 1200,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'AUDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1201,
-        accounts: [
-            {                
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'NZDUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1202,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'USDCHF',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1203,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'USDCAD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1204,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'EURUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1205,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'GBPUSD',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1206,
-        accounts: [
-            {
-                id: 12,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'USDJPY',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1207,
-        accounts: [
-            {
-                id: 12,
-                sl: 23,
-                tp: 0,
-                offset: 0,
-                symbol: 'EURCHF',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1208,
-        accounts: [
-            {
-                id: 12,
-                sl: 18,
-                tp: 0,
-                offset: 0,
-                symbol: 'EURGBP',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1209,
-        accounts: [
-            {
-                id: 12,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'EURJPY',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1210,
-        accounts: [
-            {
-                id: 12,
-                sl: 25,
-                tp: 0,
-                offset: 0,
-                symbol: 'GBPCHF',
-                volume: 0.1
-            }
-        ]
-    },
-    {   
-        id: 1211,
-        accounts: [
-            {
-                id: 12,
-                sl: 2500,
-                tp: 0,
-                offset: 0,
-                symbol: 'GBPJPY',
                 volume: 0.1
             }
         ]
     }
+    // // 12, SUB STRATEGY 11, 1H RSI 50 SELL AND BUY, 0.1
+    // {   
+    //     id: 1200,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'AUDUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1201,
+    //     accounts: [
+    //         {                
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'NZDUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1202,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'USDCHF',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1203,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'USDCAD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1204,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'EURUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1205,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'GBPUSD',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1206,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 2500,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'USDJPY',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1207,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 23,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'EURCHF',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1208,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 18,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'EURGBP',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1209,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 2500,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'EURJPY',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1210,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 25,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'GBPCHF',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // },
+    // {   
+    //     id: 1211,
+    //     accounts: [
+    //         {
+    //             id: 12,
+    //             sl: 2500,
+    //             tp: 0,
+    //             offset: 0,
+    //             symbol: 'GBPJPY',
+    //             volume: 0.1
+    //         }
+    //     ]
+    // }
 ]}
