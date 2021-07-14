@@ -77,28 +77,43 @@ function startTrade(dbClient, strategy, symbol, definedFactors, runFlag, descrip
 
         if (startBuy) {
             if (!isLockedAccount(account)) {
+                console.log()
+                console.log('BUY')
+                console.log()
                 multipleTradeController.trade(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "buy")
             }
         }
         if (startSell) {
             if (!isLockedAccount(account)) {
+                console.log()
+                console.log('SELL')
+                console.log()
                 multipleTradeController.trade(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "sell")
             }
         }
         if (closeBuy) {
             if (!isLockedAccount(account)) {
+                console.log()
+                console.log('CLOSE BUY')
+                console.log()
                 multipleTradeController.close(dbClient, account, "buy");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeBuy")
             }
         }        
         if (closeSell) {
             if (!isLockedAccount(account)) {
+                console.log()
+                console.log('CLOSE SELL')
+                console.log()
                 multipleTradeController.close(dbClient, account, "sell");
                 mfTradesModel.insertTrade(dbClient, strategy.id, symbol, account, "closeSell")
             }
         }
+        console.log()
+        console.log('END')
+        console.log()
     }
 }
 

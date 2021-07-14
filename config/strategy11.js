@@ -111,10 +111,10 @@ module.exports = {
     ],
     // or
     closeBuy: [
-        {
-            key: "1Hupperstart50",
-            value: 1
-        },
+        // {
+        //     key: "1Hupperstart50",
+        //     value: 1
+        // },
         {
             key: "1Hlowerstart50",
             value: -1
@@ -132,10 +132,10 @@ module.exports = {
         {
             key: "1Hupperstart50",
             value: -1
-        },
-        {
-            key: "1Hlowerstart50",
-            value: 1
         }
+        // {
+        //     key: "1Hlowerstart50",
+        //     value: 1
+        // }
     ]
 }

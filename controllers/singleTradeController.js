@@ -16,14 +16,15 @@ function actionStringToInt(action) {
     if (action == "buy") { return 0; } else { return 1; }
 }
 
+// UNCOMMENT TO CLOSE OPOSITE TRADES
 function closeTrades(dbClient, trades, symbol, wSocket, action) {
-    var cmd = actionStringToInt(action);
-    for (i in trades) {
-        // close only trades of oposite direction
-        if (trades[i].symbol == symbol && trades[i].cmd != cmd) {
-            send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
-        }
-    }
+    // var cmd = actionStringToInt(action);
+    // for (i in trades) {
+    //     // close only trades of oposite direction
+    //     if (trades[i].symbol == symbol && trades[i].cmd != cmd) {
+    //         send.closeTrade(dbClient, trades[i].position, trades[i].volume, trades[i].close_price, symbol, wSocket);
+    //     }
+    // }
 }
 
 function isExistingTrade(trades, symbol, cmd) {
