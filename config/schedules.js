@@ -78,7 +78,7 @@ module.exports = {
             cron: "0 41 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURCHF"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -86,7 +86,7 @@ module.exports = {
             cron: "0 42 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURGBP"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -94,7 +94,7 @@ module.exports = {
             cron: "0 43 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURJPY"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -102,7 +102,7 @@ module.exports = {
             cron: "0 44 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["GBPCHF"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -110,7 +110,7 @@ module.exports = {
             cron: "0 45 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["GBPJPY"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         // FX
         {
@@ -119,7 +119,7 @@ module.exports = {
             cron: "0 46 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["AUDUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -127,7 +127,7 @@ module.exports = {
             cron: "0 47 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["NZDUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -135,7 +135,7 @@ module.exports = {
             cron: "0 48 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCHF"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -143,7 +143,7 @@ module.exports = {
             cron: "0 49 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDCAD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },       
         {
             id: 0000,
@@ -151,7 +151,7 @@ module.exports = {
             cron: "0 50 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -159,7 +159,7 @@ module.exports = {
             cron: "0 51 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["GBPUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         {
             id: 0000,
@@ -167,7 +167,7 @@ module.exports = {
             cron: "0 52 20 * * 5",
             actions: ["closeTrades", "addToLockedAccounts"],
             symbols: ["USDJPY"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         },
         // TO REMOVE ACCOUNT IS ENOUGH TO HJAVE ONE (any) SYMBOL 
         {
@@ -176,7 +176,7 @@ module.exports = {
             cron: "0 00 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,9,10,11]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13]
         }
     ]
 }
