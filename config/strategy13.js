@@ -1,5 +1,5 @@
 module.exports = {
-    id: 12,
+    id: 13,
     name: "1H RSI 50 SELL / BUY, UNLY BETWEEN 47 - 53",
     disableParameterCheck: false,
     parameterCount: 2,
