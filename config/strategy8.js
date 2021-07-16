@@ -56,10 +56,6 @@ module.exports = {
     ],
     // and
     buy: [
-        // {
-        //     key: "4HdowntrendDESCRIPTIVE",
-        //     value: -1
-        // },
         {
             key: "1Hlowerstart",
             value: 1
@@ -67,37 +63,17 @@ module.exports = {
         {
             key: "1Hupperstart55",
             value: -1
-        },
-        // {
-        //     key: "1Huppertop",
-        //     value: -1
-        // },
-        // {
-        //     key: "1Hlowerbottom",
-        //     value: -1
-        // }
+        }
     ],
     // or
     closeBuy: [
-        // {
-        //     key: "4HdowntrendDESCRIPTIVE",
-        //     value: 1
-        // },
         {
             key: "1Hlowerstart",
             value: -1
-        },
-        // {
-        //     key: "1Huppertop",
-        //     value: 1
-        // }
+        }
     ],
     // and
     sell: [
-        // {
-        //     key: "4HuptrendDESCRIPTIVE",
-        //     value: -1
-        // },
         {
             key: "1Hupperstart55",
             value: 1
@@ -105,29 +81,13 @@ module.exports = {
         {
             key: "1Hlowerstart",
             value: -1
-        },
-        // {
-        //     key: "1Huppertop",
-        //     value: -1
-        // },
-        // {
-        //     key: "1Hlowerbottom",
-        //     value: -1
-        // }
+        }
     ],
     // or
     closeSell: [
-        // {
-        //     key: "4HuptrendDESCRIPTIVE",
-        //     value: 1
-        // },
         {
             key: "1Hupperstart55",
             value: -1
-        },
-        // {
-        //     key: "1Hlowerbottom",
-        //     value: 1
-        // }
+        }
     ]
 }

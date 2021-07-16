@@ -1,92 +1,84 @@
 module.exports = {
-    id: 3,
-    name: "1H RSI",
+    id: 12,
+    name: "1H RSI 50 SELL / BUY, UNLY BETWEEN 47 - 53",
     disableParameterCheck: false,
     parameterCount: 2,
     subStrategies: [],
     bind: [
         {
             symbol: "AUDUSD",
-            account: 300
+            account: 1300
         },
         {
             symbol: "NZDUSD",
-            account: 301
+            account: 1301
         },
         {
             symbol: "USDCHF",
-            account: 302
+            account: 1302
         },
         {
             symbol: "USDCAD",
-            account: 303
+            account: 1303
         },
         {
             symbol: "EURUSD",
-            account: 304
+            account: 1304
         },
         {
             symbol: "GBPUSD",
-            account: 305
+            account: 1305
         },
         {
             symbol: "USDJPY",
-            account: 306
+            account: 1306
         },
         {
             symbol: "EURCHF",
-            account: 307
+            account: 1307
         },
         {
             symbol: "EURGBP",
-            account: 308
+            account: 1308
         },
         {
             symbol: "EURJPY",
-            account: 309
+            account: 1309
         },
         {
             symbol: "GBPCHF",
-            account: 310
+            account: 1310
         },
         {
             symbol: "GBPJPY",
-            account: 311
+            account: 1311
         }
     ],
     // and
     buy: [
         {
-            key: "1Hlowerstart",
+            key: "1Hlowerstart50",
             value: 1
-        },
-        {
-            key: "1Hupperstart",
-            value: -1
-        },
+        }
     ],
     // or
     closeBuy: [
         {
-            key: "1Hlowerstart",
+            key: "1Hlowerstart50",
             value: -1
-        },
+        }
     ],
     // and
     sell: [
         {
-            key: "1Hupperstart",
+            key: "1Hupperstart50",
             value: 1
-        },
-        {
-            key: "1Hlowerstart",
-            value: -1
-        },
+        }
     ],
     // or
     closeSell: [
         {
-            key: "1Hupperstart",
+            key: "1Hupperstart50",
             value: -1
         }
     ]

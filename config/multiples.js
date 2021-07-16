@@ -1704,5 +1704,162 @@ module.exports = {
                 volume: 0.1
             }
         ]
+    },
+    // 1H RSI 50 SELL / BUY, ONLY BETWEEN 47 - 53
+    {   
+        id: 1300,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1301,
+        accounts: [
+            {                
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1302,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1303,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1304,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1305,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1306,
+        accounts: [
+            {
+                id: 13,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1307,
+        accounts: [
+            {
+                id: 13,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1308,
+        accounts: [
+            {
+                id: 13,
+                sl: 18,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURGBP',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1309,
+        accounts: [
+            {
+                id: 13,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1310,
+        accounts: [
+            {
+                id: 13,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1311,
+        accounts: [
+            {
+                id: 13,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPJPY',
+                volume: 0.1
+            }
+        ]
     }
 ]}
