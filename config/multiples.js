@@ -1861,5 +1861,162 @@ module.exports = {
                 volume: 0.1
             }
         ]
+    },
+    // MAGIC
+    {   
+        id: 1400,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'AUDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1401,
+        accounts: [
+            {                
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'NZDUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1402,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1403,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDCAD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1404,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1405,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPUSD',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1406,
+        accounts: [
+            {
+                id: 14,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'USDJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1407,
+        accounts: [
+            {
+                id: 14,
+                sl: 23,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1408,
+        accounts: [
+            {
+                id: 14,
+                sl: 18,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURGBP',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1409,
+        accounts: [
+            {
+                id: 14,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'EURJPY',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1410,
+        accounts: [
+            {
+                id: 14,
+                sl: 25,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPCHF',
+                volume: 0.1
+            }
+        ]
+    },
+    {   
+        id: 1411,
+        accounts: [
+            {
+                id: 14,
+                sl: 2500,
+                tp: 0,
+                offset: 0,
+                symbol: 'GBPJPY',
+                volume: 0.1
+            }
+        ]
     }
 ]}
