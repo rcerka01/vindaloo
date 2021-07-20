@@ -1,6 +1,6 @@
 module.exports = {
     id: 8,
-    name: "1H RSI 55 SELL",
+    name: "1H RSI 45 SELL, 55 BUY",
     disableParameterCheck: false,
     parameterCount: 2,
     subStrategies: [],
@@ -57,36 +57,28 @@ module.exports = {
     // and
     buy: [
         {
-            key: "1Hlowerstart",
+            key: "1Hlowerstart50",
             value: 1
-        },
-        {
-            key: "1Hupperstart55",
-            value: -1
         }
     ],
     // or
     closeBuy: [
         {
-            key: "1Hlowerstart",
+            key: "1Hlowerstart50",
             value: -1
         }
     ],
     // and
     sell: [
         {
-            key: "1Hupperstart55",
+            key: "1Hupperstart50",
             value: 1
-        },
-        {
-            key: "1Hlowerstart",
-            value: -1
         }
     ],
     // or
     closeSell: [
         {
-            key: "1Hupperstart55",
+            key: "1Hupperstart50",
             value: -1
         }
     ]
