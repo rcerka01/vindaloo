@@ -71,6 +71,16 @@ module.exports = {
         //     accounts: [8]
         // },
 
+        // open all trades for account 9
+        {
+            id: 0000,
+            name: "",
+            cron: "0 3 * * * 1-5",
+            actions: ["setBlockedParameter"],
+            symbols: [""], 
+            accounts: [9]
+        },
+
         // FX, not USD ["EURCHF". "EURGBP", "EURJPY", "GBPCHF", "GBPJPY"]
         {
             id: 0000,
