@@ -1869,7 +1869,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 8,
                 offset: 0,
                 symbol: 'AUDUSD',
                 volume: 0.1
@@ -1882,7 +1882,7 @@ module.exports = {
             {                
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 8,
                 offset: 0,
                 symbol: 'NZDUSD',
                 volume: 0.1
@@ -1895,7 +1895,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 7,
                 offset: 0,
                 symbol: 'USDCHF',
                 volume: 0.1
@@ -1908,7 +1908,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 9,
                 offset: 0,
                 symbol: 'USDCAD',
                 volume: 0.1
@@ -1921,7 +1921,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 8,
                 offset: 0,
                 symbol: 'EURUSD',
                 volume: 0.1
@@ -1934,7 +1934,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 8,
                 offset: 0,
                 symbol: 'GBPUSD',
                 volume: 0.1
@@ -1947,7 +1947,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 2500,
-                tp: 0,
+                tp: 9,
                 offset: 0,
                 symbol: 'USDJPY',
                 volume: 0.1
@@ -1960,7 +1960,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 23,
-                tp: 0,
+                tp: 7,
                 offset: 0,
                 symbol: 'EURCHF',
                 volume: 0.1
@@ -1973,7 +1973,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 18,
-                tp: 0,
+                tp: 6,
                 offset: 0,
                 symbol: 'EURGBP',
                 volume: 0.1
@@ -1986,7 +1986,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 2500,
-                tp: 0,
+                tp: 8,
                 offset: 0,
                 symbol: 'EURJPY',
                 volume: 0.1
@@ -1999,7 +1999,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 25,
-                tp: 0,
+                tp: 7,
                 offset: 0,
                 symbol: 'GBPCHF',
                 volume: 0.1
@@ -2012,7 +2012,7 @@ module.exports = {
             {
                 id: 14,
                 sl: 2500,
-                tp: 0,
+                tp: 9,
                 offset: 0,
                 symbol: 'GBPJPY',
                 volume: 0.1
