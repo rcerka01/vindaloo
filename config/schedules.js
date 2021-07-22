@@ -71,6 +71,16 @@ module.exports = {
         //     accounts: [8]
         // },
 
+        // // test
+        // {
+        //     id: 0000,
+        //     name: "",
+        //     cron: "0 * * * * *",
+        //     actions: ["test"],
+        //     symbols: [""], 
+        //     accounts: [1]
+        // },
+
         // open all trades for account 9
         {
             id: 0000,

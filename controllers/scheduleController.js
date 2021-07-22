@@ -4,7 +4,24 @@ const lockedAccountsController = require("./lockedAccountsController");
 const multipleTradeController = require("./multipleTradeController");
 const closeTradeController = require("./closeTradeController");
 const schEventsModel = require("../models/SchEvents");
-const mfController = require("./mfController");     
+const mfController = require("./mfController"); 
+
+function setFactor(factor, value) {
+    mfController.createOrUpdate(dbClient, factor, value)
+}
+
+function getFactor(key) {
+    const factors = mfController.getFactors();
+    factors.get(key);
+}
+
+function SPECFORSTRATEGY9(symbol) {
+    setFactor(symbol + "-9_blockedDESCRIPTIVE", -1);
+    if (getFactor(symbol + "-9_blockedDESCRIPTIVE") > 0) {
+        setFactor(symbol + "-9_sale", -1)
+        setFactor(symbol + "-9_buy", -1)
+    }
+}
 
 async function stringToComand(dbClient, str, account, symbol) {
     if (str === "closeTrades") {
@@ -27,19 +44,21 @@ async function stringToComand(dbClient, str, account, symbol) {
     }
     
     if (str === "setBlockedParameter") {
-        mfController.createOrUpdate(dbClient, "AUDUSD-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "NZDUSD-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "USDCHF-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "USDCAD-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "EURUSD-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "GBPUSD-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "USDJPY-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "EURCHF-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "EURGBP-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "EURJPY-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "GBPCHF-9_blockedDESCRIPTIVE", -1);
-        mfController.createOrUpdate(dbClient, "GBPJPY-9_blockedDESCRIPTIVE", -1);
+        SPECFORSTRATEGY9("AUDUSD");
+        SPECFORSTRATEGY9("NZDUSD");
+        SPECFORSTRATEGY9("USDCHF");
+        SPECFORSTRATEGY9("USDCAD");
+        SPECFORSTRATEGY9("EURUSD");
+        SPECFORSTRATEGY9("GBPUSD");
+        SPECFORSTRATEGY9("USDJPY");
+        SPECFORSTRATEGY9("EURCHF");
+        SPECFORSTRATEGY9("EURGBP");
+        SPECFORSTRATEGY9("EURJPY");
+        SPECFORSTRATEGY9("GBPCHF");
+        SPECFORSTRATEGY9("GBPJPY");
     }
+
+    if (str === "test") {}
 }
 
 function run(dbClient) {
