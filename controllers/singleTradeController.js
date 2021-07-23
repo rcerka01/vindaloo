@@ -74,8 +74,9 @@ module.exports = { trade: function (dbClient, account, sl, tp, offset, action, s
                     if (!isExistingTrade(response.returnData, symbol, cmd)) {
                         send.getPrice(dbClient, symbol, wSocket) // ignites new order
                         
-                        // REMOFE IF!!!  TO CLOSE OPOSITE TRADES ONLY FOR ACCOUNT 1
-                        if (account == 1) {
+                        // REMOFE IF!!!  
+                        // TEMP FIX TO CLOSE OPOSITE TRADES ONLY FOR ACCOUNT 1 or 2
+                        if (account == 1 || account == 2) {
                             closeTrades(dbClient, response.returnData, symbol, wSocket, action);
                         }
                     }
