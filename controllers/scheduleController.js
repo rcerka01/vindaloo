@@ -6,21 +6,21 @@ const closeTradeController = require("./closeTradeController");
 const schEventsModel = require("../models/SchEvents");
 const mfController = require("./mfController"); 
 
-function setFactor(factor, value) {
+function setFactor(dbClient,factor, value) {
     mfController.createOrUpdate(dbClient, factor, value)
 }
 
 function getFactor(key) {
     const factors = mfController.getFactors();
-    factors.get(key);
+    return factors.get(key);
 }
 
-function SPECFORSTRATEGY9(symbol) {
-    setFactor(symbol + "-9_blockedDESCRIPTIVE", -1);
+function SPECFORSTRATEGY9(dbClient, symbol) {
     if (getFactor(symbol + "-9_blockedDESCRIPTIVE") > 0) {
         setFactor(symbol + "-9_sale", -1)
-        setFactor(symbol + "-9_buy", -1)
+        setFactor(dbClient, symbol + "-9_buy", -1)
     }
+    setFactor(dbClient, symbol + "-9_blockedDESCRIPTIVE", -1);
 }
 
 async function stringToComand(dbClient, str, account, symbol) {
@@ -44,18 +44,18 @@ async function stringToComand(dbClient, str, account, symbol) {
     }
     
     if (str === "setBlockedParameter") {
-        SPECFORSTRATEGY9("AUDUSD");
-        SPECFORSTRATEGY9("NZDUSD");
-        SPECFORSTRATEGY9("USDCHF");
-        SPECFORSTRATEGY9("USDCAD");
-        SPECFORSTRATEGY9("EURUSD");
-        SPECFORSTRATEGY9("GBPUSD");
-        SPECFORSTRATEGY9("USDJPY");
-        SPECFORSTRATEGY9("EURCHF");
-        SPECFORSTRATEGY9("EURGBP");
-        SPECFORSTRATEGY9("EURJPY");
-        SPECFORSTRATEGY9("GBPCHF");
-        SPECFORSTRATEGY9("GBPJPY");
+        SPECFORSTRATEGY9(dbClient, "AUDUSD");
+        SPECFORSTRATEGY9(dbClient, "NZDUSD");
+        SPECFORSTRATEGY9(dbClient, "USDCHF");
+        SPECFORSTRATEGY9(dbClient, "USDCAD");
+        SPECFORSTRATEGY9(dbClient, "EURUSD");
+        SPECFORSTRATEGY9(dbClient, "GBPUSD");
+        SPECFORSTRATEGY9(dbClient, "USDJPY");
+        SPECFORSTRATEGY9(dbClient, "EURCHF");
+        SPECFORSTRATEGY9(dbClient, "EURGBP");
+        SPECFORSTRATEGY9(dbClient, "EURJPY");
+        SPECFORSTRATEGY9(dbClient, "GBPCHF");
+        SPECFORSTRATEGY9(dbClient, "GBPJPY");
     }
 
     if (str === "test") {}
