@@ -17,7 +17,7 @@ function getFactor(key) {
 
 function SPECFORSTRATEGY9(dbClient, symbol) {
     if (getFactor(symbol + "-9_blockedDESCRIPTIVE") > 0) {
-        setFactor(symbol + "-9_sale", -1)
+        setFactor(dbClient, symbol + "-9_sale", -1)
         setFactor(dbClient, symbol + "-9_buy", -1)
     }
     setFactor(dbClient, symbol + "-9_blockedDESCRIPTIVE", -1);
