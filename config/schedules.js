@@ -85,7 +85,7 @@ module.exports = {
         {
             id: 0000,
             name: "",
-            cron: "0 58 * * * 1-5",
+            cron: "0 3 * * * 1-5",
             actions: ["setBlockedParameter"],
             symbols: [""], 
             accounts: [9]
