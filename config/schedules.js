@@ -196,7 +196,7 @@ module.exports = {
             cron: "0 00 22 * * 7",
             actions: ["removeFromLockedAccounts"],
             symbols: ["EURUSD"], 
-            accounts: [1,2,3,4,5,6,7,8,10,11,12,13,14]
+            accounts: [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
         }
     ]
 }
